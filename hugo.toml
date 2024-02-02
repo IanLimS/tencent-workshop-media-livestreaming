@@ -1,0 +1,101 @@
+baseURL = "/"
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+
+# Change the default theme to be use when building the site with Hugo
+theme = "hugo-theme-relearn"
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "SEARCH"]
+
+[params]
+# If an option value is said to be not set, you can achieve the same behavior
+# by given it an empty string value.
+
+###############################################################################
+# For the detailed configuration options, 
+# visit https://mcshelby.github.io/hugo-theme-relearn/basics/configuration/index.html
+###############################################################################
+# Hugo
+# These options usually apply to other themes aswell.
+
+# The author of your site.
+author.name = "Ian Lim"
+
+# The description of your site.
+description = "Tencent Cloud Workshop"
+
+###############################################################################
+# Relearn Theme
+# These options are specific to the Relearn theme.
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Multilanguage content.
+# Default: not set
+# additionalContentLanguage = [ "en", "ko" ]
+
+# When using mulitlingual website, disable the switch language button.
+# disableLanguageSwitchingButton = false
+
+# Branding
+# These options set your overall visual apperance.
+
+# Used color variants.
+themeVariant = "blue"
+# Default: "auto"
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# General
+# These options are defining general, non visual behavior.
+
+# Avoid new asset URLs on build.
+# Default: false
+# By default JavaScript-files and CSS-files get a unique ID on each rebuild.
+disableAssetsBusting = false
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# Menu
+# These options modify the menu apperance.
+
+# The order of main menu submenus.
+# Default: "weight"
+# Submenus can be ordered by "weight", "title", "linktitle", "modifieddate",
+# "expirydate", "publishdate", "date", "length" or "default" (adhering to
+# Hugo's default sort order). This can be overridden in the pages frontmatter.
+ordersectionsby = "weight"
+
+# Hide Next and Previous navigation buttons.
+# Default: false
+# If the navigation buttons are hidden, also the keyboard shortcuts are
+# disabled.
+disableNextPrev = false
+
+# Shows expander for submenus.
+# Default: false
+# If set to true, a submenu in the sidebar will be displayed in a collapsible
+# tree view and a clickable expander is set in front of the entry.
+# This can be overridden in the page's frontmatter.
+collapsibleMenu = true
+
+# Shows checkmarks for visited pages of the main menu.
+# Default: false
+# This also causes the display of the `Clear History` entry in the lower part
+# of the menu to remove all checkmarks. The checkmarks will also been removed
+# if you regenerate your site as the ids are not stable.
+showVisitedLinks = true
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# English is the default language
+defaultContentLanguage = "en"
+
+[languages]
+[languages.en]
+title = "English"
+weight = 2
+languageName = "English"
+
+[languages.ko]
+title = "한글"
+weight = 1
+languageName = "Korean"

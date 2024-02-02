@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>/ko/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/index.html" />
+  </url>
+  <url>
+    <loc>/ko/categories/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/categories/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/categories/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/categories/index.html" />
+  </url>
+  <url>
+    <loc>/ko/tags/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/tags/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/tags/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/tags/index.html" />
+  </url>
+  <url>
+    <loc>/ko/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/index.html" />
+  </url>
+</urlset>
