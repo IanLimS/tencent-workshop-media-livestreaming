@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud Streaming Service on 한글</title>
+    <link>/ko/css/index.html</link>
+    <description>Recent content in Cloud Streaming Service on 한글</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <atom:link href="/ko/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Basics</title>
+      <link>/ko/css/_0-what-is-css/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/css/_0-what-is-css/index.html</guid>
+      <description>텐센트 클라우드의 Cloud Streaming Service (A.K.A CSS) 를 사용하기에 앞서, CSS 는 크게 2개의 컴포넌트를 가지고 있고, 도메인을 중심으로 채널이 구성됩니다.
+즉, 하나의 라이브 스트리밍을 구성하기 위해서는 Push 도메인, Play 도메인 이 구성됩니다.
+1. Push 도메인 Push 도메인은, 스트림 입수 및 미디어 프로세싱 (인코딩, 트랜스코딩, 레코딩, Moderation 과 같은 AI 기능들) 을 포함하고 있으며, 실제 비디오의 입수 및 프로세싱을 위한 필수 구성 요소 입니다.
+푸시란, 호스트가 로컬 오디오 및 비디오를 Tencent Cloud로 입수하는 프로세스를 말하며, 여기서 라이브 스트림을 푸시하는 데 사용되는 도메인 이름은 필수 설정입니다.</description>
+    </item>
+    <item>
+      <title>Prerequisites</title>
+      <link>/ko/css/_1-pre-requisites/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/css/_1-pre-requisites/index.html</guid>
+      <description>1. Domain Name 텐센트 클라우드의 Cloud Streaming Service 는 스트림의 채널 별로 고객의 도메인을 통해 서비스 되는 형태이며, 라이브 채널 당, 클라우드 입수를 위한 도메인 + Playback 을 위한 도메인, 2개의 도메인이 필요 합니다.
+즉, 텐센트 클라우드의 Cloud Streaming Service 를 이용하기 위해서는, Push 및 Play Domain 등록 과정에서 도메인 소유자라는 소유권을 알리고 등록하는 절차가 필요합니다. 한번 등록되면 상위 도메인이 동일한 도메인을 추가하는 경우 다시 확인할 필요가 없습니다.
+2. OBS 본 워크샵에서는 OBS Studio 를 사용합니다.</description>
+    </item>
+    <item>
+      <title>Create a push domain</title>
+      <link>/ko/css/_2-create-push/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/css/_2-create-push/index.html</guid>
+      <description>CSS 콘솔 메인 화면 왼쪽 탭에서 Domain 탭을 클릭합니다. 그러면 현재 구성되어 있는 CSS 도메인들을 확인할 수 있습니다.
+메인 메뉴 위쪽에 위치한 Add Domain 버튼을 클릭 합니다. 도메인 추가 팝업이 뜨면, 아래와 같이 Push Domain을 위한 값을 입력해 줍니다. 입력이 완료되면 Add Domain 버튼을 클릭해서 다음으로 이동합니다. Type : Push domain Domain Name : push 용으로 사용할 도메인 이름 CNAME Configuration 메뉴를 참고해서, DNS 서비스에서 host 에 대한 CNAME 값을 추가해 줍니다.</description>
+    </item>
+    <item>
+      <title>Create a play domain</title>
+      <link>/ko/css/_3-create-play/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/css/_3-create-play/index.html</guid>
+      <description>CSS 콘솔 메인 화면 왼쪽 탭에서 Domain 탭을 클릭합니다. 그러면 현재 구성되어 있는 CSS 도메인들을 확인할 수 있습니다.
+메인 메뉴 위쪽에 위치한 Add Domain 버튼을 클릭 합니다. 도메인 추가 팝업이 뜨면, 아래와 같이 Type 을 Playback Domain 으로 변경하고, 아래와 같은 값을 입력해 줍니다. 입력이 완료되면 Add Domain 버튼을 클릭해서 다음으로 이동합니다. Type : Play domain Acceleralation region : Outside Chinese mainland Domain Name : playback 용으로 사용할 도메인 이름 CNAME Configuration 메뉴를 참고해서, DNS 서비스에서 host 에 대한 CNAME 값을 추가해 줍니다.</description>
+    </item>
+    <item>
+      <title>Create a Adaptive Bitrate Config</title>
+      <link>/ko/css/_4-create-streamingconfig/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/css/_4-create-streamingconfig/index.html</guid>
+      <description>Tencent Cloud 의 Cloud Streaming Service 를 이용하면, 트랜스코딩 타입 해상도, 비트레이트를 별도 지정한 Adaptive Bitrate 구성을 템플릿으로 구성하고 Cloud Streaming Service 의 HLS Stream 및 WebRTC Streaming 에서 사용이 가능합니다.
+NOTE : Tencent Cloud 의 Cloud Streaming Service 에서 HLS, WebRTC Streaming 외 HTTP-FLV, RTMP 스트리밍을 통한 단일 비트레이트 포맷을 사용하는 경우, Adaptive Bitrate 가 아닌 Live Transcoding 기능 구성을 통해 스트림의 상세 스펙을 구성을 지원합니다.
+CSS 콘솔 메인 화면 왼쪽 탭에서 Feature Configuration -&amp;gt; Adaptive Bitrate 탭을 클릭합니다.</description>
+    </item>
+    <item>
+      <title>Test &amp; Verify</title>
+      <link>/ko/css/_5-test-verify/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/css/_5-test-verify/index.html</guid>
+      <description>자, 이제까지 Push, Playback Domain 을 구성하고, Adaptive Bitrate 을 구성 및 Playback Domain 에 바인딩 했습니다. 실제 테스트를 해볼텐데요.
+CSS 콘솔 좌측 메뉴에서 Tools &amp;gt; Address Generator 를 클릭합니다. Address Generator 메뉴로 들어가면, 다음과 같이 값들을 입력해 줍니다. 그리고 Generate 버튼을 클릭합니다. URL Type : Push and playback URLs Stream Name : live ranscoding Template : testABR Push address 를 확인합니다. Push address 로는 RTMP, WebRTC, SRT, RTMP over SRT 를 지원하고, OBS 입력 값은 별도로 출력되는 것을 확인할 수 있습니다.</description>
+    </item>
+    <item>
+      <title>Clean up resources</title>
+      <link>/ko/css/_6-cleanup-resources/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/css/_6-cleanup-resources/index.html</guid>
+      <description>이제까지 Cloud Streaming Service 를 사용해서 엔드 투 엔드 라이브 스트리밍 워크플로우를 확인해 보았습니다.
+불필요한 과금을 방지하기 위해, 다음과 같은 리소스를 정리합니다.
+1. Feature Configuration 연결 제거 및 삭제 CSS 콘솔 좌츨 메뉴에서 Adaptive Bitrate 를 클릭합니다. 생성한 Adaptive Bitrate 구성을 클릭 합니다. 구성 맨 아래 쪽 Unbind 를 클릭해서, 구성과 도메인의 연결을 해제합니다. 구성 맨 위쪽 Delete 를 클릭해서 Adaptive Bitrate 구성을 삭제합니다. 2. 도메인 구성 및 도메인 삭제 CSS 콘솔 좌츨 메뉴에서 Domain 를 클릭합니다.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,6 +1,14 @@
 var relearn_search_index = [
   {
-    "breadcrumb": "English",
+    "breadcrumb": "Default HOME",
+    "content": "Lorem Ipsum. Default BASICS\n",
+    "description": "",
+    "tags": null,
+    "title": "Default Basics",
+    "uri": "/css/index.html"
+  },
+  {
+    "breadcrumb": "",
     "content": "Lorem Ipsum. Default Home\n",
     "description": "",
     "tags": null,
@@ -8,7 +16,7 @@ var relearn_search_index = [
     "uri": "/index.html"
   },
   {
-    "breadcrumb": "English",
+    "breadcrumb": "Default HOME",
     "content": "",
     "description": "",
     "tags": null,
@@ -16,15 +24,7 @@ var relearn_search_index = [
     "uri": "/categories/index.html"
   },
   {
-    "breadcrumb": "",
-    "content": "",
-    "description": "",
-    "tags": null,
-    "title": "English",
-    "uri": "/index.html"
-  },
-  {
-    "breadcrumb": "English",
+    "breadcrumb": "Default HOME",
     "content": "",
     "description": "",
     "tags": null,

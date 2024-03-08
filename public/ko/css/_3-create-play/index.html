@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="Tencent Cloud Workshop">
+    <meta name="author" content="Ian Lim">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Create a play domain :: 한글">
+    <meta name="twitter:description" content="CSS 콘솔 메인 화면 왼쪽 탭에서 Domain 탭을 클릭합니다. 그러면 현재 구성되어 있는 CSS 도메인들을 확인할 수 있습니다.
+메인 메뉴 위쪽에 위치한 Add Domain 버튼을 클릭 합니다. 도메인 추가 팝업이 뜨면, 아래와 같이 Type 을 Playback Domain 으로 변경하고, 아래와 같은 값을 입력해 줍니다. 입력이 완료되면 Add Domain 버튼을 클릭해서 다음으로 이동합니다. Type : Play domain Acceleralation region : Outside Chinese mainland Domain Name : playback 용으로 사용할 도메인 이름 CNAME Configuration 메뉴를 참고해서, DNS 서비스에서 host 에 대한 CNAME 값을 추가해 줍니다.">
+    <meta property="og:title" content="Create a play domain :: 한글">
+    <meta property="og:description" content="CSS 콘솔 메인 화면 왼쪽 탭에서 Domain 탭을 클릭합니다. 그러면 현재 구성되어 있는 CSS 도메인들을 확인할 수 있습니다.
+메인 메뉴 위쪽에 위치한 Add Domain 버튼을 클릭 합니다. 도메인 추가 팝업이 뜨면, 아래와 같이 Type 을 Playback Domain 으로 변경하고, 아래와 같은 값을 입력해 줍니다. 입력이 완료되면 Add Domain 버튼을 클릭해서 다음으로 이동합니다. Type : Play domain Acceleralation region : Outside Chinese mainland Domain Name : playback 용으로 사용할 도메인 이름 CNAME Configuration 메뉴를 참고해서, DNS 서비스에서 host 에 대한 CNAME 값을 추가해 줍니다.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/ko/css/_3-create-play/index.html">
+    <meta property="article:section" content="Cloud Streaming Service :: 한글">
+    <meta property="og:site_name" content="한글">
+    <title>Create a play domain :: 한글</title>
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1709873570" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1709873570" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1709873570" rel="stylesheet">
+    <link href="/css/auto-complete.css?1709873570" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1709873570" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1709873570" rel="stylesheet">
+    <link href="/css/fonts.css?1709873570" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1709873570" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1709873570" rel="stylesheet">
+    <link href="/css/theme-blue.css?1709873571" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-learn.css?1709873571" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1709873571" rel="stylesheet">
+    <link href="/css/print.css?1709873571" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1709873571" rel="stylesheet">
+    <script src="/js/url.js?1709873571"></script>
+    <script src="/js/variant.js?1709873571"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/ko/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'blue' ] );
+      // translations
+      window.T_Copy_to_clipboard = `클립보드에 복사`;
+      window.T_Copied_to_clipboard = `클립보드에 복사됐습니다!`;
+      window.T_Copy_link_to_clipboard = `링크를 클립보드에 복사`;
+      window.T_Link_copied_to_clipboard = `클립보드에 링크가 복사됐습니다!`;
+      window.T_Reset_view = `보기 재설정`;
+      window.T_View_reset = `보기 초기화!`;
+      window.T_No_results_found = `"{0}"에 대한 결과가 없습니다.`;
+      window.T_N_results_found = `"{0}"에 대해 {1}개의 결과가 검색되었습니다.`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/ko/css/_3-create-play/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="메뉴 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="목차 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/index.html"><span itemprop="name">Live Streaming on Tencent Cloud</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/css/index.html"><span itemprop="name">Cloud Streaming Service</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Create a play domain</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/css/_2-create-push/index.html" title="Create a push domain (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/css/_4-create-streamingconfig/index.html" title="Create a Adaptive Bitrate Config (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="외부 링크"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="create-a-play-domain">Create a play domain</h1>
+
+<ol>
+<li>
+<p>CSS 콘솔 메인 화면 왼쪽 탭에서 <em>Domain</em> 탭을 클릭합니다. 그러면 현재 구성되어 있는 CSS 도메인들을 확인할 수 있습니다.</p>
+</li>
+<li>
+<p>메인 메뉴 위쪽에 위치한 <em>Add Domain</em> 버튼을 클릭 합니다.
+<a href="#R-image-3d11c6a94a02d219eaae690e3a5f87a3" class="lightbox-link"><img src="/images/css-basic/3-css-console-new-domain.png" alt="도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3d11c6a94a02d219eaae690e3a5f87a3"><img src="/images/css-basic/3-css-console-new-domain.png" alt="도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>도메인 추가 팝업이 뜨면, 아래와 같이 Type 을 Playback Domain 으로 변경하고, 아래와 같은 값을 입력해 줍니다. 입력이 완료되면 <em>Add Domain</em> 버튼을 클릭해서 다음으로 이동합니다.
+Type : Play domain
+Acceleralation region : Outside Chinese mainland
+Domain Name : playback 용으로 사용할 도메인 이름
+<a href="#R-image-a944f92ab7ec6b33d5196fdd87ef3779" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain.png" alt="play도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a944f92ab7ec6b33d5196fdd87ef3779"><img src="/images/css-basic/4-2-css-play-domain.png" alt="play도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>CNAME Configuration 메뉴를 참고해서, DNS 서비스에서 host 에 대한 CNAME 값을 추가해 줍니다.
+<strong>CNAME Configuration 메뉴</strong>
+<a href="#R-image-d56ba3aa12153e17fab6007352c9cd20" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname-configuration.png" alt="CNAME Configuration 메뉴" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d56ba3aa12153e17fab6007352c9cd20"><img src="/images/css-basic/4-2-css-play-domain-cname-configuration.png" alt="CNAME Configuration 메뉴" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<strong>DNS 에 CNAME 레코드 추가</strong>
+<a href="#R-image-ef6afb5352ebda317724e8fb122dbc92" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname.png" alt="도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ef6afb5352ebda317724e8fb122dbc92"><img src="/images/css-basic/4-2-css-play-domain-cname.png" alt="도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<strong>CNAME 레코드 검증</strong>
+<a href="#R-image-e80474459f4784df3eafe37d2e6db795" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname-verify.png" alt="레코드 검증" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e80474459f4784df3eafe37d2e6db795"><img src="/images/css-basic/4-2-css-play-domain-cname-verify.png" alt="레코드 검증" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<img
+  class="logo"
+  src="/images/logo_basic.png"
+  alt="TencneCloud Logo" />
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="검색 (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">검색</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="검색어를 입력하세요">
+          <button class="search-clear" type="button" data-search-clear="" title="검색 지우기"><i class="fas fa-times" title="검색 지우기"></i></button>
+        </div>
+        <script>
+          var contentLangs=['ko'];
+        </script>
+        <script src="/js/auto-complete.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.min.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.ko.min.js?1709873571" defer></script>
+        <script src="/js/search.js?1709873571" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/ko/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/ko/css/index.html" class="parent "><input type="checkbox" id="R-section-8941c520609238295a01ef684b433ec8" aria-controls="R-subsections-8941c520609238295a01ef684b433ec8" checked><label for="R-section-8941c520609238295a01ef684b433ec8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 Cloud Streaming Service</span></label><a class="padding" href="/ko/css/index.html">Cloud Streaming Service<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-8941c520609238295a01ef684b433ec8" class="morespace collapsible-menu">
+          <li data-nav-id="/ko/css/_0-what-is-css/index.html" class=""><a class="padding" href="/ko/css/_0-what-is-css/index.html">CSS Basics<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_1-pre-requisites/index.html" class=""><a class="padding" href="/ko/css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_2-create-push/index.html" class=""><a class="padding" href="/ko/css/_2-create-push/index.html">Create a push domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_3-create-play/index.html" class="active"><a class="padding" href="/ko/css/_3-create-play/index.html">Create a play domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_4-create-streamingconfig/index.html" class=""><a class="padding" href="/ko/css/_4-create-streamingconfig/index.html">Create a Adaptive Bitrate Config<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_5-test-verify/index.html" class=""><a class="padding" href="/ko/css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/ko/css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch showLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">언어</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                      <option id="R-ko" value="/ko/css/_3-create-play/index.html" lang="ko" selected>Korean</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">주제</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-blue" value="blue" selected>Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">방문 기록 삭제</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1709873571" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1709873571" defer></script>
+    <script src="/js/theme.js?1709873571" defer></script>
+  </body>
+</html>

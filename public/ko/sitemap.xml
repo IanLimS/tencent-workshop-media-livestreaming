@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/ko/css/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/css/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/css/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/css/index.html" />
+  </url>
+  <url>
     <loc>/ko/index.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="/ko/index.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="/ko/index.html" />
     <xhtml:link rel="alternate" hreflang="en" href="/index.html" />
+  </url>
+  <url>
+    <loc>/ko/css/_0-what-is-css/index.html</loc>
+  </url>
+  <url>
+    <loc>/ko/css/_1-pre-requisites/index.html</loc>
+  </url>
+  <url>
+    <loc>/ko/css/_2-create-push/index.html</loc>
+  </url>
+  <url>
+    <loc>/ko/css/_3-create-play/index.html</loc>
+  </url>
+  <url>
+    <loc>/ko/css/_4-create-streamingconfig/index.html</loc>
+  </url>
+  <url>
+    <loc>/ko/css/_5-test-verify/index.html</loc>
+  </url>
+  <url>
+    <loc>/ko/css/_6-cleanup-resources/index.html</loc>
   </url>
   <url>
     <loc>/ko/categories/index.html</loc>
@@ -17,11 +44,5 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="/ko/tags/index.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="/ko/tags/index.html" />
     <xhtml:link rel="alternate" hreflang="en" href="/tags/index.html" />
-  </url>
-  <url>
-    <loc>/ko/index.html</loc>
-    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/index.html" />
-    <xhtml:link rel="alternate" hreflang="ko" href="/ko/index.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="/index.html" />
   </url>
 </urlset>

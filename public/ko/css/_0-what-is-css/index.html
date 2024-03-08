@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="Tencent Cloud Workshop">
+    <meta name="author" content="Ian Lim">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CSS Basics :: 한글">
+    <meta name="twitter:description" content="텐센트 클라우드의 Cloud Streaming Service (A.K.A CSS) 를 사용하기에 앞서, CSS 는 크게 2개의 컴포넌트를 가지고 있고, 도메인을 중심으로 채널이 구성됩니다.
+즉, 하나의 라이브 스트리밍을 구성하기 위해서는 Push 도메인, Play 도메인 이 구성됩니다.
+1. Push 도메인 Push 도메인은, 스트림 입수 및 미디어 프로세싱 (인코딩, 트랜스코딩, 레코딩, Moderation 과 같은 AI 기능들) 을 포함하고 있으며, 실제 비디오의 입수 및 프로세싱을 위한 필수 구성 요소 입니다.
+푸시란, 호스트가 로컬 오디오 및 비디오를 Tencent Cloud로 입수하는 프로세스를 말하며, 여기서 라이브 스트림을 푸시하는 데 사용되는 도메인 이름은 필수 설정입니다.">
+    <meta property="og:title" content="CSS Basics :: 한글">
+    <meta property="og:description" content="텐센트 클라우드의 Cloud Streaming Service (A.K.A CSS) 를 사용하기에 앞서, CSS 는 크게 2개의 컴포넌트를 가지고 있고, 도메인을 중심으로 채널이 구성됩니다.
+즉, 하나의 라이브 스트리밍을 구성하기 위해서는 Push 도메인, Play 도메인 이 구성됩니다.
+1. Push 도메인 Push 도메인은, 스트림 입수 및 미디어 프로세싱 (인코딩, 트랜스코딩, 레코딩, Moderation 과 같은 AI 기능들) 을 포함하고 있으며, 실제 비디오의 입수 및 프로세싱을 위한 필수 구성 요소 입니다.
+푸시란, 호스트가 로컬 오디오 및 비디오를 Tencent Cloud로 입수하는 프로세스를 말하며, 여기서 라이브 스트림을 푸시하는 데 사용되는 도메인 이름은 필수 설정입니다.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/ko/css/_0-what-is-css/index.html">
+    <meta property="article:section" content="Cloud Streaming Service :: 한글">
+    <meta property="og:site_name" content="한글">
+    <title>CSS Basics :: 한글</title>
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1709873570" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1709873570" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1709873570" rel="stylesheet">
+    <link href="/css/auto-complete.css?1709873570" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1709873570" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1709873570" rel="stylesheet">
+    <link href="/css/fonts.css?1709873570" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1709873570" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1709873570" rel="stylesheet">
+    <link href="/css/theme-blue.css?1709873571" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-learn.css?1709873571" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1709873571" rel="stylesheet">
+    <link href="/css/print.css?1709873571" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1709873571" rel="stylesheet">
+    <script src="/js/url.js?1709873571"></script>
+    <script src="/js/variant.js?1709873571"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/ko/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'blue' ] );
+      // translations
+      window.T_Copy_to_clipboard = `클립보드에 복사`;
+      window.T_Copied_to_clipboard = `클립보드에 복사됐습니다!`;
+      window.T_Copy_link_to_clipboard = `링크를 클립보드에 복사`;
+      window.T_Link_copied_to_clipboard = `클립보드에 링크가 복사됐습니다!`;
+      window.T_Reset_view = `보기 재설정`;
+      window.T_View_reset = `보기 초기화!`;
+      window.T_No_results_found = `"{0}"에 대한 결과가 없습니다.`;
+      window.T_N_results_found = `"{0}"에 대해 {1}개의 결과가 검색되었습니다.`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/ko/css/_0-what-is-css/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="메뉴 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="목차 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+  <ul>
+    <li><a href="#1-push-도메인">1. Push 도메인</a></li>
+    <li><a href="#2-player-도메인-css-cdn">2. Player 도메인 (CSS CDN)</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/index.html"><span itemprop="name">Live Streaming on Tencent Cloud</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/css/index.html"><span itemprop="name">Cloud Streaming Service</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">CSS Basics</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/css/index.html" title="Cloud Streaming Service (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/css/_1-pre-requisites/index.html" title="Prerequisites (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="외부 링크"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="css-basics">CSS Basics</h1>
+
+<p>텐센트 클라우드의 Cloud Streaming Service (A.K.A CSS) 를 사용하기에 앞서, CSS 는 크게 2개의 컴포넌트를 가지고 있고, 도메인을 중심으로 채널이 구성됩니다.</p>
+<p>즉, 하나의 라이브 스트리밍을 구성하기 위해서는 <strong>Push 도메인</strong>, <strong>Play 도메인</strong> 이 구성됩니다.</p>
+<p><a href="#R-image-5f38e6d9d19fda7d18475f2349dbd846" class="lightbox-link"><img src="/images/css-basic/css_architecture_ko.png" alt="CSS 아키텍처" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5f38e6d9d19fda7d18475f2349dbd846"><img src="/images/css-basic/css_architecture_ko.png" alt="CSS 아키텍처" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<h2 id="1-push-도메인">1. Push 도메인</h2>
+<p>Push 도메인은, 스트림 입수 및 미디어 프로세싱 (인코딩, 트랜스코딩, 레코딩, Moderation 과 같은 AI 기능들) 을 포함하고 있으며, 실제 비디오의 입수 및 프로세싱을 위한 필수 구성 요소 입니다.</p>
+<p>푸시란, 호스트가 로컬 오디오 및 비디오를 Tencent Cloud로 입수하는 프로세스를 말하며, 여기서 라이브 스트림을 푸시하는 데 사용되는 도메인 이름은 필수 설정입니다.  라이브 스트리밍에 도메인 이름을 사용하려면 먼저 도메인 이름을 등록해야 합니다. 푸시 도메인 이름이 구성된 후 CSS는 해당 푸시 URL을 생성할 수 있습니다.</p>
+<p>CSS 에서는 이런 푸시를 위한 프로토콜로, <strong>RTMP, SRT, WebRTC, RTMP over SRT</strong> 와 같은 프로토콜을 지원 합니다.</p>
+<p>CSS 에서는 비디오 피드를 입수한 이후 다음과 같은 일을 수행할 수 있습니다.</p>
+<ol>
+<li><strong>비디오를 인코딩 합니다.</strong></li>
+</ol>
+<ul>
+<li>CSS 에서는 기본적으로 Pass through, H.264, H.265 뿐만 아니라 AV1 코덱 또한 지원합니다.</li>
+</ul>
+<ol start="2">
+<li><strong>비디오를 트랜스코딩 합니다.</strong></li>
+</ol>
+<ul>
+<li>텐센트 클라우드 미디어 서비스들에서는 <strong>TSC (Top Speed Codec)</strong> 트랜트코딩 모드를 지원 합니다.</li>
+<li>TSC 트랜스코딩은 높은 비디오 품질을 더 낮은 비트레이트로 제공하도록 하는 텐센트 클라우드의 독자 기술로 게임 스트리밍, 쇼룸 스트리밍, 이벤트 스트리밍 등에 널리 사용됩니다.</li>
+<li>TSC 트랜스코딩을 사용하면  <strong>낮은 비트 전송률(평균 50% 더 낮음)</strong> 에서 고화질 스트리밍 서비스를 제공할 수 있을 뿐만 아니라, 지능형 장면 인식, 동적 인코딩, CTU/라인/프레임 수준 비트레이트 제어 등의 선도적인 기술을 활용할 수 있습니다.</li>
+</ul>
+<ol start="3">
+<li><strong>비디오의 추가 프로세싱을 합니다</strong></li>
+</ol>
+<ul>
+<li>스트림 릴레이, 타임시프트, 레코딩, 썸네일, Content Moderation 과 같은 AI 기능들을 지원합니다.</li>
+<li>텐센트 클라우드의 CSS 는 AI 기능이 내장되어, 다른 제품과의 유기적인 통합 없이도 라이브 스트리밍에 필수 부가 기능들을 제공합니다.</li>
+</ul>
+<p>이렇게 생성된 CSS 의 출력들은 CSS 의 Player 도메인과 통합할 수 있으며, 재생을 위해 <strong>RTMP, HTTP-FLV, HLS, WebRTC, DASH</strong> 와 같은 프로토콜을 지원 합니다.</p>
+<h2 id="2-player-도메인-css-cdn">2. Player 도메인 (CSS CDN)</h2>
+<p>Player 도메인은, 라이브 스트리밍에 최적화 된 CDN 경험을 제공하는 컨포넌트 입니다.
+이는 (1) CSS Push 도메인과 통합해서 엔드-투-엔드 라이브 워크플로우를 구축하거나, (2) 텐센트 클라우드가 아닌 라이브 스트리밍 오리지네이션 서비스와 통합할 수도 있습니다.</p>
+<p>CSS Player 도메인에서는 인증 (Authentication), Referer 및 IP/Regional(국가) Access Control 과 같은 라이브 스트리밍에 필수적인 기능들을 제공합니다.</p>
+<blockquote>
+<p>NOTE : 기본 개념에 대한 추가 정보는 다음 <a href="https://www.tencentcloud.com/document/product/267/7968?lang=en" target="_blank">사용자 가이드</a>를 추가적으로 탐색할 수 있습니다.</p>
+</blockquote>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<img
+  class="logo"
+  src="/images/logo_basic.png"
+  alt="TencneCloud Logo" />
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="검색 (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">검색</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="검색어를 입력하세요">
+          <button class="search-clear" type="button" data-search-clear="" title="검색 지우기"><i class="fas fa-times" title="검색 지우기"></i></button>
+        </div>
+        <script>
+          var contentLangs=['ko'];
+        </script>
+        <script src="/js/auto-complete.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.min.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.ko.min.js?1709873571" defer></script>
+        <script src="/js/search.js?1709873571" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/ko/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/ko/css/index.html" class="parent "><input type="checkbox" id="R-section-8941c520609238295a01ef684b433ec8" aria-controls="R-subsections-8941c520609238295a01ef684b433ec8" checked><label for="R-section-8941c520609238295a01ef684b433ec8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 Cloud Streaming Service</span></label><a class="padding" href="/ko/css/index.html">Cloud Streaming Service<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-8941c520609238295a01ef684b433ec8" class="morespace collapsible-menu">
+          <li data-nav-id="/ko/css/_0-what-is-css/index.html" class="active"><a class="padding" href="/ko/css/_0-what-is-css/index.html">CSS Basics<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_1-pre-requisites/index.html" class=""><a class="padding" href="/ko/css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_2-create-push/index.html" class=""><a class="padding" href="/ko/css/_2-create-push/index.html">Create a push domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_3-create-play/index.html" class=""><a class="padding" href="/ko/css/_3-create-play/index.html">Create a play domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_4-create-streamingconfig/index.html" class=""><a class="padding" href="/ko/css/_4-create-streamingconfig/index.html">Create a Adaptive Bitrate Config<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_5-test-verify/index.html" class=""><a class="padding" href="/ko/css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/ko/css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch showLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">언어</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                      <option id="R-ko" value="/ko/css/_0-what-is-css/index.html" lang="ko" selected>Korean</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">주제</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-blue" value="blue" selected>Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">방문 기록 삭제</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1709873571" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1709873571" defer></script>
+    <script src="/js/theme.js?1709873571" defer></script>
+  </body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="Tencent Cloud Workshop">
+    <meta name="author" content="Ian Lim">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CSS Basic Configuration :: English">
+    <meta name="twitter:description" content="Tencent Cloud Workshop">
+    <meta property="og:title" content="CSS Basic Configuration :: English">
+    <meta property="og:description" content="Tencent Cloud Workshop">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/css_basics/basics-sub/index.html">
+    <meta property="og:site_name" content="English">
+    <title>CSS Basic Configuration :: English</title>
+    <link href="/ko/css_basics/basics-sub/index.html" rel="alternate" hreflang="x-default">
+    <link href="/ko/css_basics/basics-sub/index.html" rel="alternate" hreflang="ko">
+    <link href="/css_basics/basics-sub/index.html" rel="alternate" hreflang="en">
+    <link href="/css_basics/basics-sub/index.xml" rel="alternate" type="application/rss+xml" title="CSS Basic Configuration :: English">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1709781579" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1709781579" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1709781579" rel="stylesheet">
+    <link href="/css/auto-complete.css?1709781579" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1709781579" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1709781579" rel="stylesheet">
+    <link href="/css/fonts.css?1709781579" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1709781579" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1709781579" rel="stylesheet">
+    <link href="/css/theme-blue.css?1709781579" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-learn.css?1709781579" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1709781579" rel="stylesheet">
+    <link href="/css/print.css?1709781579" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1709781579" rel="stylesheet">
+    <script src="/js/url.js?1709781579"></script>
+    <script src="/js/variant.js?1709781579"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'blue' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/css_basics/basics-sub/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Default HOME</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/css_basics/index.html"><span itemprop="name">Default Basics</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">CSS Basic Configuration</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/css_basics/index.html" title="Default Basics (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="css-basic-configuration">CSS Basic Configuration</h1>
+
+<h1 id="workshop-css">workshop-css</h1>
+<p>Workshop for Tencent Cloud Cloud Streaming Service</p>
+<p>CSS is a fully managed service to provide reliable, high-quality, low-latency live streaming easily and conveniently. CSS helps you configure your live streaming lifecycle quickly and easily by constructing templates that allow you to quickly and easily create and delete live channels.
+After configuring your CSS channel using a template and getting your live feed into the cloud, you can get the playback URL. In other words, CSS manages transcoding and packaging and reliably provides streaming video to viewers through CSS CDN.</p>
+<p><a href="#R-image-6b85e42a57eb05d25a3803159810b267" class="lightbox-link"><img src="/images/css-basic/css_architecture.png" alt="CSS 아키텍처" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6b85e42a57eb05d25a3803159810b267"><img src="/images/css-basic/css_architecture.png" alt="CSS 아키텍처" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-4bc63b14b5ab9f39494b4bfc01c6e680" class="lightbox-link"><img src="/images/css-basic/css_architecture.png" alt="CSS 아키텍처" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4bc63b14b5ab9f39494b4bfc01c6e680"><img src="/images/css-basic/css_architecture.png" alt="CSS 아키텍처" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+In this lab, we will cover how to use Cloud Streaming Service to acquire live feeds to the cloud and configure an end-to-end pipeline that can be played in the player.</p>
+<h1 id="1-pre-requisites">1. Pre-requisites</h1>
+<p>Tencent Cloud Cloud Streaming Service is provided through the customer&rsquo;s domain. In other words, in order to use Tencent Cloud Cloud Streaming Service, it is necessary to notify and register ownership as the domain owner during the Push and Play Domain registration process. Once registered, you don&rsquo;t need to verify it again if you add a domain with the same parent domain.</p>
+<h1 id="2-create-a-push-domain">2. Create a push domain</h1>
+<ol>
+<li>
+<p>Click the <em>Domain</em> tab on the left tab of the CSS console main screen. Then you can check the currently configured CSS domains.</p>
+</li>
+<li>
+<p>Click the <em>Add Domain</em> button located at the top of the main menu.
+<a href="#R-image-998bbabbe7f769f2068cca36d448c902" class="lightbox-link"><img src="/images/css-basic/3-css-console-new-domain.png" alt="도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-998bbabbe7f769f2068cca36d448c902"><img src="/images/css-basic/3-css-console-new-domain.png" alt="도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>When the Add Domain pop-up appears, enter the value for Push Domain as shown below. Once the input is complete, click the <em>Add Domain</em> button to move to the next step.
+Type : Push domain
+Domain Name : Domain name to use for push
+<a href="#R-image-528e0dd3e90e2b92299d23dddb29e00b" class="lightbox-link"><img src="/images/css-basic/4-1-css-push-domain.png" alt="push도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-528e0dd3e90e2b92299d23dddb29e00b"><img src="/images/css-basic/4-1-css-push-domain.png" alt="push도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>Refer to the CNAME Configuration menu and add the CNAME value for host in the DNS service.
+<em>CNAME Configuration 메뉴</em>
+<a href="#R-image-24cb75f127400e2970c255974ae3255f" class="lightbox-link"><img src="/images/css-basic/4-1-css-push-domain-cname-configuration.png" alt="CNAME Configuration 메뉴" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-24cb75f127400e2970c255974ae3255f"><img src="/images/css-basic/4-1-css-push-domain-cname-configuration.png" alt="CNAME Configuration 메뉴" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+<p><em>Add CNAME record to DNS</em>
+<a href="#R-image-e0b8c56a6241eb834883b589a7ed6080" class="lightbox-link"><img src="/images/css-basic/4-1-css-push-domain-cname.png" alt="CNAME 레코드 추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e0b8c56a6241eb834883b589a7ed6080"><img src="/images/css-basic/4-1-css-push-domain-cname.png" alt="CNAME 레코드 추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><em>CNAME record verification</em>
+<a href="#R-image-1a828e198a53161911c25cf58ea5ece6" class="lightbox-link"><img src="/images/css-basic/4-1-css-push-domain-cname-verify.png" alt="레코드 검증" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1a828e198a53161911c25cf58ea5ece6"><img src="/images/css-basic/4-1-css-push-domain-cname-verify.png" alt="레코드 검증" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<h1 id="3-create-a-play-domain">3. Create a play domain</h1>
+<ol>
+<li>
+<p>Click the <em>Domain</em> tab on the left tab of the CSS console main screen. Then you can check the currently configured CSS domains.</p>
+</li>
+<li>
+<p>Click the <em>Add Domain</em> button located at the top of the main menu.
+<a href="#R-image-278942f453265b3f336a7d77547d3825" class="lightbox-link"><img src="/images/css-basic/3-css-console-new-domain.png" alt="도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-278942f453265b3f336a7d77547d3825"><img src="/images/css-basic/3-css-console-new-domain.png" alt="도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>When the Add Domain pop-up appears, change the Type to Playback Domain and enter the values as shown below. Once the input is complete, click the <em>Add Domain</em> button to move to the next step.
+Type : Play domain
+Acceleralation region : Outside Chinese mainland
+Domain Name : playback 용으로 사용할 도메인 이름
+<a href="#R-image-607e8007571242f8e51a77bb4b623a7b" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain.png" alt="play도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-607e8007571242f8e51a77bb4b623a7b"><img src="/images/css-basic/4-2-css-play-domain.png" alt="play도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>Referring to the CNAME Configuration menu, add the CNAME value for host in the DNS service.
+<strong>CNAME Configuration menu</strong>
+<a href="#R-image-dca2f77a6a93b2dba5cfc33f7979d6e9" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname-configuration.png" alt="CNAME Configuration 메뉴" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dca2f77a6a93b2dba5cfc33f7979d6e9"><img src="/images/css-basic/4-2-css-play-domain-cname-configuration.png" alt="CNAME Configuration 메뉴" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<strong>Add CNAME record to DNS</strong>
+<a href="#R-image-0a0fd0179b9b6ec86644d14453566370" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname.png" alt="도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a0fd0179b9b6ec86644d14453566370"><img src="/images/css-basic/4-2-css-play-domain-cname.png" alt="도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<strong>CNAME record verification</strong>
+<a href="#R-image-b177c338d6cfbec4c21cf635f1dd3766" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname-verify.png" alt="레코드 검증" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b177c338d6cfbec4c21cf635f1dd3766"><img src="/images/css-basic/4-2-css-play-domain-cname-verify.png" alt="레코드 검증" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+<h1 id="4-create-a-adaptive-bitrate-domain">4. Create a Adaptive Bitrate Domain</h1>
+<p>By using Tencent Cloud Cloud Streaming Service, you can configure an Adaptive Bitrate configuration with separately specified transcoding type, resolution, and bitrate as a template and use it in Cloud Streaming Service&rsquo;s HLS Stream and WebRTC Streaming.</p>
+<blockquote>
+<p><strong>NOTE</strong>: When Tencent Cloud&rsquo;s Cloud Streaming Service uses a single bitrate format through HTTP-FLV or RTMP streaming in addition to HLS and WebRTC Streaming, detailed specifications of the stream must be configured by configuring the Live Transcoding function rather than Adaptive Bitrate. Supports configuration.</p>
+</blockquote>
+<ol>
+<li>
+<p>On the left tab of the CSS console main screen, click the <em>Feature Configuration -&gt; Adaptive Bitrate</em> tab.</p>
+</li>
+<li>
+<p>Click the <em>Create Template</em> button at the top of the Adaptive Bitrate console.</p>
+</li>
+<li>
+<p>In CSS, you can configure the template to configure bitrate, resolution, etc. and create an ABR ladder.</p>
+<p>3-1. For Template Name, enter <em>testABR</em>. Any value can be entered.
+<a href="#R-image-b00b86b3aeee9aa71e59fdabc4210cf0" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config.png" alt="abr-config" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b00b86b3aeee9aa71e59fdabc4210cf0"><img src="/images/css-basic/5-1-abr-config.png" alt="abr-config" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>3-2. In the <em>Streams</em> menu, you can configure the ABR ladder and determine the transcoding method, resolution, bitrate, etc. for each ladder.
+In this lab, we will proceed with the basic configuration using Standard Transcoding.
+Configure 3 streams with Adaptive Bitrate as follows,
+Each Stream Name consists of HD, SD, and Smooth.
+For Stream Quality, select HD, SD, or Smooth respectively. Then, resolution and bitrate values are automatically specified.
+Note: In this lab, we will select the default value, but you can flexibly specify bitrate, resolution, transcoding type, etc.
+<a href="#R-image-e26475d2e5e3e2e3cb12ace9fa9f2daa" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-hd.png" alt="abr-config-hd" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e26475d2e5e3e2e3cb12ace9fa9f2daa"><img src="/images/css-basic/5-1-abr-config-hd.png" alt="abr-config-hd" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-2f404281471b34b2a7422b59fe4e6b17" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-sd.png" alt="abr-config-sd" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2f404281471b34b2a7422b59fe4e6b17"><img src="/images/css-basic/5-1-abr-config-sd.png" alt="abr-config-sd" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-4515805cea84a75adbe05396c576d75f" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-smooth.png" alt="abr-config-smooth" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4515805cea84a75adbe05396c576d75f"><img src="/images/css-basic/5-1-abr-config-smooth.png" alt="abr-config-smooth" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>3-3. After completing the stream configuration, click the <em>Save</em> button. Then, a pop-up will appear asking you to bind the configured Adaptive Bitrate template to the Domain. As shown below, select the Playback Domain configured in step 3.
+<a href="#R-image-32fa27d73bd6cbc7c3426c0fc4efad1a" class="lightbox-link"><img src="/images/css-basic/5-2-bind-abr-config-menu.png" alt="bind-abr-config-menu" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-32fa27d73bd6cbc7c3426c0fc4efad1a"><img src="/images/css-basic/5-2-bind-abr-config-menu.png" alt="bind-abr-config-menu" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-4cbbb2e096c66ec1fa80e40f417cc178" class="lightbox-link"><img src="/images/css-basic/5-2-bind-abr-config-to-play.png" alt="bind-abr-config-to-play" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4cbbb2e096c66ec1fa80e40f417cc178"><img src="/images/css-basic/5-2-bind-abr-config-to-play.png" alt="bind-abr-config-to-play" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+<h1 id="5-test-and-verify">5. Test and verify</h1>
+<p>Now, we have configured the Push and Playback Domains, and configured Adaptive Bitrate and bound it to the Playback Domain.
+I&rsquo;m going to do an actual test.</p>
+<ol>
+<li>On the left menu of the CSS console, click <strong>Tools &gt; Address Generator</strong>.</li>
+<li>When you enter the <strong>Address Generator</strong> menu, enter the values as follows. And click the <strong>Generate</strong> button.</li>
+</ol>
+<ul>
+<li>URL Type : Push and playback URLs</li>
+<li>Stream Name : live</li>
+<li>ranscoding Template : testABR
+<a href="#R-image-258fa5c78b5759f8916f354b3b74b3d1" class="lightbox-link"><img src="/images/css-basic/6-1-test-addr-gen.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-258fa5c78b5759f8916f354b3b74b3d1"><img src="/images/css-basic/6-1-test-addr-gen.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></li>
+</ul>
+<ol start="3">
+<li>Confirm Push address
+<a href="#R-image-646417c9c71e134f95a87f0f832adae4" class="lightbox-link"><img src="/images/css-basic/6-2-test-push-addr.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-646417c9c71e134f95a87f0f832adae4"><img src="/images/css-basic/6-2-test-push-addr.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></li>
+</ol>
+<ul>
+<li>RTMP, WebRTC, SRT, and RTMP over SRT are supported as push addresses, and you can see that the OBS input value is output separately.</li>
+<li>In this lesson, we will practice Push through OBS.</li>
+<li>Run OBS and click the Settings button,
+<a href="#R-image-5e13a77463c9c436e8e9a22ca7e587a4" class="lightbox-link"><img src="/images/css-basic/6-4-test-push-obs-setting.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5e13a77463c9c436e8e9a22ca7e587a4"><img src="/images/css-basic/6-4-test-push-obs-setting.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></li>
+<li><strong>Stream</strong> Enter the values in the menu as follows: Here, for the OBS server and OBS Stream key information, copy and paste the OBS server and stream key values in step 3 above and then click the Save (OK) button to save the configuration.
+<a href="#R-image-c1f1e25ada300c994e7cb1c2545281a9" class="lightbox-link"><img src="/images/css-basic/6-4-test-push-obs-config.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c1f1e25ada300c994e7cb1c2545281a9"><img src="/images/css-basic/6-4-test-push-obs-config.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></li>
+<li>And when you click the <strong>Start Streaming</strong> button, the camera&rsquo;s feed will be obtained as a CSS Push URL through OBS.</li>
+</ul>
+<blockquote>
+<p>NOTE: Information on environment settings for OBS download and CSS can be found <a href="https://www.tencentcloud.com/document/product/267/31569?lang=en" target="_blank">here</a>.</p>
+</blockquote>
+<ol start="4">
+<li>
+<p>Confirm Playback address and copy HLS URL.
+<a href="#R-image-05945671f49879721c62236ca9a728e7" class="lightbox-link"><img src="/images/css-basic/6-3-test-play-addr.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-05945671f49879721c62236ca9a728e7"><img src="/images/css-basic/6-3-test-play-addr.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>Visit the <a href="https://tcplayer.vcube.tencent.com/intl/index.html" target="_blank">Tencent video player demo</a> site and paste it into <strong>Playback URL</strong>. And after clicking the <strong>Preview</strong> button, check whether the HLS Stream plays normally.
+<a href="#R-image-0b8473229927c24bbc4974b78e9b215d" class="lightbox-link"><img src="/images/css-basic/6-5-test-playback-hls.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0b8473229927c24bbc4974b78e9b215d"><img src="/images/css-basic/6-5-test-playback-hls.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>Copy the WebRTC URL from Playback address number 4. Visit the <a href="https://tcplayer.vcube.tencent.com/intl/index.html" target="_blank">Tencent video player demo</a> site and paste it into <strong>Playback URL</strong>. And after clicking the <strong>Preview</strong> button, check whether the WebRTC Stream is played normally.
+<a href="#R-image-cd2895898865bd6e42be6fc8d029d61d" class="lightbox-link"><img src="/images/css-basic/6-5-test-playback-webrtc.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cd2895898865bd6e42be6fc8d029d61d"><img src="/images/css-basic/6-5-test-playback-webrtc.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+<blockquote>
+<p>NOTE: The Playback Domain of CSS (Cloud Streaming Services) functions as a CDN. If you want to make a secure connection using the HTTPS protocol, (a) <a href="https://www.tencentcloud.com/document/product/267/31066?lang=en" target="_blank">enable HTTPS</a> in the CSS Playback domain, and (b) You must <a href="https://www.tencentcloud.com/document/product/267/41317?lang=en" target="_blank">obtain a certificate and upload it to CSS</a>. Please click the links for more details.</p>
+</blockquote>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<img
+  class="logo"
+  src="/images/logo_basic.png"
+  alt="TencneCloud Logo" />
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">Search</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+          <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+        </div>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1709781579" defer></script>
+        <script src="/js/lunr/lunr.min.js?1709781579" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1709781579" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1709781579" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1709781579" defer></script>
+        <script src="/js/search.js?1709781579" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/css_basics/index.html" class="parent "><input type="checkbox" id="R-section-e017e3c43d670ebf9956e6655a25033a" aria-controls="R-subsections-e017e3c43d670ebf9956e6655a25033a" checked><label for="R-section-e017e3c43d670ebf9956e6655a25033a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Default Basics</span></label><a class="padding" href="/css_basics/index.html">Default Basics<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-e017e3c43d670ebf9956e6655a25033a" class="morespace collapsible-menu">
+          <li data-nav-id="/css_basics/basics-sub/index.html" class="active"><a class="padding" href="/css_basics/basics-sub/index.html">CSS Basic Configuration<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch showLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                      <option id="R-ko" value="/ko/css_basics/basics-sub/index.html" lang="ko">Korean</option>
+                      <option id="R-en" value="/css_basics/basics-sub/index.html" lang="en" selected>English</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-blue" value="blue" selected>Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1709781579" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1709781579" defer></script>
+    <script src="/js/theme.js?1709781579" defer></script>
+  </body>
+</html>

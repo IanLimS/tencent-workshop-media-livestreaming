@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="Tencent Cloud Workshop">
+    <meta name="author" content="Ian Lim">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CSS Basic Configuration :: 한글">
+    <meta name="twitter:description" content="Tencent Cloud Workshop">
+    <meta property="og:title" content="CSS Basic Configuration :: 한글">
+    <meta property="og:description" content="Tencent Cloud Workshop">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/ko/css_basics/basics-sub/index.html">
+    <meta property="og:site_name" content="한글">
+    <title>CSS Basic Configuration :: 한글</title>
+    <link href="/ko/css_basics/basics-sub/index.html" rel="alternate" hreflang="x-default">
+    <link href="/ko/css_basics/basics-sub/index.html" rel="alternate" hreflang="ko">
+    <link href="/css_basics/basics-sub/index.html" rel="alternate" hreflang="en">
+    <link href="/ko/css_basics/basics-sub/index.xml" rel="alternate" type="application/rss+xml" title="CSS Basic Configuration :: 한글">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1709781579" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1709781579" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1709781579" rel="stylesheet">
+    <link href="/css/auto-complete.css?1709781579" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1709781579" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1709781579" rel="stylesheet">
+    <link href="/css/fonts.css?1709781579" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1709781579" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1709781579" rel="stylesheet">
+    <link href="/css/theme-blue.css?1709781579" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-learn.css?1709781579" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1709781579" rel="stylesheet">
+    <link href="/css/print.css?1709781579" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1709781579" rel="stylesheet">
+    <script src="/js/url.js?1709781579"></script>
+    <script src="/js/variant.js?1709781579"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/ko/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'blue' ] );
+      // translations
+      window.T_Copy_to_clipboard = `클립보드에 복사`;
+      window.T_Copied_to_clipboard = `클립보드에 복사됐습니다!`;
+      window.T_Copy_link_to_clipboard = `링크를 클립보드에 복사`;
+      window.T_Link_copied_to_clipboard = `클립보드에 링크가 복사됐습니다!`;
+      window.T_Reset_view = `보기 재설정`;
+      window.T_View_reset = `보기 초기화!`;
+      window.T_No_results_found = `"{0}"에 대한 결과가 없습니다.`;
+      window.T_N_results_found = `"{0}"에 대해 {1}개의 결과가 검색되었습니다.`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/ko/css_basics/basics-sub/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="메뉴 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="목차 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/index.html"><span itemprop="name">기본 홈</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/css_basics/index.html"><span itemprop="name">기본 베이직 메뉴</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">CSS Basic Configuration</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/css_basics/index.html" title="기본 베이직 메뉴 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><span class="topbar-control"><i class="fa-fw fas fa-chevron-right"></i></span>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="외부 링크"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="css-basic-configuration">CSS Basic Configuration</h1>
+
+<h1 id="workshop-css">workshop-css</h1>
+<p>Workshop for Tencent Cloud Cloud Streaming Service</p>
+<p>CSS는 쉽고 간편하게 고품질 저지연의 라이브 스트리밍을 안정적으로 제공하기 위한 완전 관리형 서비스입니다. CSS는 라이브 채널을 빠르고 쉽게 생성하고 삭제할 수 있는 템플릿을 구성하여, 라이브 스트리밍 라이프사이클을 빠르고 손쉽게 구성할 수 있도록 도와줍니다.
+템플릿을 사용하여 CSS 채널을 구성한 후 라이브 피드를 클라우드에 입수하면, 재생 URL을 얻을 수 있습니다. 즉, CSS가 트랜스코딩, 패키징을 관리하고 CSS CDN을 통해 시청자에게 스트리밍 비디오를 안정적으로 제공한다는 건데요.</p>
+<p><a href="#R-image-494985df31f663fc92c49cfd17636bc9" class="lightbox-link"><img src="/images/css-basic/css_architecture.png" alt="CSS 아키텍처" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-494985df31f663fc92c49cfd17636bc9"><img src="/images/css-basic/css_architecture.png" alt="CSS 아키텍처" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+이번 lab 에서는, Cloud Streaming Service 를 이용해 live feed 를 클라우드로 입수하고, 디바이스에서 플레이 할 수 있는 엔드 투 앤드 파이프라인을 구성하는 방법을 다룰 예정 입니다.</p>
+<h1 id="1-pre-requisites">1. Pre-requisites</h1>
+<p>텐센트 클라우드의 Cloud Streaming Service 는 고객의 도메인을 통해 서비스 되는 형태 입니다. 즉, 텐센트 클라우드의 Cloud Streaming Service 를 이용하기 위해서는, Push 및 Play Domain 등록 과정에서 도메인 소유자라는 소유권을 알리고 등록하는 절차가 필요한데요. 한번 등록되면 상위 도메인이 동일한 도메인을 추가하는 경우 다시 확인할 필요가 없습니다.</p>
+<h1 id="2-create-a-push-domain">2. Create a push domain</h1>
+<ol>
+<li>
+<p>CSS 콘솔 메인 화면 왼쪽 탭에서 <em>Domain</em> 탭을 클릭합니다. 그러면 현재 구성되어 있는 CSS 도메인들을 확인할 수 있습니다.</p>
+</li>
+<li>
+<p>메인 메뉴 위쪽에 위치한 <em>Add Domain</em> 버튼을 클릭 합니다.
+<a href="#R-image-56e338c54d23a295f4af81f0a4cc791b" class="lightbox-link"><img src="/images/css-basic/3-css-console-new-domain.png" alt="도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-56e338c54d23a295f4af81f0a4cc791b"><img src="/images/css-basic/3-css-console-new-domain.png" alt="도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>도메인 추가 팝업이 뜨면, 아래와 같이 Push Domain을 위한 값을 입력해 줍니다. 입력이 완료되면 <em>Add Domain</em> 버튼을 클릭해서 다음으로 이동합니다.
+Type : Push domain
+Domain Name : push 용으로 사용할 도메인 이름
+<a href="#R-image-ea9b1af9dac43737d9f43f127892d2eb" class="lightbox-link"><img src="/images/css-basic/4-1-css-push-domain.png" alt="push도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ea9b1af9dac43737d9f43f127892d2eb"><img src="/images/css-basic/4-1-css-push-domain.png" alt="push도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>CNAME Configuration 메뉴를 참고해서, DNS 서비스에서 host 에 대한 CNAME 값을 추가해 줍니다.
+<em>CNAME Configuration 메뉴</em>
+<a href="#R-image-6b4498630ff44ad8e332436a8aaacbfa" class="lightbox-link"><img src="/images/css-basic/4-1-css-push-domain-cname-configuration.png" alt="CNAME Configuration 메뉴" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6b4498630ff44ad8e332436a8aaacbfa"><img src="/images/css-basic/4-1-css-push-domain-cname-configuration.png" alt="CNAME Configuration 메뉴" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+<p><em>DNS 에 CNAME 레코드 추가</em>
+<a href="#R-image-3f3f0e95e08fcec1ff1b662b2aeecc31" class="lightbox-link"><img src="/images/css-basic/4-1-css-push-domain-cname.png" alt="CNAME 레코드 추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f3f0e95e08fcec1ff1b662b2aeecc31"><img src="/images/css-basic/4-1-css-push-domain-cname.png" alt="CNAME 레코드 추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><em>CNAME 레코드 검증</em>
+<a href="#R-image-bc587a641f976a171e56fbb2c8846f93" class="lightbox-link"><img src="/images/css-basic/4-1-css-push-domain-cname-verify.png" alt="레코드 검증" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-bc587a641f976a171e56fbb2c8846f93"><img src="/images/css-basic/4-1-css-push-domain-cname-verify.png" alt="레코드 검증" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<h1 id="3-create-a-play-domain">3. Create a play domain</h1>
+<ol>
+<li>
+<p>CSS 콘솔 메인 화면 왼쪽 탭에서 <em>Domain</em> 탭을 클릭합니다. 그러면 현재 구성되어 있는 CSS 도메인들을 확인할 수 있습니다.</p>
+</li>
+<li>
+<p>메인 메뉴 위쪽에 위치한 <em>Add Domain</em> 버튼을 클릭 합니다.
+<a href="#R-image-80aa4e3ea613f8ec57973d5c096c67df" class="lightbox-link"><img src="/images/css-basic/3-css-console-new-domain.png" alt="도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-80aa4e3ea613f8ec57973d5c096c67df"><img src="/images/css-basic/3-css-console-new-domain.png" alt="도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>도메인 추가 팝업이 뜨면, 아래와 같이 Type 을 Playback Domain 으로 변경하고, 아래와 같은 값을 입력해 줍니다. 입력이 완료되면 <em>Add Domain</em> 버튼을 클릭해서 다음으로 이동합니다.
+Type : Play domain
+Acceleralation region : Outside Chinese mainland
+Domain Name : playback 용으로 사용할 도메인 이름
+<a href="#R-image-98642e2c49f749c6d8a4953ecb08d4d6" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain.png" alt="play도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-98642e2c49f749c6d8a4953ecb08d4d6"><img src="/images/css-basic/4-2-css-play-domain.png" alt="play도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>CNAME Configuration 메뉴를 참고해서, DNS 서비스에서 host 에 대한 CNAME 값을 추가해 줍니다.
+<strong>CNAME Configuration 메뉴</strong>
+<a href="#R-image-463b80e5296eacee85b0369ea993662d" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname-configuration.png" alt="CNAME Configuration 메뉴" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-463b80e5296eacee85b0369ea993662d"><img src="/images/css-basic/4-2-css-play-domain-cname-configuration.png" alt="CNAME Configuration 메뉴" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<strong>DNS 에 CNAME 레코드 추가</strong>
+<a href="#R-image-54b51533f63f8d428d7a9683df095174" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname.png" alt="도메인추가" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-54b51533f63f8d428d7a9683df095174"><img src="/images/css-basic/4-2-css-play-domain-cname.png" alt="도메인추가" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<strong>CNAME 레코드 검증</strong>
+<a href="#R-image-eae63e67ee29f61f55cb460b261780d2" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname-verify.png" alt="레코드 검증" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-eae63e67ee29f61f55cb460b261780d2"><img src="/images/css-basic/4-2-css-play-domain-cname-verify.png" alt="레코드 검증" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+<h1 id="4-create-a-adaptive-bitrate-domain">4. Create a Adaptive Bitrate Domain</h1>
+<p>Tencent Cloud 의 Cloud Streaming Service 를 이용하면, 트랜스코딩 타입 해상도, 비트레이트를 별도 지정한 Adaptive Bitrate 구성을 템플릿으로 구성하고 Cloud Streaming Service 의 HLS Stream 및 WebRTC Streaming 에서 사용이 가능합니다.</p>
+<blockquote>
+<p><strong>NOTE</strong> : Tencent Cloud 의 Cloud Streaming Service 에서 HLS, WebRTC Streaming 외 HTTP-FLV, RTMP 스트리밍을 통한 단일 비트레이트 포맷을 사용하는 경우, Adaptive Bitrate 가 아닌 Live Transcoding 기능 구성을 통해 스트림의 상세 스펙을 구성을 지원합니다.</p>
+</blockquote>
+<ol>
+<li>
+<p>CSS 콘솔 메인 화면 왼쪽 탭에서 <em>Feature Configuration -&gt; Adaptive Bitrate</em> 탭을 클릭합니다.</p>
+</li>
+<li>
+<p>Adaptive Bitrate 콘솔 상단에 <em>Create Template</em> 을 버튼을 클릭 합니다.</p>
+</li>
+<li>
+<p>CSS 에서는 Template 을 구성해서 Bitrate, 해상도 등을 구성하고 ABR 래더를 생성할 수 있습니다.</p>
+<p>3-1. Template Name 은 <em>testABR</em> 을 입력합니다. 이는 임의의 값을 입력 가능 합니다.
+<a href="#R-image-edbf0a6eeef34d8c110ce7b835fe8e70" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config.png" alt="abr-config" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-edbf0a6eeef34d8c110ce7b835fe8e70"><img src="/images/css-basic/5-1-abr-config.png" alt="abr-config" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>3-2. <em>Streams</em> 메뉴에는 ABR 래더를 구성하고 레더별 트랜스코딩 방법, 해상도, 비트레이트 등을 결정 할 수 있습니다.
+이번 랩에서는 Standard Transcoding 을 활용한 기본 구성으로 진행할 예정 입니다.
+다음과 같이 3개의 Stream 을 Adaptive Bitrate 으로 구성하고,
+각각의 Stream Name 은 HD, SD, Smooth 로 구성합니다.
+Stream Quality 은 각각 HD, SD, Smooth 을 선택합니다. 그러면 자동으로 resolution, bitrate 값들이 지정됩니다.
+Note: 이번 랩에서는 기본값을 선택하지만, bitrate, resolution, transcoding type 등 유연하게 지정 가능합니다.
+<a href="#R-image-99212b11c72cd812130c0703e1579a37" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-hd.png" alt="abr-config-hd" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-99212b11c72cd812130c0703e1579a37"><img src="/images/css-basic/5-1-abr-config-hd.png" alt="abr-config-hd" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-2990f42aa982208954d99d44ffb3d938" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-sd.png" alt="abr-config-sd" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2990f42aa982208954d99d44ffb3d938"><img src="/images/css-basic/5-1-abr-config-sd.png" alt="abr-config-sd" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-91585ff41c58f969edead007fcc15d56" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-smooth.png" alt="abr-config-smooth" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-91585ff41c58f969edead007fcc15d56"><img src="/images/css-basic/5-1-abr-config-smooth.png" alt="abr-config-smooth" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>3-3. Stream 구성까지 완료한 이후 <em>Save</em> 버튼을 클릭 합니다. 그러면 구성한 Adaptive Bitrate 템플릿을 Domain 과 Binding 하라는 팝업이 뜨는데요. 아래와 같이, 3번에서 구성한 Playback Domain 을 선택합니다.
+<a href="#R-image-e627b1dc8fd027670cd0f34eadc4aeec" class="lightbox-link"><img src="/images/css-basic/5-2-bind-abr-config-menu.png" alt="bind-abr-config-menu" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e627b1dc8fd027670cd0f34eadc4aeec"><img src="/images/css-basic/5-2-bind-abr-config-menu.png" alt="bind-abr-config-menu" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-135ee7d130534cd7442d688496e0680b" class="lightbox-link"><img src="/images/css-basic/5-2-bind-abr-config-to-play.png" alt="bind-abr-config-to-play" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-135ee7d130534cd7442d688496e0680b"><img src="/images/css-basic/5-2-bind-abr-config-to-play.png" alt="bind-abr-config-to-play" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+<h1 id="5-test-and-verify">5. Test and verify</h1>
+<p>자, 이제까지 Push, Playback Domain 을 구성하고, Adaptive Bitrate 을 구성 및 Playback Domain 에 바인딩 했습니다.
+실제 테스트를 해볼텐데요.</p>
+<ol>
+<li>CSS 콘솔 좌측 메뉴에서 <strong>Tools &gt; Address Generator</strong> 를 클릭합니다.</li>
+<li><strong>Address Generator</strong> 메뉴로 들어가면, 다음과 같이 값들을 입력해 줍니다. 그리고 <strong>Generate</strong> 버튼을 클릭합니다.</li>
+</ol>
+<ul>
+<li>URL Type : Push and playback URLs</li>
+<li>Stream Name : live</li>
+<li>ranscoding Template : testABR
+<a href="#R-image-d62eb24a4d51493d37494a360e9057dc" class="lightbox-link"><img src="/images/css-basic/6-1-test-addr-gen.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d62eb24a4d51493d37494a360e9057dc"><img src="/images/css-basic/6-1-test-addr-gen.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-8dc9ac71ef810bbd17aff2c96f9231b0" class="lightbox-link"><img src="/images/css-basic/6-1-test-addr-gen.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8dc9ac71ef810bbd17aff2c96f9231b0"><img src="/images/css-basic/6-1-test-addr-gen.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></li>
+</ul>
+<ol start="3">
+<li>Push address 를 확인합니다.
+<a href="#R-image-dd0bf316dad5c4cfb1806d7f23a19f7e" class="lightbox-link"><img src="/images/css-basic/6-2-test-push-addr.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dd0bf316dad5c4cfb1806d7f23a19f7e"><img src="/images/css-basic/6-2-test-push-addr.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></li>
+</ol>
+<ul>
+<li>Push address 로는 RTMP, WebRTC, SRT, RTMP over SRT 를 지원하고, OBS 입력 값은 별도로 출력되는 것을 확인할 수 있습니다.</li>
+<li>이번 시간에는 OBS 를 통한 Push 를 실습해 볼 예정입니다.</li>
+<li>OBS 를 실행시켜서 Settings 버튼을 클릭하고,
+<a href="#R-image-9434b4ef6b428cde06affc88dd240cf7" class="lightbox-link"><img src="/images/css-basic/6-4-test-push-obs-setting.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9434b4ef6b428cde06affc88dd240cf7"><img src="/images/css-basic/6-4-test-push-obs-setting.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></li>
+<li><strong>Stream</strong> 메뉴 내에 있는 값을 다음과 같이 입력합니다. 여기서 OBS server 및 OBS Stream key 정보는, 위 3번의 OBS server, stream key 값을 복사해서 붙여 넣은 후 저장 (OK) 버튼을 클릭해서 구성을 저장합니다.
+<a href="#R-image-ffa4ae775dd1c9f8dfa6e5dc4bfa8630" class="lightbox-link"><img src="/images/css-basic/6-4-test-push-obs-config.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ffa4ae775dd1c9f8dfa6e5dc4bfa8630"><img src="/images/css-basic/6-4-test-push-obs-config.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></li>
+<li>그리고 <strong>Start Streaming</strong> 버튼을 클릭하면, 카메라의 피드가 OBS 를 통해 CSS Push URL 로 입수되게 됩니다.</li>
+</ul>
+<blockquote>
+<p>NOTE : OBS 다운로드 및 CSS 를 위한 환경 세팅 정보는 <a href="https://www.tencentcloud.com/document/product/267/31569?lang=en" target="_blank">여기</a> 를 통해 확인할 수 있습니다.</p>
+</blockquote>
+<ol start="4">
+<li>
+<p>Playback address 를 확인하고 HLS URL 을 copy 합니다.
+<a href="#R-image-270d9d398a9c7d42604bdfee1c76bff0" class="lightbox-link"><img src="/images/css-basic/6-3-test-play-addr.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-270d9d398a9c7d42604bdfee1c76bff0"><img src="/images/css-basic/6-3-test-play-addr.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p><a href="https://tcplayer.vcube.tencent.com/intl/index.html" target="_blank">Tencent video player demo</a> 사이트를 방문해서 <strong>Playback URL</strong> 에 붙여넣기 합니다. 그리고 <strong>Preview</strong> 버튼을 클릭 한 후, 정상적으로 HLS Stream 이 재생 되는지 확인 합니다.
+<a href="#R-image-a89c9005ccdf31b3fd687d20394d597d" class="lightbox-link"><img src="/images/css-basic/6-5-test-playback-hls.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a89c9005ccdf31b3fd687d20394d597d"><img src="/images/css-basic/6-5-test-playback-hls.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>4번의 Playback address 에서 WebRTC URL 을 copy 합니다. <a href="https://tcplayer.vcube.tencent.com/intl/index.html" target="_blank">Tencent video player demo</a> 사이트를 방문해서 <strong>Playback URL</strong> 에 붙여넣기 합니다. 그리고 <strong>Preview</strong> 버튼을 클릭 한 후, 정상적으로 WebRTC Stream 이 재생 되는지 확인 합니다.
+<a href="#R-image-916ceddc1be1621564b768cbff9da8c2" class="lightbox-link"><img src="/images/css-basic/6-5-test-playback-webrtc.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-916ceddc1be1621564b768cbff9da8c2"><img src="/images/css-basic/6-5-test-playback-webrtc.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+<blockquote>
+<p>NOTE : CSS (Cloud Streaming Services) 의 Playback Domain 은 CDN 의 역할을 합니다. 만약 HTTPS 프로토콜을 이용해 안전한 연결을 하기 위해서는, (a)  CSS Playback domain 에서 <a href="https://www.tencentcloud.com/document/product/267/31066?lang=en" target="_blank">HTTPS 를 enable</a> 하고 (b) <a href="https://www.tencentcloud.com/document/product/267/41317?lang=en" target="_blank">인증서를 발급받아 CSS 에 업로드</a> 해야 합니다. 자세한 내용은 링크들을 클릭해서 확인해 주세요.</p>
+</blockquote>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<img
+  class="logo"
+  src="/images/logo_basic.png"
+  alt="TencneCloud Logo" />
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="검색 (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">검색</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="검색어를 입력하세요">
+          <button class="search-clear" type="button" data-search-clear="" title="검색 지우기"><i class="fas fa-times" title="검색 지우기"></i></button>
+        </div>
+        <script>
+          var contentLangs=['ko'];
+        </script>
+        <script src="/js/auto-complete.js?1709781579" defer></script>
+        <script src="/js/lunr/lunr.min.js?1709781579" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1709781579" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1709781579" defer></script>
+        <script src="/js/lunr/lunr.ko.min.js?1709781579" defer></script>
+        <script src="/js/search.js?1709781579" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/ko/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/ko/css_basics/index.html" class="parent "><input type="checkbox" id="R-section-9444fdc1f02a0f375972b0c3c82d73ee" aria-controls="R-subsections-9444fdc1f02a0f375972b0c3c82d73ee" checked><label for="R-section-9444fdc1f02a0f375972b0c3c82d73ee"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 기본 베이직 메뉴</span></label><a class="padding" href="/ko/css_basics/index.html">기본 베이직 메뉴<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-9444fdc1f02a0f375972b0c3c82d73ee" class="morespace collapsible-menu">
+          <li data-nav-id="/ko/css_basics/basics-sub/index.html" class="active"><a class="padding" href="/ko/css_basics/basics-sub/index.html">CSS Basic Configuration<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch showLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">언어</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                      <option id="R-ko" value="/ko/css_basics/basics-sub/index.html" lang="ko" selected>Korean</option>
+                      <option id="R-en" value="/css_basics/basics-sub/index.html" lang="en">English</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">주제</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-blue" value="blue" selected>Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">방문 기록 삭제</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1709781579" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1709781579" defer></script>
+    <script src="/js/theme.js?1709781579" defer></script>
+  </body>
+</html>

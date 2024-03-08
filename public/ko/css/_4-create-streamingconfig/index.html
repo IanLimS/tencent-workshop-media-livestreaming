@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="Tencent Cloud Workshop">
+    <meta name="author" content="Ian Lim">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Create a Adaptive Bitrate Config :: 한글">
+    <meta name="twitter:description" content="Tencent Cloud 의 Cloud Streaming Service 를 이용하면, 트랜스코딩 타입 해상도, 비트레이트를 별도 지정한 Adaptive Bitrate 구성을 템플릿으로 구성하고 Cloud Streaming Service 의 HLS Stream 및 WebRTC Streaming 에서 사용이 가능합니다.
+NOTE : Tencent Cloud 의 Cloud Streaming Service 에서 HLS, WebRTC Streaming 외 HTTP-FLV, RTMP 스트리밍을 통한 단일 비트레이트 포맷을 사용하는 경우, Adaptive Bitrate 가 아닌 Live Transcoding 기능 구성을 통해 스트림의 상세 스펙을 구성을 지원합니다.
+CSS 콘솔 메인 화면 왼쪽 탭에서 Feature Configuration -&gt; Adaptive Bitrate 탭을 클릭합니다.">
+    <meta property="og:title" content="Create a Adaptive Bitrate Config :: 한글">
+    <meta property="og:description" content="Tencent Cloud 의 Cloud Streaming Service 를 이용하면, 트랜스코딩 타입 해상도, 비트레이트를 별도 지정한 Adaptive Bitrate 구성을 템플릿으로 구성하고 Cloud Streaming Service 의 HLS Stream 및 WebRTC Streaming 에서 사용이 가능합니다.
+NOTE : Tencent Cloud 의 Cloud Streaming Service 에서 HLS, WebRTC Streaming 외 HTTP-FLV, RTMP 스트리밍을 통한 단일 비트레이트 포맷을 사용하는 경우, Adaptive Bitrate 가 아닌 Live Transcoding 기능 구성을 통해 스트림의 상세 스펙을 구성을 지원합니다.
+CSS 콘솔 메인 화면 왼쪽 탭에서 Feature Configuration -&gt; Adaptive Bitrate 탭을 클릭합니다.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/ko/css/_4-create-streamingconfig/index.html">
+    <meta property="article:section" content="Cloud Streaming Service :: 한글">
+    <meta property="og:site_name" content="한글">
+    <title>Create a Adaptive Bitrate Config :: 한글</title>
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1709873570" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1709873570" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1709873570" rel="stylesheet">
+    <link href="/css/auto-complete.css?1709873570" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1709873570" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1709873570" rel="stylesheet">
+    <link href="/css/fonts.css?1709873570" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1709873570" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1709873570" rel="stylesheet">
+    <link href="/css/theme-blue.css?1709873571" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-learn.css?1709873571" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1709873571" rel="stylesheet">
+    <link href="/css/print.css?1709873571" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1709873571" rel="stylesheet">
+    <script src="/js/url.js?1709873571"></script>
+    <script src="/js/variant.js?1709873571"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/ko/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'blue' ] );
+      // translations
+      window.T_Copy_to_clipboard = `클립보드에 복사`;
+      window.T_Copied_to_clipboard = `클립보드에 복사됐습니다!`;
+      window.T_Copy_link_to_clipboard = `링크를 클립보드에 복사`;
+      window.T_Link_copied_to_clipboard = `클립보드에 링크가 복사됐습니다!`;
+      window.T_Reset_view = `보기 재설정`;
+      window.T_View_reset = `보기 초기화!`;
+      window.T_No_results_found = `"{0}"에 대한 결과가 없습니다.`;
+      window.T_N_results_found = `"{0}"에 대해 {1}개의 결과가 검색되었습니다.`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/ko/css/_4-create-streamingconfig/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="메뉴 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="목차 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/index.html"><span itemprop="name">Live Streaming on Tencent Cloud</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/css/index.html"><span itemprop="name">Cloud Streaming Service</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Create a Adaptive Bitrate Config</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/css/_3-create-play/index.html" title="Create a play domain (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/css/_5-test-verify/index.html" title="Test &amp; Verify (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="외부 링크"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="create-a-adaptive-bitrate-config">Create a Adaptive Bitrate Config</h1>
+
+<p>Tencent Cloud 의 Cloud Streaming Service 를 이용하면, 트랜스코딩 타입 해상도, 비트레이트를 별도 지정한 Adaptive Bitrate 구성을 템플릿으로 구성하고 Cloud Streaming Service 의 HLS Stream 및 WebRTC Streaming 에서 사용이 가능합니다.</p>
+<blockquote>
+<p><strong>NOTE</strong> : Tencent Cloud 의 Cloud Streaming Service 에서 HLS, WebRTC Streaming 외 HTTP-FLV, RTMP 스트리밍을 통한 단일 비트레이트 포맷을 사용하는 경우, Adaptive Bitrate 가 아닌 Live Transcoding 기능 구성을 통해 스트림의 상세 스펙을 구성을 지원합니다.</p>
+</blockquote>
+<ol>
+<li>
+<p>CSS 콘솔 메인 화면 왼쪽 탭에서 <em>Feature Configuration -&gt; Adaptive Bitrate</em> 탭을 클릭합니다.</p>
+</li>
+<li>
+<p>Adaptive Bitrate 콘솔 상단에 <em>Create Template</em> 을 버튼을 클릭 합니다.</p>
+</li>
+<li>
+<p>CSS 에서는 Template 을 구성해서 Bitrate, 해상도 등을 구성하고 ABR 래더를 생성할 수 있습니다.</p>
+<p>3-1. Template Name 은 <em>testABR</em> 을 입력합니다. 이는 임의의 값을 입력 가능 합니다.
+<a href="#R-image-e7ef28620f2b3d29f55aabbfa5e38072" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config.png" alt="abr-config" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e7ef28620f2b3d29f55aabbfa5e38072"><img src="/images/css-basic/5-1-abr-config.png" alt="abr-config" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>3-2. <em>Streams</em> 메뉴에는 ABR 래더를 구성하고 레더별 트랜스코딩 방법, 해상도, 비트레이트 등을 결정 할 수 있습니다.
+이번 랩에서는 Standard Transcoding 을 활용한 기본 구성으로 진행할 예정 입니다.
+다음과 같이 3개의 Stream 을 Adaptive Bitrate 으로 구성하고,
+각각의 Stream Name 은 HD, SD, Smooth 로 구성합니다.
+Stream Quality 은 각각 HD, SD, Smooth 을 선택합니다. 그러면 자동으로 resolution, bitrate 값들이 지정됩니다.
+Note: 이번 랩에서는 기본값을 선택하지만, bitrate, resolution, transcoding type 등 유연하게 지정 가능합니다.
+<a href="#R-image-10f8482cd86e1f44d500021fd17b7a83" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-hd.png" alt="abr-config-hd" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-10f8482cd86e1f44d500021fd17b7a83"><img src="/images/css-basic/5-1-abr-config-hd.png" alt="abr-config-hd" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-5f0e0c3f3dbc72ea4892a8358cf41278" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-sd.png" alt="abr-config-sd" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5f0e0c3f3dbc72ea4892a8358cf41278"><img src="/images/css-basic/5-1-abr-config-sd.png" alt="abr-config-sd" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-f2592dc4944b90aa11919c1942576f3c" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-smooth.png" alt="abr-config-smooth" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f2592dc4944b90aa11919c1942576f3c"><img src="/images/css-basic/5-1-abr-config-smooth.png" alt="abr-config-smooth" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p>3-3. Stream 구성까지 완료한 이후 <em>Save</em> 버튼을 클릭 합니다. 그러면 구성한 Adaptive Bitrate 템플릿을 Domain 과 Binding 하라는 팝업이 뜨는데요. 아래와 같이, 3번에서 구성한 Playback Domain 을 선택합니다.
+<a href="#R-image-3cdd8965570538770a241ffdb1d488a3" class="lightbox-link"><img src="/images/css-basic/5-2-bind-abr-config-menu.png" alt="bind-abr-config-menu" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3cdd8965570538770a241ffdb1d488a3"><img src="/images/css-basic/5-2-bind-abr-config-menu.png" alt="bind-abr-config-menu" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
+<a href="#R-image-0b0e28677c507342a6a080dda556801d" class="lightbox-link"><img src="/images/css-basic/5-2-bind-abr-config-to-play.png" alt="bind-abr-config-to-play" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0b0e28677c507342a6a080dda556801d"><img src="/images/css-basic/5-2-bind-abr-config-to-play.png" alt="bind-abr-config-to-play" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<img
+  class="logo"
+  src="/images/logo_basic.png"
+  alt="TencneCloud Logo" />
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="검색 (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">검색</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="검색어를 입력하세요">
+          <button class="search-clear" type="button" data-search-clear="" title="검색 지우기"><i class="fas fa-times" title="검색 지우기"></i></button>
+        </div>
+        <script>
+          var contentLangs=['ko'];
+        </script>
+        <script src="/js/auto-complete.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.min.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1709873571" defer></script>
+        <script src="/js/lunr/lunr.ko.min.js?1709873571" defer></script>
+        <script src="/js/search.js?1709873571" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/ko/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/ko/css/index.html" class="parent "><input type="checkbox" id="R-section-8941c520609238295a01ef684b433ec8" aria-controls="R-subsections-8941c520609238295a01ef684b433ec8" checked><label for="R-section-8941c520609238295a01ef684b433ec8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 Cloud Streaming Service</span></label><a class="padding" href="/ko/css/index.html">Cloud Streaming Service<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-8941c520609238295a01ef684b433ec8" class="morespace collapsible-menu">
+          <li data-nav-id="/ko/css/_0-what-is-css/index.html" class=""><a class="padding" href="/ko/css/_0-what-is-css/index.html">CSS Basics<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_1-pre-requisites/index.html" class=""><a class="padding" href="/ko/css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_2-create-push/index.html" class=""><a class="padding" href="/ko/css/_2-create-push/index.html">Create a push domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_3-create-play/index.html" class=""><a class="padding" href="/ko/css/_3-create-play/index.html">Create a play domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_4-create-streamingconfig/index.html" class="active"><a class="padding" href="/ko/css/_4-create-streamingconfig/index.html">Create a Adaptive Bitrate Config<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_5-test-verify/index.html" class=""><a class="padding" href="/ko/css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/ko/css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch showLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">언어</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                      <option id="R-ko" value="/ko/css/_4-create-streamingconfig/index.html" lang="ko" selected>Korean</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">주제</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-blue" value="blue" selected>Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">방문 기록 삭제</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1709873571" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1709873571" defer></script>
+    <script src="/js/theme.js?1709873571" defer></script>
+  </body>
+</html>

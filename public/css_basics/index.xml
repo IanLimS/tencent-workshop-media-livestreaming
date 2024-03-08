@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Default Basics on English</title>
+    <link>/css_basics/index.html</link>
+    <description>Recent content in Default Basics on English</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="/css_basics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Basic Configuration</title>
+      <link>/css_basics/basics-sub/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/css_basics/basics-sub/index.html</guid>
+      <description>workshop-css Workshop for Tencent Cloud Cloud Streaming Service
+CSS is a fully managed service to provide reliable, high-quality, low-latency live streaming easily and conveniently. CSS helps you configure your live streaming lifecycle quickly and easily by constructing templates that allow you to quickly and easily create and delete live channels. After configuring your CSS channel using a template and getting your live feed into the cloud, you can get the playback URL.</description>
+    </item>
+  </channel>
+</rss>
