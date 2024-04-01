@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Live Streaming for large events or OTT on 한글</title>
+    <link>/ko/stream_css/index.html</link>
+    <description>Recent content in Live Streaming for large events or OTT on 한글</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <atom:link href="/ko/stream_css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stream Series with CSS</title>
+      <link>/ko/stream_css/_0-what-is-stream-series/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/stream_css/_0-what-is-stream-series/index.html</guid>
+      <description>OTT 의 24x7 채널 및 대규로 스포츠 스트리밍 이벤트와 같은 미션 크리티컬한 비디오 워크로드를 운용하는 고객들은 다음과 같은 요구사항이 충족되는 것을 원합니다.
+수백만명의 시청자들 Copyrighted 컨텐츠 보호 HLS/DASH 와 같은 범용 스트리밍 포맷 지원 및 H.265 와 같은 효율적인 코덱 Redundancy 텐센트 클라우드의 미디어 서비스는 대규모 이벤트나 24X7 워크로드에 적합한 솔루션을 제공하고 있는데요. 다음과 같은 서비스들을 이용할 수 있습니다. 한 번 하나씩 살펴보도록 하겠습니다.
+CSS CDN Cloud Streaming Service (CSS) 는 UGC (User Gerenrated Content) 혹은 미디어 엔터테인먼트 등의 사용사례에서 완전관리형으로 사용할 수 있는 서비스입니다.</description>
+    </item>
+    <item>
+      <title>Prerequisites</title>
+      <link>/ko/stream_css/_1-pre-requisites/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/stream_css/_1-pre-requisites/index.html</guid>
+      <description>1. Domain Name 텐센트 클라우드의 Cloud Streaming Service 는 스트림의 채널 별로 고객의 도메인을 통해 서비스 되는 형태 입니다. 본 실습에서는 CSS CDN 을 사용하기 위해 Playback 도메인이 필요 합니다.
+즉, 텐센트 클라우드의 Cloud Streaming Service CDN 을 이용하기 위해서는, Playback Domain 등록 과정에서 도메인 소유자라는 소유권을 알리고 등록하는 절차가 필요합니다. 한번 등록되면 상위 도메인이 동일한 도메인을 추가하는 경우 다시 확인할 필요가 없습니다.
+2. OBS 본 워크샵에서는 OBS Studio 를 사용합니다.</description>
+    </item>
+    <item>
+      <title>Configure StreamPackage</title>
+      <link>/ko/stream_css/_2-streampackage/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/stream_css/_2-streampackage/index.html</guid>
+      <description>대규모 이벤트 및 24x7 을 위한 비디오 워크로드 설계에서, 제일 처음 구성할 것은 StreamPackage 입니다.
+StreamPackage 을 구성하는 방법을 아래와 같이 하나씩 살펴보겠습니다.
+텐센트 클라우드 콘솔 위쪽에서 Product 버튼에 마우스를 가져다 대고, streampackage 를 검색한 후 StreamPackage 콘솔로 이동합니다. StreamPackage 콘솔 위쪽에 위치한 Create Channel 버튼을 클릭합니다.
+Name 에는 str_pkg_workshop 을 입력하고, 다른 값들은 기본값으로 둡니다. Create 버튼을 클릭해서 StreamPackage 구성을 생성 합니다. StreamPackage 구성에서 Endpoints 탭을 클릭하고 Create Endpoint 버튼을 클릭합니다.</description>
+    </item>
+    <item>
+      <title>Configure StreamLive</title>
+      <link>/ko/stream_css/_3-streamlive/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/stream_css/_3-streamlive/index.html</guid>
+      <description>대규모 이벤트 및 24x7 을 위한 비디오 워크로드 설계에서, StreamPackage 를 구성한 이후 StreamLive 를 구성하고 StreamPackage 와 연결할 수 있습니다.
+StreamLive 를 구성하는 방법을 아래와 같이 하나씩 살펴보겠습니다.
+텐센트 클라우드 콘솔 위쪽에서 Product 버튼에 마우스를 가져다 대고, streamlive 를 검색한 후 StreamLive 콘솔로 이동합니다. 1. StreamLive Security Group 생성 왼쪽 메뉴에서 Security Group 탭을 클릭 합니다. Create Security Group 버튼을 클릭하고 다음과 같이 값을 입력한 후 Confirm 버튼을 클릭해서 Security Group 생성을 마무리 합니다.</description>
+    </item>
+    <item>
+      <title>Create CSS CDN</title>
+      <link>/ko/stream_css/_4-css/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/stream_css/_4-css/index.html</guid>
+      <description>대규모 이벤트 및 24x7 을 위한 비디오 워크로드 설계에서, 대규모 시청자 트래픽을 처리하기 위해 CSS 를 CDN 으로 활용할 수 있습니다. StreamPackage 를 구성한 이후 CSS Playback Domain 를 구성하고 StreamPackage 와 연결할 수 있습니다.
+CSS 를 Live Streaming 에 적합한 CDN 으로 구성하는 방법을 아래와 같이 하나씩 살펴보겠습니다.
+CSS Playback Domain 구성 CSS 콘솔 메인 화면 왼쪽 탭에서 Domain 탭을 클릭합니다. 그러면 현재 구성되어 있는 CSS 도메인들을 확인할 수 있습니다.</description>
+    </item>
+    <item>
+      <title>Test &amp; Verify</title>
+      <link>/ko/stream_css/_5-test-verify/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/stream_css/_5-test-verify/index.html</guid>
+      <description>자, 이제까지 비디오를 브로드캐스트 급의 품질과 기능을 제공하기 위해 StreamPackage, StreamLive 구성을 완료했고, CSS Playback Domain 을 Live Streaming 용 CDN 구성으로 완료 했습니다.
+이제 실제 테스트를 해보겠습니다.
+StreamLive 세팅 및 정보 확인 StreamLive 콘솔에 방문합니다.
+콘솔 내 왼쪽 메뉴에서 Channel 메뉴를 방문하고, 생성된 채널을 확인 합니다.
+채널의 상태가 IDLE 상태인 경우, 오른쪽 Operation 메뉴에서 Start 버튼을 클릭해서 채널을 구동합니다.
+콘솔 내 왼쪽 메뉴에서 Input 메뉴를 방문하고, 생성된 Input 을 확인 합니다.</description>
+    </item>
+    <item>
+      <title>Clean up resources</title>
+      <link>/ko/stream_css/_6-cleanup-resources/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/ko/stream_css/_6-cleanup-resources/index.html</guid>
+      <description>이제까지 Cloud Streaming Service 의 CDN 기능 및 StreamLive, StreamPackage 를 사용해서 브로드캐스트 급의 엔드 투 엔드 라이브 스트리밍 워크플로우를 확인해 보았습니다.
+불필요한 과금을 방지하기 위해, 다음과 같은 리소스를 정리합니다.
+1. CSS 구성 삭제 CSS 콘솔 좌측 메뉴에서 Domaine 을 클릭합니다. 구성한 CDN playback 도메인을 확인 후 Delete 버튼을 눌러 제거합니다. 2. StreamLive 구성 삭제 StreamLive 콘솔 좌측 메뉴에서 Channel 을 클릭합니다. StreamLive 채널의 상태가 RUNNING 이면 Stop 을 클릭해서 중지합니다.</description>
+    </item>
+  </channel>
+</rss>

@@ -13,6 +13,96 @@
     <xhtml:link rel="alternate" hreflang="en" href="/index.html" />
   </url>
   <url>
+    <loc>/stream_css/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/stream_css/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/stream_css/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/stream_css/index.html" />
+  </url>
+  <url>
+    <loc>/css/_0-what-is-css/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/css/_0-what-is-css/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/css/_0-what-is-css/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/css/_0-what-is-css/index.html" />
+  </url>
+  <url>
+    <loc>/stream_css/_0-what-is-stream-series/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/stream_css/_0-what-is-stream-series/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/stream_css/_0-what-is-stream-series/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/stream_css/_0-what-is-stream-series/index.html" />
+  </url>
+  <url>
+    <loc>/css/_1-pre-requisites/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/css/_1-pre-requisites/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/css/_1-pre-requisites/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/css/_1-pre-requisites/index.html" />
+  </url>
+  <url>
+    <loc>/stream_css/_1-pre-requisites/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/stream_css/_1-pre-requisites/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/stream_css/_1-pre-requisites/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/stream_css/_1-pre-requisites/index.html" />
+  </url>
+  <url>
+    <loc>/stream_css/_2-streampackage/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/stream_css/_2-streampackage/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/stream_css/_2-streampackage/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/stream_css/_2-streampackage/index.html" />
+  </url>
+  <url>
+    <loc>/css/_2-create-push/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/css/_2-create-push/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/css/_2-create-push/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/css/_2-create-push/index.html" />
+  </url>
+  <url>
+    <loc>/stream_css/_3-streamlive/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/stream_css/_3-streamlive/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/stream_css/_3-streamlive/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/stream_css/_3-streamlive/index.html" />
+  </url>
+  <url>
+    <loc>/css/_3-create-play/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/css/_3-create-play/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/css/_3-create-play/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/css/_3-create-play/index.html" />
+  </url>
+  <url>
+    <loc>/css/_4-create-streamingconfig/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/css/_4-create-streamingconfig/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/css/_4-create-streamingconfig/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/css/_4-create-streamingconfig/index.html" />
+  </url>
+  <url>
+    <loc>/stream_css/_4-css/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/stream_css/_4-css/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/stream_css/_4-css/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/stream_css/_4-css/index.html" />
+  </url>
+  <url>
+    <loc>/css/_5-test-verify/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/css/_5-test-verify/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/css/_5-test-verify/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/css/_5-test-verify/index.html" />
+  </url>
+  <url>
+    <loc>/stream_css/_5-test-verify/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/stream_css/_5-test-verify/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/stream_css/_5-test-verify/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/stream_css/_5-test-verify/index.html" />
+  </url>
+  <url>
+    <loc>/css/_6-cleanup-resources/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/css/_6-cleanup-resources/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/css/_6-cleanup-resources/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/css/_6-cleanup-resources/index.html" />
+  </url>
+  <url>
+    <loc>/stream_css/_6-cleanup-resources/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/ko/stream_css/_6-cleanup-resources/index.html" />
+    <xhtml:link rel="alternate" hreflang="ko" href="/ko/stream_css/_6-cleanup-resources/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="/stream_css/_6-cleanup-resources/index.html" />
+  </url>
+  <url>
     <loc>/categories/index.html</loc>
     <xhtml:link rel="alternate" hreflang="x-default" href="/ko/categories/index.html" />
     <xhtml:link rel="alternate" hreflang="ko" href="/ko/categories/index.html" />

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="Tencent Cloud Workshop">
+    <meta name="author" content="Ian Lim">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Create a play domain :: English">
+    <meta name="twitter:description" content="Click the Domain tab on the left tab of the CSS console main screen. Then you can check the currently configured CSS domains.
+Click the Add Domain button located at the top of the main menu. When the Add Domain pop-up appears, change the Type to Playback Domain and enter the values as shown below. Once the input is complete, click the Add Domain button to move to the next step.">
+    <meta property="og:title" content="Create a play domain :: English">
+    <meta property="og:description" content="Click the Domain tab on the left tab of the CSS console main screen. Then you can check the currently configured CSS domains.
+Click the Add Domain button located at the top of the main menu. When the Add Domain pop-up appears, change the Type to Playback Domain and enter the values as shown below. Once the input is complete, click the Add Domain button to move to the next step.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/css/_3-create-play/index.html">
+    <meta property="article:section" content="Live Streaming for UGC or M&amp;E :: English">
+    <meta property="og:site_name" content="English">
+    <title>Create a play domain :: English</title>
+    <link href="/ko/css/_3-create-play/index.html" rel="alternate" hreflang="x-default">
+    <link href="/ko/css/_3-create-play/index.html" rel="alternate" hreflang="ko">
+    <link href="/css/_3-create-play/index.html" rel="alternate" hreflang="en">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1711950590" rel="stylesheet">
+    <link href="/css/auto-complete.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1711950590" rel="stylesheet">
+    <link href="/css/fonts.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1711950590" rel="stylesheet">
+    <link href="/css/theme-blue.css?1711950590" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-learn.css?1711950590" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1711950590" rel="stylesheet">
+    <link href="/css/print.css?1711950590" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1711950590" rel="stylesheet">
+    <script src="/js/url.js?1711950590"></script>
+    <script src="/js/variant.js?1711950590"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'blue' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/css/_3-create-play/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/index.html"><span itemprop="name">Live Streaming on Tencent Cloud</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/css/index.html"><span itemprop="name">Live Streaming for UGC or M&amp;E</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Create a play domain</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/css/_2-create-push/index.html" title="Create a push domain (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/css/_4-create-streamingconfig/index.html" title="Create an Adaptive Bitrate Configuration (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="create-a-play-domain">Create a play domain</h1>
+
+<ol>
+<li>
+<p>Click the <strong>Domain</strong> tab on the left tab of the CSS console main screen. Then you can check the currently configured CSS domains.</p>
+</li>
+<li>
+<p>Click the <strong>Add Domain</strong> button located at the top of the main menu.
+<a href="#R-image-a86ad6cbe388b80a039ca488f2edeba7" class="lightbox-link"><img src="/images/css-basic/3-css-console-new-domain.png" alt="Add domain" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a86ad6cbe388b80a039ca488f2edeba7"><img src="/images/css-basic/3-css-console-new-domain.png" alt="Add domain" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>When the Add Domain pop-up appears, change the Type to Playback Domain and enter the values as shown below. Once the input is complete, click the <strong>Add Domain</strong> button to move to the next step.</p>
+</li>
+</ol>
+<ul>
+<li>Type: Play domain</li>
+<li>Acceleration region: Outside Chinese mainland</li>
+<li>Domain Name: Domain name to use for playback
+<a href="#R-image-6cb1ad5c01779f63deaebf3e627441f3" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain.png?width=40vw&amp;classes=left" alt="Add play domain" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6cb1ad5c01779f63deaebf3e627441f3"><img src="/images/css-basic/4-2-css-play-domain.png?width=40vw&amp;classes=left" alt="Add play domain" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></li>
+</ul>
+<ol start="4">
+<li>Refer to the CNAME Configuration menu and add the CNAME value for host in the DNS service.</li>
+</ol>
+<ul>
+<li><strong>CNAME Configuration menu</strong>
+<a href="#R-image-a03e686d492414e5aebcbccc3318ef48" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname-configuration.png?width=40vw&amp;classes=left" alt="CNAME Configuration menu" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a03e686d492414e5aebcbccc3318ef48"><img src="/images/css-basic/4-2-css-play-domain-cname-configuration.png?width=40vw&amp;classes=left" alt="CNAME Configuration menu" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></li>
+<li><strong>Add CNAME record to DNS</strong>
+<a href="#R-image-d3fd3e3ba97e565233c5532a0ec83b4f" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname.png" alt="Add domain" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d3fd3e3ba97e565233c5532a0ec83b4f"><img src="/images/css-basic/4-2-css-play-domain-cname.png" alt="Add domain" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></li>
+<li><strong>CNAME record verification</strong>
+<a href="#R-image-f7663bd78317be2bbe97c6ade9fa0f6c" class="lightbox-link"><img src="/images/css-basic/4-2-css-play-domain-cname-verify.png?width=40vw&amp;classes=left" alt="Record Verification" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f7663bd78317be2bbe97c6ade9fa0f6c"><img src="/images/css-basic/4-2-css-play-domain-cname-verify.png?width=40vw&amp;classes=left" alt="Record Verification" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<img
+  class="logo"
+  src="/images/logo_basic.png"
+  alt="TencneCloud Logo" />
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">Search</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+          <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+        </div>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/js/auto-complete.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1711950590" defer></script>
+        <script src="/js/search.js?1711950590" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/css/index.html" class="parent "><input type="checkbox" id="R-section-bb28383ec310a527355a46a5d9c1b554" aria-controls="R-subsections-bb28383ec310a527355a46a5d9c1b554" checked><label for="R-section-bb28383ec310a527355a46a5d9c1b554"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Live Streaming for UGC or M&amp;E</span></label><a class="padding" href="/css/index.html">Live Streaming for UGC or M&amp;E<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-bb28383ec310a527355a46a5d9c1b554" class="morespace collapsible-menu">
+          <li data-nav-id="/css/_0-what-is-css/index.html" class=""><a class="padding" href="/css/_0-what-is-css/index.html">CSS Basics<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/css/_1-pre-requisites/index.html" class=""><a class="padding" href="/css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/css/_2-create-push/index.html" class=""><a class="padding" href="/css/_2-create-push/index.html">Create a push domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/css/_3-create-play/index.html" class="active"><a class="padding" href="/css/_3-create-play/index.html">Create a play domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/css/_4-create-streamingconfig/index.html" class=""><a class="padding" href="/css/_4-create-streamingconfig/index.html">Create an Adaptive Bitrate Configuration<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/css/_5-test-verify/index.html" class=""><a class="padding" href="/css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/stream_css/index.html" class=""><input type="checkbox" id="R-section-64c461f9b54ac2c49de44849b11125b2" aria-controls="R-subsections-64c461f9b54ac2c49de44849b11125b2"><label for="R-section-64c461f9b54ac2c49de44849b11125b2"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Live Streaming for large events or OTT</span></label><a class="padding" href="/stream_css/index.html">Live Streaming for large events or OTT<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-64c461f9b54ac2c49de44849b11125b2" class="morespace collapsible-menu">
+          <li data-nav-id="/stream_css/_0-what-is-stream-series/index.html" class=""><a class="padding" href="/stream_css/_0-what-is-stream-series/index.html">Stream Series with CSS<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/stream_css/_1-pre-requisites/index.html" class=""><a class="padding" href="/stream_css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/stream_css/_2-streampackage/index.html" class=""><a class="padding" href="/stream_css/_2-streampackage/index.html">Configure StreamPackage<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/stream_css/_3-streamlive/index.html" class=""><a class="padding" href="/stream_css/_3-streamlive/index.html">Configure StreamLive<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/stream_css/_4-css/index.html" class=""><a class="padding" href="/stream_css/_4-css/index.html">Create CSS CDN<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/stream_css/_5-test-verify/index.html" class=""><a class="padding" href="/stream_css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/stream_css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/stream_css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch showLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                      <option id="R-ko" value="/ko/css/_3-create-play/index.html" lang="ko">Korean</option>
+                      <option id="R-en" value="/css/_3-create-play/index.html" lang="en" selected>English</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-blue" value="blue" selected>Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1711950590" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1711950590" defer></script>
+    <script src="/js/theme.js?1711950590" defer></script>
+  </body>
+</html>

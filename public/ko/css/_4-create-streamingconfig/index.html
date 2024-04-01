@@ -18,23 +18,26 @@ NOTE : Tencent Cloud 의 Cloud Streaming Service 에서 HLS, WebRTC Streaming �
 CSS 콘솔 메인 화면 왼쪽 탭에서 Feature Configuration -&gt; Adaptive Bitrate 탭을 클릭합니다.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="/ko/css/_4-create-streamingconfig/index.html">
-    <meta property="article:section" content="Cloud Streaming Service :: 한글">
+    <meta property="article:section" content="Live Streaming for UGC or M&amp;E :: 한글">
     <meta property="og:site_name" content="한글">
     <title>Create a Adaptive Bitrate Config :: 한글</title>
+    <link href="/ko/css/_4-create-streamingconfig/index.html" rel="alternate" hreflang="x-default">
+    <link href="/ko/css/_4-create-streamingconfig/index.html" rel="alternate" hreflang="ko">
+    <link href="/css/_4-create-streamingconfig/index.html" rel="alternate" hreflang="en">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1709873617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1709873617" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1709873617" rel="stylesheet">
-    <link href="/css/auto-complete.css?1709873617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1709873617" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1709873617" rel="stylesheet">
-    <link href="/css/fonts.css?1709873617" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1709873617" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1709873617" rel="stylesheet">
-    <link href="/css/theme-blue.css?1709873617" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-learn.css?1709873617" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1709873617" rel="stylesheet">
-    <link href="/css/print.css?1709873617" rel="stylesheet" media="print">
-    <link href="/css/ie.css?1709873617" rel="stylesheet">
-    <script src="/js/url.js?1709873617"></script>
-    <script src="/js/variant.js?1709873617"></script>
+    <link href="/css/fontawesome-all.min.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1711950590" rel="stylesheet">
+    <link href="/css/auto-complete.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1711950590" rel="stylesheet">
+    <link href="/css/fonts.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1711950590" rel="stylesheet">
+    <link href="/css/theme-blue.css?1711950590" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-learn.css?1711950590" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1711950590" rel="stylesheet">
+    <link href="/css/print.css?1711950590" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1711950590" rel="stylesheet">
+    <script src="/js/url.js?1711950590"></script>
+    <script src="/js/variant.js?1711950590"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -75,7 +78,7 @@ CSS 콘솔 메인 화면 왼쪽 탭에서 Feature Configuration -&gt; Adaptive B
           </div>
           <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/index.html"><span itemprop="name">Live Streaming on Tencent Cloud</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
-            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/css/index.html"><span itemprop="name">Cloud Streaming Service</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/css/index.html"><span itemprop="name">Live Streaming for UGC or M&amp;E</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
             itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Create a Adaptive Bitrate Config</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
@@ -108,35 +111,46 @@ CSS 콘솔 메인 화면 왼쪽 탭에서 Feature Configuration -&gt; Adaptive B
 </blockquote>
 <ol>
 <li>
-<p>CSS 콘솔 메인 화면 왼쪽 탭에서 <em>Feature Configuration -&gt; Adaptive Bitrate</em> 탭을 클릭합니다.</p>
+<p>CSS 콘솔 메인 화면 왼쪽 탭에서 <strong>Feature Configuration -&gt; Adaptive Bitrate</strong> 탭을 클릭합니다.</p>
 </li>
 <li>
-<p>Adaptive Bitrate 콘솔 상단에 <em>Create Template</em> 을 버튼을 클릭 합니다.</p>
+<p>Adaptive Bitrate 콘솔 상단에 <strong>Create Template</strong> 을 버튼을 클릭 합니다.</p>
 </li>
 <li>
-<p>CSS 에서는 Template 을 구성해서 Bitrate, 해상도 등을 구성하고 ABR 래더를 생성할 수 있습니다.</p>
-<p>3-1. Template Name 은 <em>testABR</em> 을 입력합니다. 이는 임의의 값을 입력 가능 합니다.
-<a href="#R-image-acd407083438fa04c6cab24cbfc6b5d8" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config.png" alt="abr-config" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-acd407083438fa04c6cab24cbfc6b5d8"><img src="/images/css-basic/5-1-abr-config.png" alt="abr-config" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
-<p>3-2. <em>Streams</em> 메뉴에는 ABR 래더를 구성하고 레더별 트랜스코딩 방법, 해상도, 비트레이트 등을 결정 할 수 있습니다.
+<p>CSS 에서는 <strong>Template</strong> 을 구성해서 Bitrate, 해상도 등을 구성하고 ABR 래더를 생성할 수 있습니다.</p>
+</li>
+<li>
+<p>Template Name 은 <strong>testABR</strong> 을 입력합니다. 이는 임의의 값을 입력 가능 합니다.
+<a href="#R-image-ffba2a5e110091f4195e40882789c0a5" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config.png" alt="abr-config" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ffba2a5e110091f4195e40882789c0a5"><img src="/images/css-basic/5-1-abr-config.png" alt="abr-config" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p><strong>Streams</strong> 메뉴에는 ABR 래더를 구성하고 레더별 트랜스코딩 방법, 해상도, 비트레이트 등을 결정 할 수 있습니다.
 이번 랩에서는 Standard Transcoding 을 활용한 기본 구성으로 진행할 예정 입니다.
 다음과 같이 3개의 Stream 을 Adaptive Bitrate 으로 구성하고,
 각각의 Stream Name 은 HD, SD, Smooth 로 구성합니다.
-Stream Quality 은 각각 HD, SD, Smooth 을 선택합니다. 그러면 자동으로 resolution, bitrate 값들이 지정됩니다.
-Note: 이번 랩에서는 기본값을 선택하지만, bitrate, resolution, transcoding type 등 유연하게 지정 가능합니다.
-<a href="#R-image-c56e151a037433914d4c666a741cf946" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-hd.png" alt="abr-config-hd" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c56e151a037433914d4c666a741cf946"><img src="/images/css-basic/5-1-abr-config-hd.png" alt="abr-config-hd" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-063efd594b23e0ce03c16f7e9dbd0221" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-sd.png" alt="abr-config-sd" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-063efd594b23e0ce03c16f7e9dbd0221"><img src="/images/css-basic/5-1-abr-config-sd.png" alt="abr-config-sd" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-ac61e77530bb8ba29544cdc1da9b5cff" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-smooth.png" alt="abr-config-smooth" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ac61e77530bb8ba29544cdc1da9b5cff"><img src="/images/css-basic/5-1-abr-config-smooth.png" alt="abr-config-smooth" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
-<p>3-3. Stream 구성까지 완료한 이후 <em>Save</em> 버튼을 클릭 합니다. 그러면 구성한 Adaptive Bitrate 템플릿을 Domain 과 Binding 하라는 팝업이 뜨는데요. 아래와 같이, 3번에서 구성한 Playback Domain 을 선택합니다.
-<a href="#R-image-18083683fa3d9adc118e5fa6ca3be082" class="lightbox-link"><img src="/images/css-basic/5-2-bind-abr-config-menu.png" alt="bind-abr-config-menu" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-18083683fa3d9adc118e5fa6ca3be082"><img src="/images/css-basic/5-2-bind-abr-config-menu.png" alt="bind-abr-config-menu" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a>
-<a href="#R-image-cec8d88dda93323039b677b5b2c2f6ce" class="lightbox-link"><img src="/images/css-basic/5-2-bind-abr-config-to-play.png" alt="bind-abr-config-to-play" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cec8d88dda93323039b677b5b2c2f6ce"><img src="/images/css-basic/5-2-bind-abr-config-to-play.png" alt="bind-abr-config-to-play" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<strong>Stream Quality</strong> 은 각각 HD, SD, Smooth 을 선택합니다. 그러면 자동으로 resolution, bitrate 값들이 지정됩니다.
+<a href="#R-image-2ba51c64fe8afd40d05cebd8a6ea3ed9" class="lightbox-link"><img src="/images/css-basic/5-1-abr-config-hd.png?width=80vw&amp;classes=left" alt="abr-config-hd" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 80vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2ba51c64fe8afd40d05cebd8a6ea3ed9"><img src="/images/css-basic/5-1-abr-config-hd.png?width=80vw&amp;classes=left" alt="abr-config-hd" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></p>
 </li>
 </ol>
+<blockquote>
+<p><strong>Note</strong>: 이번 랩에서는 기본값을 선택하지만, bitrate, resolution, transcoding type 등 유연하게 지정 가능합니다.</p>
+</blockquote>
+<ol start="6">
+<li>
+<p>Stream 구성까지 완료한 이후 <strong>Save</strong> 버튼을 클릭 합니다.
+<a href="#R-image-ebd00cc287975162a6381247e1214104" class="lightbox-link"><img src="/images/css-basic/5-2-bind-abr-config-menu.png?width=40vw&amp;classes=left" alt="bind-abr-config-menu" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ebd00cc287975162a6381247e1214104"><img src="/images/css-basic/5-2-bind-abr-config-menu.png?width=40vw&amp;classes=left" alt="bind-abr-config-menu" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p>구성한 Adaptive Bitrate 템플릿을 <strong>Domain 과 Binding</strong> 하라는 팝업이 뜨는데요. 아래와 같이, <strong>3번에서 구성한 Playback Domain</strong> 을 선택합니다.
+<a href="#R-image-2c377b282a4528262728b8f20d16e35e" class="lightbox-link"><img src="/images/css-basic/5-2-bind-abr-config-to-play.png?width=40vw&amp;classes=left" alt="bind-abr-config-to-play" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2c377b282a4528262728b8f20d16e35e"><img src="/images/css-basic/5-2-bind-abr-config-to-play.png?width=40vw&amp;classes=left" alt="bind-abr-config-to-play" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></p>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 
             <footer class="footline">
             </footer>
@@ -163,12 +177,12 @@ Note: 이번 랩에서는 기본값을 선택하지만, bitrate, resolution, tra
         <script>
           var contentLangs=['ko'];
         </script>
-        <script src="/js/auto-complete.js?1709873617" defer></script>
-        <script src="/js/lunr/lunr.min.js?1709873617" defer></script>
-        <script src="/js/lunr/lunr.stemmer.support.min.js?1709873617" defer></script>
-        <script src="/js/lunr/lunr.multi.min.js?1709873617" defer></script>
-        <script src="/js/lunr/lunr.ko.min.js?1709873617" defer></script>
-        <script src="/js/search.js?1709873617" defer></script>
+        <script src="/js/auto-complete.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.ko.min.js?1711950590" defer></script>
+        <script src="/js/search.js?1711950590" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -179,7 +193,7 @@ Note: 이번 랩에서는 기본값을 선택하지만, bitrate, resolution, tra
       <div id="R-content-wrapper" class="highlightable">
         <div id="R-topics">
           <ul class="enlarge morespace collapsible-menu">
-          <li data-nav-id="/ko/css/index.html" class="parent "><input type="checkbox" id="R-section-8941c520609238295a01ef684b433ec8" aria-controls="R-subsections-8941c520609238295a01ef684b433ec8" checked><label for="R-section-8941c520609238295a01ef684b433ec8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 Cloud Streaming Service</span></label><a class="padding" href="/ko/css/index.html">Cloud Streaming Service<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-8941c520609238295a01ef684b433ec8" class="morespace collapsible-menu">
+          <li data-nav-id="/ko/css/index.html" class="parent "><input type="checkbox" id="R-section-8941c520609238295a01ef684b433ec8" aria-controls="R-subsections-8941c520609238295a01ef684b433ec8" checked><label for="R-section-8941c520609238295a01ef684b433ec8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 Live Streaming for UGC or M&amp;E</span></label><a class="padding" href="/ko/css/index.html">Live Streaming for UGC or M&amp;E<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-8941c520609238295a01ef684b433ec8" class="morespace collapsible-menu">
           <li data-nav-id="/ko/css/_0-what-is-css/index.html" class=""><a class="padding" href="/ko/css/_0-what-is-css/index.html">CSS Basics<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ko/css/_1-pre-requisites/index.html" class=""><a class="padding" href="/ko/css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ko/css/_2-create-push/index.html" class=""><a class="padding" href="/ko/css/_2-create-push/index.html">Create a push domain<i class="fas fa-check read-icon"></i></a></li>
@@ -187,6 +201,14 @@ Note: 이번 랩에서는 기본값을 선택하지만, bitrate, resolution, tra
           <li data-nav-id="/ko/css/_4-create-streamingconfig/index.html" class="active"><a class="padding" href="/ko/css/_4-create-streamingconfig/index.html">Create a Adaptive Bitrate Config<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ko/css/_5-test-verify/index.html" class=""><a class="padding" href="/ko/css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/ko/css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/ko/css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/ko/stream_css/index.html" class=""><input type="checkbox" id="R-section-d160c0b53ecab67ccd1ea4d39846080b" aria-controls="R-subsections-d160c0b53ecab67ccd1ea4d39846080b"><label for="R-section-d160c0b53ecab67ccd1ea4d39846080b"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 Live Streaming for large events or OTT</span></label><a class="padding" href="/ko/stream_css/index.html">Live Streaming for large events or OTT<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d160c0b53ecab67ccd1ea4d39846080b" class="morespace collapsible-menu">
+          <li data-nav-id="/ko/stream_css/_0-what-is-stream-series/index.html" class=""><a class="padding" href="/ko/stream_css/_0-what-is-stream-series/index.html">Stream Series with CSS<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_1-pre-requisites/index.html" class=""><a class="padding" href="/ko/stream_css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_2-streampackage/index.html" class=""><a class="padding" href="/ko/stream_css/_2-streampackage/index.html">Configure StreamPackage<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_3-streamlive/index.html" class=""><a class="padding" href="/ko/stream_css/_3-streamlive/index.html">Configure StreamLive<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_4-css/index.html" class=""><a class="padding" href="/ko/stream_css/_4-css/index.html">Create CSS CDN<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_5-test-verify/index.html" class=""><a class="padding" href="/ko/stream_css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/ko/stream_css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
           </ul>
         </div>
         <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter"></div>
@@ -202,6 +224,7 @@ Note: 이번 랩에서는 기본값을 선택하지만, bitrate, resolution, tra
                     <label class="a11y-only" for="R-select-language">언어</label>
                     <select id="R-select-language" onchange="location = baseUri + this.value;">
                       <option id="R-ko" value="/ko/css/_4-create-streamingconfig/index.html" lang="ko" selected>Korean</option>
+                      <option id="R-en" value="/css/_4-create-streamingconfig/index.html" lang="en">English</option>
                     </select>
                   </div>
                   <div class="clear"></div>
@@ -239,8 +262,8 @@ Note: 이번 랩에서는 기본값을 선택하지만, bitrate, resolution, tra
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1709873617" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1709873617" defer></script>
-    <script src="/js/theme.js?1709873617" defer></script>
+    <script src="/js/clipboard.min.js?1711950590" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1711950590" defer></script>
+    <script src="/js/theme.js?1711950590" defer></script>
   </body>
 </html>

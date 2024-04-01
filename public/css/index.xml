@@ -1,11 +1,71 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Default Basics on English</title>
+    <title>Live Streaming for UGC or M&amp;E on English</title>
     <link>/css/index.html</link>
-    <description>Recent content in Default Basics on English</description>
+    <description>Recent content in Live Streaming for UGC or M&amp;E on English</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <atom:link href="/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSS Basics</title>
+      <link>/css/_0-what-is-css/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/css/_0-what-is-css/index.html</guid>
+      <description>Prior to start with Tencent Cloud Cloud Streaming Service (A.K.A CSS), Push domain and Play domain are configured to configure one live streaming.
+In other words, CSS has two main components, and channels are organized around domains.
+1. Push domain The push domain includes stream acquisition and media processing (AI functions such as encoding, transcoding, recording, and moderation) and is an essential component for ingesting and processing video feed.
+Push refers to the process by which the host obtains local audio and video into Tencent Cloud, where the domain name used to push the live stream is a required setting.</description>
+    </item>
+    <item>
+      <title>Prerequisites</title>
+      <link>/css/_1-pre-requisites/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/css/_1-pre-requisites/index.html</guid>
+      <description>1. Domain Name Tencent Cloud Cloud Streaming Service is serviced through the customer&amp;rsquo;s domain for each stream channel, and 2 domains are required per live channel, a domain for cloud acquisition and a domain for playback.
+In other words, in order to use Tencent Cloud Cloud Streaming Service, it is necessary to register ownership and verify of the domain owner during the Push and Play Domain registration process. Once registered, you don&amp;rsquo;t need to verify it again if you add a domain with the same domain.</description>
+    </item>
+    <item>
+      <title>Create a push domain</title>
+      <link>/css/_2-create-push/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/css/_2-create-push/index.html</guid>
+      <description>Click the Domain tab on the left tab of the CSS console. Then you can check the currently configured CSS domains.
+Click the Add Domain button located at the top of the main menu. When the Add Domain pop-up appears, enter the value for Push Domain as shown below. Once the input is complete, click the Add Domain button to move to the next step.
+Type: Push domain Domain Name: Domain name to use for push Note: If this is your first time registering a CSS Domain, a separate domain ownership verification process is required.</description>
+    </item>
+    <item>
+      <title>Create a play domain</title>
+      <link>/css/_3-create-play/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/css/_3-create-play/index.html</guid>
+      <description>Click the Domain tab on the left tab of the CSS console main screen. Then you can check the currently configured CSS domains.
+Click the Add Domain button located at the top of the main menu. When the Add Domain pop-up appears, change the Type to Playback Domain and enter the values as shown below. Once the input is complete, click the Add Domain button to move to the next step.</description>
+    </item>
+    <item>
+      <title>Create an Adaptive Bitrate Configuration</title>
+      <link>/css/_4-create-streamingconfig/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/css/_4-create-streamingconfig/index.html</guid>
+      <description>In Cloud Streaming Service, you can configure an Adaptive Bitrate configuration with separately specified transcoding type, resolution, and bitrate as a template and use it in CSS HLS Stream and WebRTC Streaming.
+NOTE: When Tencent Cloud CSS uses a single bitrate format through HTTP-FLV or RTMP streaming in addition to HLS and WebRTC Streaming, detailed specifications of the stream must be configured by configuring the Live Transcoding function in CSS rather than Adaptive Bitrate.</description>
+    </item>
+    <item>
+      <title>Test &amp; Verify</title>
+      <link>/css/_5-test-verify/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/css/_5-test-verify/index.html</guid>
+      <description>Now, we have configured the Push and Playback Domains, and configured Adaptive Bitrate and bound it to the Playback Domain. Let&amp;rsquo;s do an test and verify the live streaming.
+On the left menu of the CSS console, click Tools &amp;gt; Address Generator. When you visit the Address Generator menu, enter the values as follows. And click the Generate button. URL Type: Push and playback URLs Stream Name: live rancoding Template: testABR Confirm the push address.</description>
+    </item>
+    <item>
+      <title>Clean up resources</title>
+      <link>/css/_6-cleanup-resources/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/css/_6-cleanup-resources/index.html</guid>
+      <description>So far, we have configured and verified an end-to-end live streaming workflow using Cloud Streaming Service.
+To prevent unnecessary charges, you need to deprovision the following resources.
+1. Remove binding and delete Feature Configuration Click Adaptive Bitrate in the CSS console left menu. Click the Adaptive Bitrate configuration you created. Click Unbind at the bottom of the configuration to unlink the configuration from the domain. Delete the Adaptive Bitrate configuration by clicking Delete at the top of the configuration.</description>
+    </item>
   </channel>
 </rss>

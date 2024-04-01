@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="Tencent Cloud Workshop">
+    <meta name="author" content="Ian Lim">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Test &amp; Verify :: 한글">
+    <meta name="twitter:description" content="자, 이제까지 비디오를 브로드캐스트 급의 품질과 기능을 제공하기 위해 StreamPackage, StreamLive 구성을 완료했고, CSS Playback Domain 을 Live Streaming 용 CDN 구성으로 완료 했습니다.
+이제 실제 테스트를 해보겠습니다.
+StreamLive 세팅 및 정보 확인 StreamLive 콘솔에 방문합니다.
+콘솔 내 왼쪽 메뉴에서 Channel 메뉴를 방문하고, 생성된 채널을 확인 합니다.
+채널의 상태가 IDLE 상태인 경우, 오른쪽 Operation 메뉴에서 Start 버튼을 클릭해서 채널을 구동합니다.
+콘솔 내 왼쪽 메뉴에서 Input 메뉴를 방문하고, 생성된 Input 을 확인 합니다.">
+    <meta property="og:title" content="Test &amp; Verify :: 한글">
+    <meta property="og:description" content="자, 이제까지 비디오를 브로드캐스트 급의 품질과 기능을 제공하기 위해 StreamPackage, StreamLive 구성을 완료했고, CSS Playback Domain 을 Live Streaming 용 CDN 구성으로 완료 했습니다.
+이제 실제 테스트를 해보겠습니다.
+StreamLive 세팅 및 정보 확인 StreamLive 콘솔에 방문합니다.
+콘솔 내 왼쪽 메뉴에서 Channel 메뉴를 방문하고, 생성된 채널을 확인 합니다.
+채널의 상태가 IDLE 상태인 경우, 오른쪽 Operation 메뉴에서 Start 버튼을 클릭해서 채널을 구동합니다.
+콘솔 내 왼쪽 메뉴에서 Input 메뉴를 방문하고, 생성된 Input 을 확인 합니다.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/ko/stream_css/_5-test-verify/index.html">
+    <meta property="article:section" content="Live Streaming for large events or OTT :: 한글">
+    <meta property="og:site_name" content="한글">
+    <title>Test &amp; Verify :: 한글</title>
+    <link href="/ko/stream_css/_5-test-verify/index.html" rel="alternate" hreflang="x-default">
+    <link href="/ko/stream_css/_5-test-verify/index.html" rel="alternate" hreflang="ko">
+    <link href="/stream_css/_5-test-verify/index.html" rel="alternate" hreflang="en">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1711950590" rel="stylesheet">
+    <link href="/css/auto-complete.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1711950590" rel="stylesheet">
+    <link href="/css/fonts.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1711950590" rel="stylesheet">
+    <link href="/css/theme-blue.css?1711950590" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-learn.css?1711950590" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1711950590" rel="stylesheet">
+    <link href="/css/print.css?1711950590" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1711950590" rel="stylesheet">
+    <script src="/js/url.js?1711950590"></script>
+    <script src="/js/variant.js?1711950590"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/ko/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'blue' ] );
+      // translations
+      window.T_Copy_to_clipboard = `클립보드에 복사`;
+      window.T_Copied_to_clipboard = `클립보드에 복사됐습니다!`;
+      window.T_Copy_link_to_clipboard = `링크를 클립보드에 복사`;
+      window.T_Link_copied_to_clipboard = `클립보드에 링크가 복사됐습니다!`;
+      window.T_Reset_view = `보기 재설정`;
+      window.T_View_reset = `보기 초기화!`;
+      window.T_No_results_found = `"{0}"에 대한 결과가 없습니다.`;
+      window.T_N_results_found = `"{0}"에 대해 {1}개의 결과가 검색되었습니다.`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/ko/stream_css/_5-test-verify/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="메뉴 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="목차 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+  <ul>
+    <li><a href="#streamlive-세팅-및-정보-확인">StreamLive 세팅 및 정보 확인</a></li>
+    <li><a href="#obs-studio-실행-및-세팅">OBS Studio 실행 및 세팅</a></li>
+    <li><a href="#playback-url-확인-및-테스트">Playback URL 확인 및 테스트</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/index.html"><span itemprop="name">Live Streaming on Tencent Cloud</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/stream_css/index.html"><span itemprop="name">Live Streaming for large events or OTT</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Test &amp; Verify</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/stream_css/_4-css/index.html" title="Create CSS CDN (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/stream_css/_6-cleanup-resources/index.html" title="Clean up resources (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="외부 링크"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="test--verify">Test &amp; Verify</h1>
+
+<p>자, 이제까지 비디오를 브로드캐스트 급의 품질과 기능을 제공하기 위해 StreamPackage, StreamLive 구성을 완료했고,
+CSS Playback Domain 을 Live Streaming 용 CDN 구성으로 완료 했습니다.</p>
+<p>이제 실제 테스트를 해보겠습니다.</p>
+<h2 id="streamlive-세팅-및-정보-확인">StreamLive 세팅 및 정보 확인</h2>
+<ol>
+<li>
+<p><strong>StreamLive</strong> 콘솔에 방문합니다.</p>
+</li>
+<li>
+<p>콘솔 내 왼쪽 메뉴에서 <strong>Channel</strong> 메뉴를 방문하고, 생성된 채널을 확인 합니다.</p>
+</li>
+<li>
+<p>채널의 상태가 <strong>IDLE</strong> 상태인 경우, 오른쪽 <strong>Operation</strong> 메뉴에서 <strong>Start</strong> 버튼을 클릭해서 채널을 구동합니다.</p>
+</li>
+<li>
+<p>콘솔 내 왼쪽 메뉴에서 <strong>Input</strong> 메뉴를 방문하고, 생성된 Input 을 확인 합니다.</p>
+</li>
+<li>
+<p>URL A 를 확인합니다. <em>rtmp://xxxxxxx.ap-{region}-x.streamlive.myqcloud.com/{APP_NAME}/{STREAM_NAME}</em> 와 같은 스키마를 가진 URL 을 확인합니다.</p>
+</li>
+</ol>
+<ul>
+<li>OBS 를 이용해서 라이브 피드를 입수시킬 경우, 아래와 같은 입력이 사용됩니다.</li>
+<li>OBS Server : <strong>rtmp://xxxxxxx.ap-{region}-x.streamlive.myqcloud.com/{APP_NAME}/</strong></li>
+<li>OBS Stream Key : <strong>{STREAM_NAME}</strong></li>
+</ul>
+<h2 id="obs-studio-실행-및-세팅">OBS Studio 실행 및 세팅</h2>
+<ol start="6">
+<li><strong>OBS Studio</strong> 를 실행합니다.</li>
+</ol>
+<ul>
+<li>이번 시간에는 OBS 를 통한 Push 를 실습해 볼 예정입니다.</li>
+<li>OBS 를 실행시켜서 Settings 버튼을 클릭하고,
+<a href="#R-image-7fa492ff858d7619ab98915eca97a67c" class="lightbox-link"><img src="/images/css-basic/6-4-test-push-obs-setting.png?width=10vw&amp;classes=left" alt="ALT IMG" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 10vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7fa492ff858d7619ab98915eca97a67c"><img src="/images/css-basic/6-4-test-push-obs-setting.png?width=10vw&amp;classes=left" alt="ALT IMG" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></li>
+<li><strong>Stream</strong> 메뉴 내에 있는 값을 다음과 같이 입력합니다. 여기서 OBS server 및 OBS Stream key 정보는, 위 5번의 OBS server, stream key 값을 참고 하십시오. 값들을 입력한 후 저장 (OK) 버튼을 클릭해서 구성을 저장합니다.
+<a href="#R-image-252b0148e6566e332ce935e58260641a" class="lightbox-link"><img src="/images/stream-css/5-test-push-obs-config.png?width=40vw&amp;classes=left" alt="ALT IMG" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-252b0148e6566e332ce935e58260641a"><img src="/images/stream-css/5-test-push-obs-config.png?width=40vw&amp;classes=left" alt="ALT IMG" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></li>
+<li>그리고 <strong>Start Streaming</strong> 버튼을 클릭하면, 카메라의 피드가 OBS 를 통해 CSS Push URL 로 입수되게 됩니다.</li>
+</ul>
+<blockquote>
+<p>NOTE : OBS 다운로드 및 StreamLive 를 위한 환경 세팅 정보는 <a href="https://www.tencentcloud.com/document/product/1048/50115" target="_blank">여기</a> 를 통해 확인할 수 있습니다.</p>
+</blockquote>
+<h2 id="playback-url-확인-및-테스트">Playback URL 확인 및 테스트</h2>
+<ol start="7">
+<li>
+<p><strong>StreamPackage</strong> 콘솔을 방문합니다. 구성을 클릭하고 Endpoint 탭에 방문 합니다. 여기서 URL 값을 복사합니다.
+<a href="#R-image-2c35760f2faea946910dc064249a1525" class="lightbox-link"><img src="/images/stream-css/5-strpkg-endpoint.png" alt="ALT IMG" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2c35760f2faea946910dc064249a1525"><img src="/images/stream-css/5-strpkg-endpoint.png" alt="ALT IMG" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+</li>
+<li>
+<p><strong>VLC media player</strong> 를 실행합니다. <em>File &gt; Open Network</em> 메뉴를 실행하고 복사한 URL 을 붙여 넣습니다. <strong>정상적으로 StreamPackage URL 이 재생</strong>되는지 확인 합니다.</p>
+</li>
+</ol>
+<ul>
+<li>URL 의 형태는 다음과 비슷할 것입니다.</li>
+<li><em><a href="http://xxxxxxx.ap" target="_blank">http://xxxxxxx.ap</a>-{region}.mediapackage.srclivepull.myqcloud.com/v1/xxxxxx/xxxx/main.m3u8</em>
+<a href="#R-image-711dcad0b626cc7d02637b83f092e2e2" class="lightbox-link"><img src="/images/stream-css/5-test-strpkg.png?width=40vw&amp;classes=left" alt="ALT IMG" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-711dcad0b626cc7d02637b83f092e2e2"><img src="/images/stream-css/5-test-strpkg.png?width=40vw&amp;classes=left" alt="ALT IMG" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></li>
+</ul>
+<ol start="9">
+<li><strong>VLC media player</strong> 에서 <em>File &gt; Open Network</em> 메뉴를 실행하고, 이번에는 복사한 URL 에서 도메인을 CSS Playback Domain (CDN) 으로 변경한 후 재생해 봅니다. <strong>정상적으로 CSS Playback URL 이 재생</strong>되는지 확인 합니다.</li>
+</ol>
+<ul>
+<li>URL 의 형태는 다음과 비슷할 것입니다.</li>
+<li><em>http://{YOUR_CSS_PLAYBACK_DOMAIN}/v1/xxxxxx/xxxx/main.m3u8</em>
+<a href="#R-image-f28e2323eee196b78abd399ff125749b" class="lightbox-link"><img src="/images/stream-css/5-test-cssplayback.png?width=40vw&amp;classes=left" alt="ALT IMG" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f28e2323eee196b78abd399ff125749b"><img src="/images/stream-css/5-test-cssplayback.png?width=40vw&amp;classes=left" alt="ALT IMG" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></li>
+</ul>
+<blockquote>
+<p>NOTE : CSS (Cloud Streaming Services) 의 Playback Domain 은 CDN 의 역할을 합니다. 만약 HTTPS 프로토콜을 이용해 안전한 연결을 하기 위해서는, (a)  CSS Playback domain 에서 <a href="https://www.tencentcloud.com/document/product/267/31066?lang=en" target="_blank">HTTPS 를 enable</a> 하고 (b) <a href="https://www.tencentcloud.com/document/product/267/41317?lang=en" target="_blank">인증서를 발급받아 CSS 에 업로드</a> 해야 합니다. 자세한 내용은 링크들을 클릭해서 확인해 주세요.</p>
+</blockquote>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<img
+  class="logo"
+  src="/images/logo_basic.png"
+  alt="TencneCloud Logo" />
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="검색 (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">검색</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="검색어를 입력하세요">
+          <button class="search-clear" type="button" data-search-clear="" title="검색 지우기"><i class="fas fa-times" title="검색 지우기"></i></button>
+        </div>
+        <script>
+          var contentLangs=['ko'];
+        </script>
+        <script src="/js/auto-complete.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.ko.min.js?1711950590" defer></script>
+        <script src="/js/search.js?1711950590" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/ko/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/ko/css/index.html" class=""><input type="checkbox" id="R-section-8941c520609238295a01ef684b433ec8" aria-controls="R-subsections-8941c520609238295a01ef684b433ec8"><label for="R-section-8941c520609238295a01ef684b433ec8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 Live Streaming for UGC or M&amp;E</span></label><a class="padding" href="/ko/css/index.html">Live Streaming for UGC or M&amp;E<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-8941c520609238295a01ef684b433ec8" class="morespace collapsible-menu">
+          <li data-nav-id="/ko/css/_0-what-is-css/index.html" class=""><a class="padding" href="/ko/css/_0-what-is-css/index.html">CSS Basics<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_1-pre-requisites/index.html" class=""><a class="padding" href="/ko/css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_2-create-push/index.html" class=""><a class="padding" href="/ko/css/_2-create-push/index.html">Create a push domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_3-create-play/index.html" class=""><a class="padding" href="/ko/css/_3-create-play/index.html">Create a play domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_4-create-streamingconfig/index.html" class=""><a class="padding" href="/ko/css/_4-create-streamingconfig/index.html">Create a Adaptive Bitrate Config<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_5-test-verify/index.html" class=""><a class="padding" href="/ko/css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/ko/css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/ko/stream_css/index.html" class="parent "><input type="checkbox" id="R-section-d160c0b53ecab67ccd1ea4d39846080b" aria-controls="R-subsections-d160c0b53ecab67ccd1ea4d39846080b" checked><label for="R-section-d160c0b53ecab67ccd1ea4d39846080b"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 Live Streaming for large events or OTT</span></label><a class="padding" href="/ko/stream_css/index.html">Live Streaming for large events or OTT<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d160c0b53ecab67ccd1ea4d39846080b" class="morespace collapsible-menu">
+          <li data-nav-id="/ko/stream_css/_0-what-is-stream-series/index.html" class=""><a class="padding" href="/ko/stream_css/_0-what-is-stream-series/index.html">Stream Series with CSS<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_1-pre-requisites/index.html" class=""><a class="padding" href="/ko/stream_css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_2-streampackage/index.html" class=""><a class="padding" href="/ko/stream_css/_2-streampackage/index.html">Configure StreamPackage<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_3-streamlive/index.html" class=""><a class="padding" href="/ko/stream_css/_3-streamlive/index.html">Configure StreamLive<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_4-css/index.html" class=""><a class="padding" href="/ko/stream_css/_4-css/index.html">Create CSS CDN<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_5-test-verify/index.html" class="active"><a class="padding" href="/ko/stream_css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/ko/stream_css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch showLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">언어</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                      <option id="R-ko" value="/ko/stream_css/_5-test-verify/index.html" lang="ko" selected>Korean</option>
+                      <option id="R-en" value="/stream_css/_5-test-verify/index.html" lang="en">English</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">주제</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-blue" value="blue" selected>Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">방문 기록 삭제</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1711950590" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1711950590" defer></script>
+    <script src="/js/theme.js?1711950590" defer></script>
+  </body>
+</html>

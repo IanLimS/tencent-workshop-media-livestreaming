@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Live Streaming for large events or OTT on English</title>
+    <link>/stream_css/index.html</link>
+    <description>Recent content in Live Streaming for large events or OTT on English</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <atom:link href="/stream_css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stream Series with CSS</title>
+      <link>/stream_css/_0-what-is-stream-series/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/stream_css/_0-what-is-stream-series/index.html</guid>
+      <description>Customers run mission-critical video workloads, such as 24x7 OTT channels and large-scale sports streaming events, want the following requirements met:
+Millions of viewers/CCU Copyrighted content protection Support for universal streaming formats such as HLS/DASH and efficient codecs such as H.265 Redundancy of stream Tencent Cloud media services provide solutions suitable for large-scale events or 24X7 workloads. You can use the following services: Let’s look at them one by one.
+CSS CDN Cloud Streaming Service (CSS) is a fully managed service that can be used in use cases such as UGC (User Generated Content) or media entertainment.</description>
+    </item>
+    <item>
+      <title>Prerequisites</title>
+      <link>/stream_css/_1-pre-requisites/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/stream_css/_1-pre-requisites/index.html</guid>
+      <description>1. Domain Name Tencent Cloud CSS is serviced through the customer&amp;rsquo;s domain for each stream channel. In this lab, Playback domain is required to use CSS CDN.
+In other words, in order to use Tencent Cloud CSS CDN, registration step is required that Procedure to inform and register ownership as the domain owner during the Playback Domain registration process . Once registered, you don&amp;rsquo;t need to verify it again if you add a domain with the same parent domain.</description>
+    </item>
+    <item>
+      <title>Configure StreamPackage</title>
+      <link>/stream_css/_2-streampackage/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/stream_css/_2-streampackage/index.html</guid>
+      <description>When implementing video workloads for large-scale events and 24x7, the first thing to configure is the StreamPackage.
+Let&amp;rsquo;s look at how to configure StreamPackage as follows :
+Hover the mouse over the Product button at the top of the Tencent Cloud console, search for streampackage, and go to the StreamPackage console. Click the Create Channel button located at the top of the StreamPackage console.
+Enter str_pkg_workshop in Name and leave other values as default.</description>
+    </item>
+    <item>
+      <title>Configure StreamLive</title>
+      <link>/stream_css/_3-streamlive/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/stream_css/_3-streamlive/index.html</guid>
+      <description>In implementing video workloads for large-scale events and 24x7, after configuring a StreamPackage, you can configure StreamLive and associate it with the StreamPackage.
+Let&amp;rsquo;s take a look at how to configure StreamLive as follows :
+Hover the mouse over the Product button at the top of the Tencent Cloud console, search for streamlive, and then go to the StreamLive console. Create StreamLive Security Group Click the Security Group tab in the left menu.</description>
+    </item>
+    <item>
+      <title>Create CSS CDN</title>
+      <link>/stream_css/_4-css/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/stream_css/_4-css/index.html</guid>
+      <description>When implementing video workloads for large-scale events and 24x7, CSS can be leveraged as a CDN to handle large viewer traffic. After configuring the StreamPackage, you can configure a CSS Playback Domain and associate it with the StreamPackage.
+Let&amp;rsquo;s take a look at how to configure CSS as a CDN which is optimized for Live Streaming as follows.
+CSS Playback Domain Configuration Click the Domain tab on the left tab of the CSS console.</description>
+    </item>
+    <item>
+      <title>Test &amp; Verify</title>
+      <link>/stream_css/_5-test-verify/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/stream_css/_5-test-verify/index.html</guid>
+      <description>Now, we have completed configuring StreamPackage and StreamLive to provide broadcast-grade video quality and functionality. You have completed configuring CSS Playback Domain as a CDN for Live Streaming.
+Now let&amp;rsquo;s verify the configurations.
+Check StreamLive settings and information Visit the StreamLive console.
+Visit the Channel menu in the left menu of the console and check the created channel.
+If the channel status is IDLE, click the Start button in the Operation menu on the right to run the channel.</description>
+    </item>
+    <item>
+      <title>Clean up resources</title>
+      <link>/stream_css/_6-cleanup-resources/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/stream_css/_6-cleanup-resources/index.html</guid>
+      <description>Now, we have confirmed the broadcast-grade end-to-end live streaming workflow using the CDN feature of Cloud Streaming Service, StreamLive, and StreamPackage.
+To prevent unnecessary charges, we organize the following resources.
+1. Delete CSS configuration Click Domain on the left menu of the CSS console. Check the configured CDN playback domain and remove it by clicking the Delete button. 2. Delete StreamLive configuration Click Channel on the left menu of the StreamLive console.</description>
+    </item>
+  </channel>
+</rss>

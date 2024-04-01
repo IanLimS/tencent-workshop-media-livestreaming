@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Default HOME on English</title>
+    <title>Live Streaming on Tencent Cloud on English</title>
     <link>/index.html</link>
-    <description>Recent content in Default HOME on English</description>
+    <description>Recent content in Live Streaming on Tencent Cloud on English</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Default Basics</title>
+      <title>Live Streaming for UGC or M&amp;E</title>
       <link>/css/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/css/index.html</guid>
-      <description>Lorem Ipsum. Default BASICS</description>
+      <description>CSS is a fully managed service to provide reliable, high-quality, low-latency live streaming easily and conveniently. CSS helps you configure your live streaming lifecycle quickly and easily by templates that allow you to quickly and easily create and delete live channels. After configuring your CSS channel using a template and getting your live feed into the cloud, you can get the playback URL. This means CSS manages the transcoding, packaging, and reliably delivers streaming video to viewers through the CSS CDN.</description>
+    </item>
+    <item>
+      <title>Live Streaming for large events or OTT</title>
+      <link>/stream_css/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/stream_css/index.html</guid>
+      <description>Tencent Cloud provides media services that can meet almost all customer use cases, from live streaming to video on demand.
+Among them, CSS is a fully managed service to provide stable, high-quality, low-latency live streaming easily and conveniently. I mentioned earlier that CSS consists of two major components: Push and Play. The Play component can be a standalone component that provides a CDN optimized for Live Streaming.
+CSS CDN (CSS Play component) can be used simply as a fully managed CSS, or integrated with other live streaming origination services.</description>
     </item>
   </channel>
 </rss>

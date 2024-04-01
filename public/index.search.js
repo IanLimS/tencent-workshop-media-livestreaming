@@ -1,22 +1,142 @@
 var relearn_search_index = [
   {
-    "breadcrumb": "Default HOME",
-    "content": "Lorem Ipsum. Default BASICS\n",
+    "breadcrumb": "Live Streaming on Tencent Cloud",
+    "content": "CSS is a fully managed service to provide reliable, high-quality, low-latency live streaming easily and conveniently. CSS helps you configure your live streaming lifecycle quickly and easily by templates that allow you to quickly and easily create and delete live channels. After configuring your CSS channel using a template and getting your live feed into the cloud, you can get the playback URL. This means CSS manages the transcoding, packaging, and reliably delivers streaming video to viewers through the CSS CDN.\n",
     "description": "",
     "tags": null,
-    "title": "Default Basics",
+    "title": "Live Streaming for UGC or M\u0026E",
     "uri": "/css/index.html"
   },
   {
     "breadcrumb": "",
-    "content": "Lorem Ipsum. Default Home\n",
+    "content": "Tencent Cloud provides top grade Media Services that ensures quality, ranking as the No. 1 cloud service provider in the Asia Pacific region in the media service market.\nReference\nTencent Cloud media service provides full landscape of portfolios including live streaming and video on demand.\nAlso have strong features that can meet most customer requirements, including ultra-low latency, high definition, AI functions, and SDK.\nAmong them, Tencent media services for live streaming services can be broadly classified according to use cases as follows.\n(1) Cloud Streaming Service suitable for general use cases in media entertainment\n(2) Stream Series suitable for use cases that require broadcast-level quality and functionality\nIn this workshop, we will learn how to basically configure and check each service.\n",
     "description": "",
     "tags": null,
-    "title": "Default HOME",
+    "title": "Live Streaming on Tencent Cloud",
     "uri": "/index.html"
   },
   {
-    "breadcrumb": "Default HOME",
+    "breadcrumb": "Live Streaming on Tencent Cloud",
+    "content": "Tencent Cloud provides media services that can meet almost all customer use cases, from live streaming to video on demand.\nAmong them, CSS is a fully managed service to provide stable, high-quality, low-latency live streaming easily and conveniently. I mentioned earlier that CSS consists of two major components: Push and Play. The Play component can be a standalone component that provides a CDN optimized for Live Streaming.\nCSS CDN (CSS Play component) can be used simply as a fully managed CSS, or integrated with other live streaming origination services.\nTencent Cloud provides Stream Link, Stream Live, and Stream Package services that provide broadcast-grade quality and functionality.\nThis time, we will look at this CSS CDN and Stream Series integration example on Tencent Cloud.\n",
+    "description": "",
+    "tags": null,
+    "title": "Live Streaming for large events or OTT",
+    "uri": "/stream_css/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for UGC or M\u0026E",
+    "content": "Prior to start with Tencent Cloud Cloud Streaming Service (A.K.A CSS), Push domain and Play domain are configured to configure one live streaming.\nIn other words, CSS has two main components, and channels are organized around domains.\n1. Push domain The push domain includes stream acquisition and media processing (AI functions such as encoding, transcoding, recording, and moderation) and is an essential component for ingesting and processing video feed.\nPush refers to the process by which the host obtains local audio and video into Tencent Cloud, where the domain name used to push the live stream is a required setting. If you want to use a domain name for live streaming, you must first register it. After the push domain name is configured, CSS can generate the corresponding push URL.\nCSS supports protocols such as RTMP, SRT, WebRTC, and RTMP over SRT for ingesting the live feed.\nIn CSS, you can do the following after ingesting the video feed:\nEncode the video. CSS basically supports pass through codecs such as H.264, H.265, and AV1 . Transcode the video. Tencent Cloud media services support TSC (Top Speed Codec) trancoding mode. TSC transcoding is Tencent Cloud unique technology that provides high video quality at a lower bitrate and is widely used in game streaming, showroom streaming, event streaming, etc. TSC transcoding not only allows you to deliver high-definition streaming services at low bitrates (50% lower on average), but also features intelligent scene recognition, dynamic encoding, CTU/line/frame level bitrate control, etc. You can take advantage of our leading technologies by adopting TSC. Additional processing of the video Supports built-in AI functions such as stream relay, time shift, recording, thumbnail, and content moderation. Tencent Cloud CSS has built-in AI functions, providing essential additional functions for live streaming without integration with other products. The CSS output generated in this way can be integrated with the CSS Player domain, and protocols such as RTMP, HTTP-FLV, HLS, WebRTC, and DASH are supported for playback.\n2. Player 도메인 (CSS CDN) Player 도메인은, 라이브 스트리밍에 최적화 된 CDN 경험을 제공하는 컨포넌트 입니다. 이는 (1) CSS Push 도메인과 통합해서 엔드-투-엔드 라이브 워크플로우를 구축하거나, (2) 텐센트 클라우드가 아닌 라이브 스트리밍 오리지네이션 서비스와 통합할 수도 있습니다.\nCSS Player 도메인에서는 인증 (Authentication), Referer 및 IP/Regional(국가) Access Control 과 같은 라이브 스트리밍에 필수적인 기능들을 제공합니다.\nNOTE : 기본 개념에 대한 추가 정보는 다음 사용자 가이드를 추가적으로 탐색할 수 있습니다.\n2. Player domain (CSS CDN) The Player domain is a component that provides a CDN optimized for live streaming. This can be (1) integrated with a CSS Push domain to build an end-to-end live workflow, or (2) integrated with a 3rd party live streaming packaging \u0026 origination service.\nIn addition, CSS Player domain provides essential functions for live streaming such as Authentication, Referer, and IP/Regional Access Control.\nNOTE: For additional information on basic concepts, you can further explore the following User Guide.\n",
+    "description": "",
+    "tags": null,
+    "title": "CSS Basics",
+    "uri": "/css/_0-what-is-css/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for large events or OTT",
+    "content": "Customers run mission-critical video workloads, such as 24x7 OTT channels and large-scale sports streaming events, want the following requirements met:\nMillions of viewers/CCU Copyrighted content protection Support for universal streaming formats such as HLS/DASH and efficient codecs such as H.265 Redundancy of stream Tencent Cloud media services provide solutions suitable for large-scale events or 24X7 workloads. You can use the following services: Let’s look at them one by one.\nCSS CDN Cloud Streaming Service (CSS) is a fully managed service that can be used in use cases such as UGC (User Generated Content) or media entertainment.\nThis is a service that can meet the needs of customers who have requirements such as channel templating, fast channel creation, easy and simple operation, and low latency.\nThis CSS channel is domain-based and consists of two large domain components: Push and Play.\nHere, CSS’s Play domain can be used exclusively as a CSS CDN. In other words, it can be integrated with CSS and used as a fully managed service, or it can be integrated with other streaming packaging \u0026 origin services and used as a Streaming CDN suitable for Live Streaming.\nStreamLive StreamLive is a streaming processing service that provides broadcast-grade live streaming processing services. This allows you to create high-quality video streams and distribute them to many different types of devices.\nStreamLive uses Tencent Cloud proprietary high-performance video encoding and compression algorithms to provide a better viewing experience while reducing transmission traffic consumption. We also provides 24/7 availability.\nStreamLive is also a service that provides functions that support the following broadcast-level workflows.\nDesign highly available, dual-pipeline workflows with two independent pipelines. Supports broadcast-grade acquisition protocols such as RTP, RTMP, UDP, HLS, HTTP-MP4, and RTP-FEC Supports high-quality multi-format transcoding, supports transcoding at various resolutions (SD, HD, UHD, 2K, 4K, etc.), bitrates, and frame rates. Supports Fairplay, Widevine Encryption technology and DRM (digital rights management) solution for stream protection When using TSC (Top Speed Codec), AI algorithms can calculate optimal dynamic encoding parameters in real time based on business scenarios and implement low bitrate and high-quality transcoding services. It also provides better performance than AWS Elemental MediaLive QVBR from the standards of SSIM and VMAF. StreamPackage StreamPackage is a high-quality video muxing and origination service that provides professional, stable and safe video muxing and delivery services. It leverages Tencent Cloud globally distributed abundant computing resources and exclusive world-leading video technology, provides 24/7 availability, simplifies video packaging and delivery, and improves source resilience, allowing video content providers to keep videos safe and stable. Allows for large-scale streaming.\n",
+    "description": "",
+    "tags": null,
+    "title": "Stream Series with CSS",
+    "uri": "/stream_css/_0-what-is-stream-series/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for UGC or M\u0026E",
+    "content": "1. Domain Name Tencent Cloud Cloud Streaming Service is serviced through the customer’s domain for each stream channel, and 2 domains are required per live channel, a domain for cloud acquisition and a domain for playback.\nIn other words, in order to use Tencent Cloud Cloud Streaming Service, it is necessary to register ownership and verify of the domain owner during the Push and Play Domain registration process. Once registered, you don’t need to verify it again if you add a domain with the same domain.\n2. OBS In this workshop, OBS Studio is used. Use OBS Studio on your laptop to ingest live video feed to Tencent Cloud Media Service. Tutorial videos explaining how to use OBS Studio are available online, and Tencent Cloud CSS User Guide Document also provides detailed information. You can refer to the contents.\nIf OBS Studio is not installed, please install it now. Run OBS Studio. Click + in the Scenes menu at the bottom left and create a Scene named test. Click + in the Sources menu on the right side of the Scenes menu, select the Video Capture Device option, and create a source. Once complete, the built-in camera video capture input will be centered. Click the Settings button in the Controls menu at the bottom right, and then click the Output menu on the left side of the Setting window. In the Output menu, change Output Mode to Advanced and then change the configuration as shown below. Leave everything else as default and click the OK button to complete the configuration. ",
+    "description": "",
+    "tags": null,
+    "title": "Prerequisites",
+    "uri": "/css/_1-pre-requisites/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for large events or OTT",
+    "content": "1. Domain Name Tencent Cloud CSS is serviced through the customer’s domain for each stream channel. In this lab, Playback domain is required to use CSS CDN.\nIn other words, in order to use Tencent Cloud CSS CDN, registration step is required that Procedure to inform and register ownership as the domain owner during the Playback Domain registration process . Once registered, you don’t need to verify it again if you add a domain with the same parent domain.\n2. OBS In this workshop, OBS Studio is used. Use OBS Studio on your laptop to transmit live video to Tencent Cloud Media Service. Several tutorial videos explaining how to use OBS Studio are available online, and Tencent Cloud CSS User Guide Document also provides detailed information. You can refer to the contents.\nIf OBS Studio is not installed, please install it now. Run OBS Studio. Click + in the Scenes menu at the bottom left and create a Scene named test. Click + in the Sources menu on the right side of the Scenes menu, select the Video Capture Device option, and create a source. Once complete, the built-in camera video capture input will be centered. Click the Settings button in the Controls menu at the bottom right, and then click the Output menu on the left side of the Setting window. In the Output menu, change Output Mode to Advanced and then change the configuration as shown below. Leave everything else as default and click the OK button to complete the configuration. 3. VLC In this workshop, the stream will be played using VLC media player. If VLC media player is not installed, we recommend installing it.\n",
+    "description": "",
+    "tags": null,
+    "title": "Prerequisites",
+    "uri": "/stream_css/_1-pre-requisites/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for large events or OTT",
+    "content": "When implementing video workloads for large-scale events and 24x7, the first thing to configure is the StreamPackage.\nLet’s look at how to configure StreamPackage as follows :\nHover the mouse over the Product button at the top of the Tencent Cloud console, search for streampackage, and go to the StreamPackage console. Click the Create Channel button located at the top of the StreamPackage console.\nEnter str_pkg_workshop in Name and leave other values as default. Click the Create button to create the StreamPackage configuration. In the StreamPackage configuration, click the Endpoints tab and click the Create Endpoint button.\nEnter str_pkg_endpoint in Name and leave other values as default. Click the Create button to create a StreamPackage Endpoint configuration. In the StreamPackage configuration, click the Information tab and copy the ID value into Notepad.\n",
+    "description": "",
+    "tags": null,
+    "title": "Configure StreamPackage",
+    "uri": "/stream_css/_2-streampackage/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for UGC or M\u0026E",
+    "content": " Click the Domain tab on the left tab of the CSS console. Then you can check the currently configured CSS domains.\nClick the Add Domain button located at the top of the main menu. When the Add Domain pop-up appears, enter the value for Push Domain as shown below. Once the input is complete, click the Add Domain button to move to the next step.\nType: Push domain Domain Name: Domain name to use for push Note: If this is your first time registering a CSS Domain, a separate domain ownership verification process is required. After verifying ownership of the domain by adding a TXT record to the domain registration service, click Verify Now to complete domain ownership verification and move on to the next step. Refer to the CNAME Configuration menu and add the CNAME value for host in the DNS service. CNAME Configuration menu Add CNAME record to DNS CNAME record verification ",
+    "description": "",
+    "tags": null,
+    "title": "Create a push domain",
+    "uri": "/css/_2-create-push/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for large events or OTT",
+    "content": "In implementing video workloads for large-scale events and 24x7, after configuring a StreamPackage, you can configure StreamLive and associate it with the StreamPackage.\nLet’s take a look at how to configure StreamLive as follows :\nHover the mouse over the Product button at the top of the Tencent Cloud console, search for streamlive, and then go to the StreamLive console. Create StreamLive Security Group Click the Security Group tab in the left menu. Click the Create Security Group button, enter the values as follows, and then click the Confirm button to finish creating the security group. Name: str_live_sg_workshop IP Allowlist: 0.0.0.0/0 (allow all) Create StreamLive Input Click the Input tab in the left menu. Click the Create Input button, enter the values as follows, and then click the Confirm button to complete the input creation. Name: strlive_input_workshop Type: RTMP_PUSH Security Group: str_live_sg_workshop Destination A: app name live / stream name a Destination B: app name live / stream name b Leave rest to default Create StreamLive Channel Click the Channel tab in the left menu and click the Create Channel button.\nEnter the following values for Channel Name and click the Next button.\nChannel name: str_live_ch_workshop In Input Setting, click the Add button and load the strlive_input_workshop input. In Output Group Setting, press the ADD button, then enter the values as follows and click the Next button. Output Group name: strlive_output_workshop Output Group type: HLS_STREAMPACKAGE Destination Information \u003e StreamPackage Channel ID: ID value copied to notepad in the previous chapter Outputs: Here, we will create outputs with a total of two bitrate ladders. Add two outputs** and click the Setting button in the Transcoding Setting menu. Then enter the values below. Output Name 960x540 1280x720 Transcoding Joint Transcoding Joint Transcoding Audio/Video Name 960x540 1280x720 Video Transcoding - Vcodec H264 H264 Video Transcoding - Width 960 1280 Video Transcoding - Height 540 720 Rate Control - Video Bitrate/bps 1200000 2000000 Top Speed Codec Transcoding Enable Enable Other configurations Leave it as Default value Leave it as Default value Leave the rest as default and click the Done button to finalize the configuration.\nAfter configuration is complete, check the created channels. You can see that it has been created in the current IDLE state. Note: You can start running the StreamLive channel by clicking the START button. Once you start a channel, billing starts even if you don’t actually start streaming. Therefore, if you plan to temporarily suspend or not continue this workshop, we recommend that you maintain the IDLE status or STOP to prevent unnecessary charges.\n",
+    "description": "",
+    "tags": null,
+    "title": "Configure StreamLive",
+    "uri": "/stream_css/_3-streamlive/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for UGC or M\u0026E",
+    "content": " Click the Domain tab on the left tab of the CSS console main screen. Then you can check the currently configured CSS domains.\nClick the Add Domain button located at the top of the main menu. When the Add Domain pop-up appears, change the Type to Playback Domain and enter the values as shown below. Once the input is complete, click the Add Domain button to move to the next step.\nType: Play domain Acceleration region: Outside Chinese mainland Domain Name: Domain name to use for playback Refer to the CNAME Configuration menu and add the CNAME value for host in the DNS service. CNAME Configuration menu Add CNAME record to DNS CNAME record verification ",
+    "description": "",
+    "tags": null,
+    "title": "Create a play domain",
+    "uri": "/css/_3-create-play/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for UGC or M\u0026E",
+    "content": "In Cloud Streaming Service, you can configure an Adaptive Bitrate configuration with separately specified transcoding type, resolution, and bitrate as a template and use it in CSS HLS Stream and WebRTC Streaming.\nNOTE: When Tencent Cloud CSS uses a single bitrate format through HTTP-FLV or RTMP streaming in addition to HLS and WebRTC Streaming, detailed specifications of the stream must be configured by configuring the Live Transcoding function in CSS rather than Adaptive Bitrate.\nOn the left tab of the CSS console main screen, click the Feature Configuration -\u003e Adaptive Bitrate tab.\nClick the Create Template button at the top of the Adaptive Bitrate console.\nIn CSS, you can configure Template to configure bitrate, resolution, and creating ABR ladder.\nFor Template Name, enter testABR. Any value can be entered. In the Streams menu, you can configure the ABR ladder and determine the transcoding method, resolution, bitrate, etc. for each ladder. In this lab, we will proceed with the basic configuration using Standard Transcoding. Configure 3 streams with Adaptive Bitrate as follows, Each Stream Name consists of HD, SD, and Smooth. Stream Quality selects HD, SD, and Smooth respectively. Then, resolution and bitrate values are automatically specified. Note: In this lab, we will select the default value, however, you can flexibly specify bitrate, resolution, transcoding type in the real scenario.\nAfter completing the stream configuration, click the Save button. A pop-up will appear asking you to Domain and Binding the configured Adaptive Bitrate template. As shown below, select Playback Domain configured in step 3. ",
+    "description": "",
+    "tags": null,
+    "title": "Create an Adaptive Bitrate Configuration",
+    "uri": "/css/_4-create-streamingconfig/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for large events or OTT",
+    "content": "When implementing video workloads for large-scale events and 24x7, CSS can be leveraged as a CDN to handle large viewer traffic. After configuring the StreamPackage, you can configure a CSS Playback Domain and associate it with the StreamPackage.\nLet’s take a look at how to configure CSS as a CDN which is optimized for Live Streaming as follows.\nCSS Playback Domain Configuration Click the Domain tab on the left tab of the CSS console. Then you can check the currently configured CSS domains.\nClick the Add Domain button located at the top of the main menu. When the Add Domain pop-up appears, change the Type to Playback Domain and enter the values as shown below. Once the input is complete, click the Add Domain button to move to the next step.\nType: Play domain Acceleration region: Outside Chinese mainland Domain Name: Domain name to use for playback Note: If this is your first time registering a CSS Domain, a separate domain ownership verification process is required. After verifying ownership of the domain by adding a TXT record to the domain registration service, click Verify Now to complete domain ownership verification and move on to the next step. Refer to the CNAME Configuration menu and add the CNAME value for host in the DNS service. CNAME Configuration menu Add CNAME record to DNS CNAME record verification Now configure the origin for CSS CDN. This configuration can be done from the StreamPackage console or CSS console. Integration of CSS Playback Domain with StreamPackage Go to the StreamPackage console and navigate to the StreamPackage configuration configured in the previous section. Click the CDN tab in the top menu. Click the Edit Configuration button and select the CSS Playback domain you created. StreamPackage and CSS CDN can be natively integrated by default, so no additional integration procedures are required. In StreamPackage configuration, check that CSS Playback domain is configured as CDN and that CNAME and Status are all normal. Note. If you go to CSS configuration, you can see that Origin server mode is activated, and in Origin-pull configuration, only StreamPackage Id is integrated.\nWhen configuring CSS for Live Streaming CDN only, Origin server mode must be enabled. ",
+    "description": "",
+    "tags": null,
+    "title": "Create CSS CDN",
+    "uri": "/stream_css/_4-css/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for UGC or M\u0026E",
+    "content": "Now, we have configured the Push and Playback Domains, and configured Adaptive Bitrate and bound it to the Playback Domain. Let’s do an test and verify the live streaming.\nOn the left menu of the CSS console, click Tools \u003e Address Generator. When you visit the Address Generator menu, enter the values as follows. And click the Generate button. URL Type: Push and playback URLs Stream Name: live rancoding Template: testABR Confirm the push address. RTMP, WebRTC, SRT, and RTMP over SRT are supported as push addresses, and you can see that the OBS input value is output separately. In this lab, we will practice Push through OBS. Run OBS and click the Settings button. Enter the values in the Stream menu as follows. Here, for the OBS server and OBS Stream key information, copy and paste the OBS server and stream key values in step 3 above and then click the Save (OK) button to save the configuration. And when you click the Start Streaming button, the camera’s feed will be obtained as a CSS Push URL through OBS. NOTE: Information on environment settings for OBS download and CSS can be found here.\nCheck the playback address and copy the HLS URL. Visit the Tencent video player demo site and paste it into Playback URL. And after clicking the Preview button, check whether the HLS Stream plays normally. Copy WebRTC URL from Playback address in Step 4. Visit the Tencent video player demo site and paste it into Playback URL. And after clicking the Preview button, check whether the WebRTC Stream is played normally. NOTE: The Playback Domain of CSS (Cloud Streaming Services) functions as a CDN. If you want to make a secure connection via the HTTPS protocol, (a) enable HTTPS in the CSS Playback domain, and (b) You must obtain a certificate and upload it to CSS. Please click the links for more details.\n",
+    "description": "",
+    "tags": null,
+    "title": "Test \u0026 Verify",
+    "uri": "/css/_5-test-verify/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for large events or OTT",
+    "content": "Now, we have completed configuring StreamPackage and StreamLive to provide broadcast-grade video quality and functionality. You have completed configuring CSS Playback Domain as a CDN for Live Streaming.\nNow let’s verify the configurations.\nCheck StreamLive settings and information Visit the StreamLive console.\nVisit the Channel menu in the left menu of the console and check the created channel.\nIf the channel status is IDLE, click the Start button in the Operation menu on the right to run the channel.\nVisit the Input menu in the left menu of the console and check the created input.\nCheck URL A. Check for URLs with a schema like rtmp://xxxxxxx.ap-{region}-x.streamlive.myqcloud.com/{APP_NAME}/{STREAM_NAME}.\nWhen obtaining a live feed using OBS, the following input is used. OBS Server: rtmp://xxxxxxx.ap-{region}-x.streamlive.myqcloud.com/{APP_NAME}/ OBS Stream Key: {STREAM_NAME} Running and setting up OBS Studio Run OBS Studio. In this lab, we will practice Push through OBS. Run OBS and click the Settings button, Enter the values in the Stream menu as follows. For OBS server and OBS Stream key information, please refer to the OBS server and stream key values in step 5 above. After entering the values, click the Save (OK) button to save the configuration. And when you click the Start Streaming button, the camera’s feed will be obtained as a CSS Push URL through OBS. NOTE: Information on environment settings for OBS download and StreamLive can be found here.\nCheck and test Playback URL Visit the StreamPackage console. Click Configure and visit the Endpoint tab. Copy the URL value from here. Run VLC media player. Run the File \u003e Open Network menu and paste the copied URL. Check if the StreamPackage URL is played normally.\nThe format of the URL will be similar to the following. http://xxxxxxx.ap-{region}.mediapackage.srclivepull.myqcloud.com/v1/xxxxxx/xxxx/main.m3u8 Run the File \u003e Open Network menu in VLC media player, and this time change the domain to CSS Playback Domain (CDN) in the copied URL and try playing. Check if the CSS Playback URL is played properly. The format of the URL will be similar to the following: http://{YOUR_CSS_PLAYBACK_DOMAIN}/v1/xxxxxx/xxxx/main.m3u8 NOTE: The Playback Domain of CSS (Cloud Streaming Services) feature as a CDN. If you want to make a secure connection using the HTTPS protocol, (a) enable HTTPS in the CSS Playback domain, and (b) You must obtain a certificate and upload it to CSS. Please click the links for more details.\n",
+    "description": "",
+    "tags": null,
+    "title": "Test \u0026 Verify",
+    "uri": "/stream_css/_5-test-verify/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for UGC or M\u0026E",
+    "content": "So far, we have configured and verified an end-to-end live streaming workflow using Cloud Streaming Service.\nTo prevent unnecessary charges, you need to deprovision the following resources.\n1. Remove binding and delete Feature Configuration Click Adaptive Bitrate in the CSS console left menu. Click the Adaptive Bitrate configuration you created. Click Unbind at the bottom of the configuration to unlink the configuration from the domain. Delete the Adaptive Bitrate configuration by clicking Delete at the top of the configuration. 2. Delete domain and delete domain Click Domain on the left menu of the CSS console. Check the Push and Play domains you created, and click Delete on the right to delete the domain configuration. Finally, delete the domains from the domain registrar you are using. ",
+    "description": "",
+    "tags": null,
+    "title": "Clean up resources",
+    "uri": "/css/_6-cleanup-resources/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud \u003e Live Streaming for large events or OTT",
+    "content": "Now, we have confirmed the broadcast-grade end-to-end live streaming workflow using the CDN feature of Cloud Streaming Service, StreamLive, and StreamPackage.\nTo prevent unnecessary charges, we organize the following resources.\n1. Delete CSS configuration Click Domain on the left menu of the CSS console. Check the configured CDN playback domain and remove it by clicking the Delete button. 2. Delete StreamLive configuration Click Channel on the left menu of the StreamLive console. If the status of the StreamLive channel is RUNNING, click Stop to stop it. Check the StreamLive channels you have configured and click Delete to remove them. Click Input on the left menu of the StreamLive console. Check the StreamLive inputs you configured and click Delete to remove them. Click Security Group in the left menu of the StreamLive console. Check the configured Security Group and click Delete to remove it. 3. Delete StreamPackage configuration Click Channel Management on the left menu of the StreamPackage console. Check the configured StreamPackage channel and click to enter detailed settings. Click the Endpoints tab, and then click Delete to remove the Endpoint configuration. Press the back button to go to Channel Management configuration and remove the StreamPackage channel you configured. ",
+    "description": "",
+    "tags": null,
+    "title": "Clean up resources",
+    "uri": "/stream_css/_6-cleanup-resources/index.html"
+  },
+  {
+    "breadcrumb": "Live Streaming on Tencent Cloud",
     "content": "",
     "description": "",
     "tags": null,
@@ -24,7 +144,7 @@ var relearn_search_index = [
     "uri": "/categories/index.html"
   },
   {
-    "breadcrumb": "Default HOME",
+    "breadcrumb": "Live Streaming on Tencent Cloud",
     "content": "",
     "description": "",
     "tags": null,

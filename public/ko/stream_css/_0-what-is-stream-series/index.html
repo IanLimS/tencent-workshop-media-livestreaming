@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.121.2">
+    <meta name="generator" content="Relearn 5.23.2+tip">
+    <meta name="description" content="Tencent Cloud Workshop">
+    <meta name="author" content="Ian Lim">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Stream Series with CSS :: 한글">
+    <meta name="twitter:description" content="OTT 의 24x7 채널 및 대규로 스포츠 스트리밍 이벤트와 같은 미션 크리티컬한 비디오 워크로드를 운용하는 고객들은 다음과 같은 요구사항이 충족되는 것을 원합니다.
+수백만명의 시청자들 Copyrighted 컨텐츠 보호 HLS/DASH 와 같은 범용 스트리밍 포맷 지원 및 H.265 와 같은 효율적인 코덱 Redundancy 텐센트 클라우드의 미디어 서비스는 대규모 이벤트나 24X7 워크로드에 적합한 솔루션을 제공하고 있는데요. 다음과 같은 서비스들을 이용할 수 있습니다. 한 번 하나씩 살펴보도록 하겠습니다.
+CSS CDN Cloud Streaming Service (CSS) 는 UGC (User Gerenrated Content) 혹은 미디어 엔터테인먼트 등의 사용사례에서 완전관리형으로 사용할 수 있는 서비스입니다.">
+    <meta property="og:title" content="Stream Series with CSS :: 한글">
+    <meta property="og:description" content="OTT 의 24x7 채널 및 대규로 스포츠 스트리밍 이벤트와 같은 미션 크리티컬한 비디오 워크로드를 운용하는 고객들은 다음과 같은 요구사항이 충족되는 것을 원합니다.
+수백만명의 시청자들 Copyrighted 컨텐츠 보호 HLS/DASH 와 같은 범용 스트리밍 포맷 지원 및 H.265 와 같은 효율적인 코덱 Redundancy 텐센트 클라우드의 미디어 서비스는 대규모 이벤트나 24X7 워크로드에 적합한 솔루션을 제공하고 있는데요. 다음과 같은 서비스들을 이용할 수 있습니다. 한 번 하나씩 살펴보도록 하겠습니다.
+CSS CDN Cloud Streaming Service (CSS) 는 UGC (User Gerenrated Content) 혹은 미디어 엔터테인먼트 등의 사용사례에서 완전관리형으로 사용할 수 있는 서비스입니다.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="/ko/stream_css/_0-what-is-stream-series/index.html">
+    <meta property="article:section" content="Live Streaming for large events or OTT :: 한글">
+    <meta property="og:site_name" content="한글">
+    <title>Stream Series with CSS :: 한글</title>
+    <link href="/ko/stream_css/_0-what-is-stream-series/index.html" rel="alternate" hreflang="x-default">
+    <link href="/ko/stream_css/_0-what-is-stream-series/index.html" rel="alternate" hreflang="ko">
+    <link href="/stream_css/_0-what-is-stream-series/index.html" rel="alternate" hreflang="en">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/css/fontawesome-all.min.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1711950590" rel="stylesheet">
+    <link href="/css/auto-complete.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1711950590" rel="stylesheet">
+    <link href="/css/fonts.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1711950590" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1711950590" rel="stylesheet">
+    <link href="/css/theme-blue.css?1711950590" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-learn.css?1711950590" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1711950590" rel="stylesheet">
+    <link href="/css/print.css?1711950590" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1711950590" rel="stylesheet">
+    <script src="/js/url.js?1711950590"></script>
+    <script src="/js/variant.js?1711950590"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_js_url="/ko/index.search.js";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      window.relearn = window.relearn || {};
+      window.relearn.baseUriFull='/';
+      // variant stuff
+      window.relearn.themeVariantModifier='';
+      window.variants && variants.init( [ 'blue' ] );
+      // translations
+      window.T_Copy_to_clipboard = `클립보드에 복사`;
+      window.T_Copied_to_clipboard = `클립보드에 복사됐습니다!`;
+      window.T_Copy_link_to_clipboard = `링크를 클립보드에 복사`;
+      window.T_Link_copied_to_clipboard = `클립보드에 링크가 복사됐습니다!`;
+      window.T_Reset_view = `보기 재설정`;
+      window.T_View_reset = `보기 초기화!`;
+      window.T_No_results_found = `"{0}"에 대한 결과가 없습니다.`;
+      window.T_N_results_found = `"{0}"에 대해 {1}개의 결과가 검색되었습니다.`;
+    </script>
+  </head>
+  <body class="mobile-support html" data-url="/ko/stream_css/_0-what-is-stream-series/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="메뉴 (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+            <div class="topbar-button topbar-button-toc" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="목차 (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-list-alt"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"><nav class="TableOfContents">
+  <ul>
+    <li><a href="#css-cdn">CSS CDN</a></li>
+    <li><a href="#streamlive">StreamLive</a></li>
+    <li><a href="#streampackage">StreamPackage</a></li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/index.html"><span itemprop="name">Live Streaming on Tencent Cloud</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/ko/stream_css/index.html"><span itemprop="name">Live Streaming for large events or OTT</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Stream Series with CSS</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/stream_css/index.html" title="Live Streaming for large events or OTT (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-next" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show"><a class="topbar-control" href="/ko/stream_css/_1-pre-requisites/index.html" title="Prerequisites (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a>
+            </div>
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="외부 링크"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+<h1 id="stream-series-with-css">Stream Series with CSS</h1>
+
+<p>OTT 의 24x7 채널 및 대규로 스포츠 스트리밍 이벤트와 같은 미션 크리티컬한 비디오 워크로드를 운용하는 고객들은 다음과 같은 요구사항이 충족되는 것을 원합니다.</p>
+<ol>
+<li>수백만명의 시청자들</li>
+<li>Copyrighted 컨텐츠 보호</li>
+<li>HLS/DASH 와 같은 범용 스트리밍 포맷 지원 및 H.265 와 같은 효율적인 코덱</li>
+<li>Redundancy</li>
+</ol>
+<p>텐센트 클라우드의 미디어 서비스는 대규모 이벤트나 24X7 워크로드에 적합한 솔루션을 제공하고 있는데요. 다음과 같은 서비스들을 이용할 수 있습니다. 한 번 하나씩 살펴보도록 하겠습니다.</p>
+<p><a href="#R-image-4b372ef8e938ca18329500e3cc37eb23" class="lightbox-link"><img src="/images/stream-css/stream-workflow-en.png" alt="CSS 아키텍처" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4b372ef8e938ca18329500e3cc37eb23"><img src="/images/stream-css/stream-workflow-en.png" alt="CSS 아키텍처" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<h2 id="css-cdn">CSS CDN</h2>
+<p>Cloud Streaming Service (CSS) 는 UGC (User Gerenrated Content) 혹은 미디어 엔터테인먼트 등의 사용사례에서 완전관리형으로 사용할 수 있는 서비스입니다.</p>
+<p><strong>채널의 템플릿화, 빠른 채널 생성, 쉽고 간편한 조작, 저지연 대기시간</strong> 등의 요구사항을 가진 고객분들의 니즈를 해소드릴 수 있는 서비스 인데요.</p>
+<p>이 CSS 는 채널이 도메인 기반으로 구성되며 Push 및 Play 2개의 큰 도메인 컴포넌트로 이루어져 있습니다.</p>
+<p>여기서, <strong>CSS 의 Play 도메인은 단독으로 CSS CDN 으로 사용</strong>될 수 있습니다. 즉, CSS 와 유기적으로 통합되어 완전관리형 서비스로 사용하거나, 다른 스트리밍 오리지네이션 서비스와 통합해서 Live Streaming 에 적합한 <strong>Streaming CDN 으로도 사용</strong>될 수 있습니다.</p>
+<p><a href="#R-image-2d8436e2e535e75c15d04d623f79a48e" class="lightbox-link"><img src="/images/stream-css/css-as-a-live-cdn.png" alt="CSS 아키텍처" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2d8436e2e535e75c15d04d623f79a48e"><img src="/images/stream-css/css-as-a-live-cdn.png" alt="CSS 아키텍처" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<h2 id="streamlive">StreamLive</h2>
+<p><strong>StreamLive는 브로드캐스트 급의 라이브 스트리밍 처리 서비스를 제공하는 스트리밍 처리 서비스</strong> 입니다. 이를 통해 고품질 비디오 스트림을 생성하고 이를 다양한 유형의 장치에 배포할 수 있습니다.</p>
+<p>StreamLive는 Tencent Cloud의 독점적인 고성능 비디오 인코딩 및 압축 알고리즘을 사용하여 전송 트래픽 소비를 줄이는 동시에 더 나은 시청 경험을 제공합니다. 또한 24/7 가용성을 보장합니다.</p>
+<p>StreamLive 는 또한 아래와 같은 브로드캐스트 급의 워크플로우를 지원하는 기능을 제공하는 서비스 입니다.</p>
+<ul>
+<li>2개의 독립적인 파이프라인을 통해 고가용성의 이중 파이프라인 워크플로우를 설계할 수 있습니다.</li>
+<li>RTP, RTMP, UDP, HLS, HTTP-MP4 및 RTP-FEC와 같은 방송급에 준하는 입수 프로토콜 지원</li>
+<li>높은 품질의 다중 포맷 트랜스코딩을 지원하며, 다양한 해상도(SD, HD, UHD, 2K, 4K 등), 비트 전송률 및 프레임 속도에서 트랜스코딩을 지원</li>
+<li>스트림 보호를 위한 Fairplay, Widevine Encryption 기술 및 DRM (디지털 권한관리) 솔루션을 지원</li>
+<li>TSC (Top Speed Codec) 을 이용시 AI 알고리즘은 비즈니스 시나리오를 기반으로 실시간으로 최적의 동적 인코딩 매개 변수를 계산하고 낮은 비트 전송률과 고품질 트랜스코딩 서비스를 구현할 수 있습니다. 또한 SSIM과 VMAF의 이중 표준에 따라 AWS Elemental MediaLive QVBR 보다 나은 성능을 제공합니다.</li>
+</ul>
+<p><a href="#R-image-8951d3a0682c5a591bf64619fba07a1b" class="lightbox-link"><img src="/images/stream-css/stream-live-arch.png?width=40vw&amp;classes=left" alt="CSS 아키텍처" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-8951d3a0682c5a591bf64619fba07a1b"><img src="/images/stream-css/stream-live-arch.png?width=40vw&amp;classes=left" alt="CSS 아키텍처" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></p>
+<h2 id="streampackage">StreamPackage</h2>
+<p><strong>StreamPackage 는 고품질 비디오 Muxing 및 오리지네이션 서비스</strong>로, 전문적이고 안정적이며 안전한 비디오 Muxing 및 Delivery 서비스를 제공합니다.
+전 세계에 배포된 Tencent Cloud의 풍부한 컴퓨팅 리소스와 독점적인 세계 최고의 비디오 기술을 활용하고 24/7 가용성을 제공하여 비디오 패키징 및 전달을 단순화하고 원본 복원력을 향상시켜 비디오 콘텐츠 제공업체가 비디오를 안전하고 안정적으로 대규모 스트리밍할 수 있도록 합니다.</p>
+<p><a href="#R-image-554bf7154c92ca0ceb6d7a51f7a95f4c" class="lightbox-link"><img src="/images/stream-css/stream-package-arch.png?width=40vw&amp;classes=left" alt="CSS 아키텍처" class="figure-image noborder left lightbox noshadow" style="height: auto; width: 40vw;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-554bf7154c92ca0ceb6d7a51f7a95f4c"><img src="/images/stream-css/stream-package-arch.png?width=40vw&amp;classes=left" alt="CSS 아키텍처" class="lightbox-image noborder left lightbox noshadow" loading="lazy"></a></p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation showVisitedLinks">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<img
+  class="logo"
+  src="/images/logo_basic.png"
+  alt="TencneCloud Logo" />
+
+        </div>
+        <div class="searchbox default-animation">
+          <i class="fas fa-search" title="검색 (CTRL+ALT+f)"></i>
+          <label class="a11y-only" for="R-search-by">검색</label>
+          <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="검색어를 입력하세요">
+          <button class="search-clear" type="button" data-search-clear="" title="검색 지우기"><i class="fas fa-times" title="검색 지우기"></i></button>
+        </div>
+        <script>
+          var contentLangs=['ko'];
+        </script>
+        <script src="/js/auto-complete.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1711950590" defer></script>
+        <script src="/js/lunr/lunr.ko.min.js?1711950590" defer></script>
+        <script src="/js/search.js?1711950590" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <ul>
+          <li><a class="padding" href="/ko/index.html"><i class="fas fa-home"></i> Home</a></li>
+        </ul>
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/ko/css/index.html" class=""><input type="checkbox" id="R-section-8941c520609238295a01ef684b433ec8" aria-controls="R-subsections-8941c520609238295a01ef684b433ec8"><label for="R-section-8941c520609238295a01ef684b433ec8"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 Live Streaming for UGC or M&amp;E</span></label><a class="padding" href="/ko/css/index.html">Live Streaming for UGC or M&amp;E<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-8941c520609238295a01ef684b433ec8" class="morespace collapsible-menu">
+          <li data-nav-id="/ko/css/_0-what-is-css/index.html" class=""><a class="padding" href="/ko/css/_0-what-is-css/index.html">CSS Basics<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_1-pre-requisites/index.html" class=""><a class="padding" href="/ko/css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_2-create-push/index.html" class=""><a class="padding" href="/ko/css/_2-create-push/index.html">Create a push domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_3-create-play/index.html" class=""><a class="padding" href="/ko/css/_3-create-play/index.html">Create a play domain<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_4-create-streamingconfig/index.html" class=""><a class="padding" href="/ko/css/_4-create-streamingconfig/index.html">Create a Adaptive Bitrate Config<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_5-test-verify/index.html" class=""><a class="padding" href="/ko/css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/ko/css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/ko/stream_css/index.html" class="parent "><input type="checkbox" id="R-section-d160c0b53ecab67ccd1ea4d39846080b" aria-controls="R-subsections-d160c0b53ecab67ccd1ea4d39846080b" checked><label for="R-section-d160c0b53ecab67ccd1ea4d39846080b"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">하위 메뉴 Live Streaming for large events or OTT</span></label><a class="padding" href="/ko/stream_css/index.html">Live Streaming for large events or OTT<i class="fas fa-check read-icon"></i></a><ul id="R-subsections-d160c0b53ecab67ccd1ea4d39846080b" class="morespace collapsible-menu">
+          <li data-nav-id="/ko/stream_css/_0-what-is-stream-series/index.html" class="active"><a class="padding" href="/ko/stream_css/_0-what-is-stream-series/index.html">Stream Series with CSS<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_1-pre-requisites/index.html" class=""><a class="padding" href="/ko/stream_css/_1-pre-requisites/index.html">Prerequisites<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_2-streampackage/index.html" class=""><a class="padding" href="/ko/stream_css/_2-streampackage/index.html">Configure StreamPackage<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_3-streamlive/index.html" class=""><a class="padding" href="/ko/stream_css/_3-streamlive/index.html">Configure StreamLive<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_4-css/index.html" class=""><a class="padding" href="/ko/stream_css/_4-css/index.html">Create CSS CDN<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_5-test-verify/index.html" class=""><a class="padding" href="/ko/stream_css/_5-test-verify/index.html">Test &amp; Verify<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/ko/stream_css/_6-cleanup-resources/index.html" class=""><a class="padding" href="/ko/stream_css/_6-cleanup-resources/index.html">Clean up resources<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showLangSwitch showVisitedLinks showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showLangSwitch showVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch showLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-language fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">언어</label>
+                    <select id="R-select-language" onchange="location = baseUri + this.value;">
+                      <option id="R-ko" value="/ko/stream_css/_0-what-is-stream-series/index.html" lang="ko" selected>Korean</option>
+                      <option id="R-en" value="/stream_css/_0-what-is-stream-series/index.html" lang="en">English</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fas fa-paint-brush fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">주제</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-blue" value="blue" selected>Blue</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks showVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fas fa-history fa-fw"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">방문 기록 삭제</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter">
+	    <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/js/clipboard.min.js?1711950590" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1711950590" defer></script>
+    <script src="/js/theme.js?1711950590" defer></script>
+  </body>
+</html>
