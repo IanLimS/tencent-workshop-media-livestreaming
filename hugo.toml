@@ -32,7 +32,7 @@ description = "Tencent Cloud Workshop"
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Multilanguage content.
-# Default: not set
+# Default: "ko"
 # additionalContentLanguage = [ "en", "ko" ]
 
 # When using mulitlingual website, disable the switch language button.
