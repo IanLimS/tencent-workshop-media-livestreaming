@@ -30,4 +30,4 @@ If you are first to use Hugo, please visit and follow the guide : https://gohugo
 4. Verify changes in real time
 5. Once change is completed, run **hugo** command
 5. Deploy files into COS of respository. (compiled output is located in /public directory)
-6. Commit changes into the repository.
+6. Commit & push changes into the repository.

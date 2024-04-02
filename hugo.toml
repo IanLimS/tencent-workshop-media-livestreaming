@@ -2,6 +2,13 @@ baseURL = "/"
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 
+[deployment]
+[[deployment.targets]]
+# An arbitrary name for this target.
+name = "production"
+# URL specifies the Go Cloud Development Kit URL to deploy to. Examples:
+URL = "https://workshop-ianlim-1301344332.cos.ap-seoul.myqcloud.com/hugo-template"
+
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-relearn"
 
@@ -32,8 +39,8 @@ description = "Tencent Cloud Workshop"
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Multilanguage content.
-# Default: "ko"
-# additionalContentLanguage = [ "ko" ]
+# Default: not set
+# additionalContentLanguage = [ "en", "ko" ]
 
 # When using mulitlingual website, disable the switch language button.
 # disableLanguageSwitchingButton = false
@@ -87,10 +94,17 @@ showVisitedLinks = true
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # English is the default language
-defaultContentLanguage = "ko"
+defaultContentLanguage = "en"
 
 [languages]
 [languages.ko]
 title = "한글"
 weight = 1
 languageName = "Korean"
+
+[languages.en]
+title = "English"
+weight = 2
+languageName = "English"
+
+
