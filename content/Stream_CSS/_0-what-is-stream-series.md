@@ -12,7 +12,7 @@ Customers run mission-critical video workloads, such as 24x7 OTT channels and la
 
 Tencent Cloud media services provide solutions suitable for large-scale events or 24X7 workloads. You can use the following services: Let’s look at them one by one.
 
-![CSS architecture](/images/stream-css/stream-workflow.png)
+![CSS architecture](/images/stream-css/stream-workflow-en.png)
 
 ## CSS CDN
 

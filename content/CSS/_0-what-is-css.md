@@ -3,7 +3,8 @@ title = "CSS Basics"
 weight = 20
 +++
 
-Prior to start with Tencent Cloud Cloud Streaming Service (A.K.A CSS), **Push domain** and **Play domain** are configured to configure one live streaming.
+Tencent Cloud Cloud Streaming Service (A.K.A CSS) provides an all-in-one service that allows you to build an entire live workflow on the cloud.
+To build a live streaming workflow using CSS, you need 2 customer domains.
 
 In other words, CSS has two main components, and channels are organized around domains.
 
@@ -43,7 +44,7 @@ CSS Player 도메인에서는 인증 (Authentication), Referer 및 IP/Regional(�
 ## 2. Player domain (CSS CDN)
 
 The Player domain is a component that provides a CDN optimized for live streaming.
-This can be (1) integrated with a CSS Push domain to build an end-to-end live workflow, or (2) integrated with a 3rd party live streaming packaging & origination service.
+(1) Basically Player domain is natively integrated with a CSS Push domain to build an end-to-end live workflow or (2) can be integrated with a 3rd party live streaming packaging & origination service by enabling Origin-Pull mode.
 
 In addition, CSS Player domain provides essential functions for live streaming such as Authentication, Referer, and IP/Regional Access Control.
 

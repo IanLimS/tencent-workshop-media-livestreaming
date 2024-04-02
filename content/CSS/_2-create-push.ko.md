@@ -21,7 +21,7 @@ weight = 22
 - **CNAME Configuration 메뉴**
 ![CNAME Configuration 메뉴](/images/css-basic/4-1-css-push-domain-cname-configuration.png?width=40vw&classes=left)
 
-- **DNS 에 CNAME 레코드 추가**
+- **DNS 에 CNAME 레코드 추가** : *아래는 예시 화면으로, 자료 업데이트 과정에서 도메인 이름이 상이할 수 있습니다.*
 ![CNAME 레코드 추가](/images/css-basic/4-1-css-push-domain-cname.png)
 
 - **CNAME 레코드 검증**

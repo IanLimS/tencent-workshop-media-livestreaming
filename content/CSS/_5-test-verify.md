@@ -28,10 +28,10 @@ Let's do an test and verify the live streaming.
 4. Check the playback address and copy the HLS URL.
 ![ALT IMG](/images/css-basic/6-3-test-play-addr.png?width=60vw&classes=left)
 
-5. Visit the [Tencent video player demo](https://tcplayer.vcube.tencent.com/intl/index.html) site and paste it into **Playback URL**. And after clicking the **Preview** button, check whether the HLS Stream plays normally.
+5. Visit the [Tencent video player demo](http://tcplayer.vcube.tencent.com/intl/index.html) site and paste it into **Playback URL**. And after clicking the **Preview** button, check whether the HLS Stream plays normally. (*left shows player and right shows OBS*)
 ![ALT IMG](/images/css-basic/6-5-test-playback-hls.png)
 
-6. Copy **WebRTC URL** from Playback address in Step 4. Visit the [Tencent video player demo](https://tcplayer.vcube.tencent.com/intl/index.html) site and paste it into **Playback URL**. And after clicking the **Preview** button, check whether the WebRTC Stream is played normally.
+6. Copy **WebRTC URL** from Playback address in Step 4. Visit the [Tencent video player demo](https://tcplayer.vcube.tencent.com/intl/index.html) site and paste it into **Playback URL**. And after clicking the **Preview** button, check whether the WebRTC Stream is played normally.  (*left shows player and right shows OBS*)
 ![ALT IMG](/images/css-basic/6-5-test-playback-webrtc.png)
 
 > NOTE: The Playback Domain of CSS (Cloud Streaming Services) functions as a CDN. If you want to make a secure connection via the HTTPS protocol, (a) [enable HTTPS](https://www.tencentcloud.com/document/product/267/31066?lang=en) in the CSS Playback domain, and (b) You must [obtain a certificate and upload it to CSS](https://www.tencentcloud.com/document/product/267/41317?lang=en). Please click the links for more details.

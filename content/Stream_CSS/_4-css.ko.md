@@ -29,7 +29,7 @@ CSS 를 Live Streaming 에 적합한 CDN 으로 구성하는 방법을 아래와
 
 - **CNAME Configuration 메뉴**
 ![CNAME Configuration 메뉴](/images/stream-css/3-3-add-play-domain-2.png?width=40vw&classes=left)
-- **DNS 에 CNAME 레코드 추가**
+- **DNS 에 CNAME 레코드 추가** (*아래는 예시 화면으로, 자료 업데이트 과정에서 도메인 이름이 상이할 수 있습니다.*)
 ![도메인추가](/images/css-basic/4-2-css-play-domain-cname.png?width=40vw&classes=left)
 - **CNAME 레코드 검증**
 ![레코드 검증](/images/stream-css/3-5-css-play-domain-cname-verify.png?width=40vw&classes=left)
@@ -48,6 +48,6 @@ CSS 를 Live Streaming 에 적합한 CDN 으로 구성하는 방법을 아래와
 ![ALT_IMG](/images/stream-css/3-8-add-play-connect-strpkg.png?width=40vw&classes=left)
 
 > 참고. **CSS 구성** 을 가서 보면 **Origin server mode** 가 활성화 되어 있고, **Origin-pull configuration** 에서 StreamPackage Id 만으로 통합이 된 것을 확인 할 수 있습니다.
->> 이렇게 CSS 에서 Live Streaming CDN 전용으로 구성하는 경우, **Origin server mode** 를 enable 해야 합니다.
+>> CSS 에서 Live Streaming CDN 전용으로 구성하는 경우 혹은 3rd party 라이브 스트리밍 서비스와 통합하는 경우, 다음과 같이 **Origin server mode** 를 enable 해야 합니다.
 ![ALT_IMG](/images/stream-css/3-8-verify-css-oirigin-pull.png?width=40vw&classes=left)
 

@@ -9,15 +9,13 @@
     <meta name="author" content="Ian Lim">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="CSS Basics :: English">
-    <meta name="twitter:description" content="Prior to start with Tencent Cloud Cloud Streaming Service (A.K.A CSS), Push domain and Play domain are configured to configure one live streaming.
+    <meta name="twitter:description" content="Tencent Cloud Cloud Streaming Service (A.K.A CSS) provides an all-in-one service that allows you to build an entire live workflow on the cloud. To build a live streaming workflow using CSS, you need 2 customer domains.
 In other words, CSS has two main components, and channels are organized around domains.
-1. Push domain The push domain includes stream acquisition and media processing (AI functions such as encoding, transcoding, recording, and moderation) and is an essential component for ingesting and processing video feed.
-Push refers to the process by which the host obtains local audio and video into Tencent Cloud, where the domain name used to push the live stream is a required setting.">
+1. Push domain The push domain includes stream acquisition and media processing (AI functions such as encoding, transcoding, recording, and moderation) and is an essential component for ingesting and processing video feed.">
     <meta property="og:title" content="CSS Basics :: English">
-    <meta property="og:description" content="Prior to start with Tencent Cloud Cloud Streaming Service (A.K.A CSS), Push domain and Play domain are configured to configure one live streaming.
+    <meta property="og:description" content="Tencent Cloud Cloud Streaming Service (A.K.A CSS) provides an all-in-one service that allows you to build an entire live workflow on the cloud. To build a live streaming workflow using CSS, you need 2 customer domains.
 In other words, CSS has two main components, and channels are organized around domains.
-1. Push domain The push domain includes stream acquisition and media processing (AI functions such as encoding, transcoding, recording, and moderation) and is an essential component for ingesting and processing video feed.
-Push refers to the process by which the host obtains local audio and video into Tencent Cloud, where the domain name used to push the live stream is a required setting.">
+1. Push domain The push domain includes stream acquisition and media processing (AI functions such as encoding, transcoding, recording, and moderation) and is an essential component for ingesting and processing video feed.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="/css/_0-what-is-css/index.html">
     <meta property="article:section" content="Live Streaming for UGC or M&amp;E :: English">
@@ -27,19 +25,19 @@ Push refers to the process by which the host obtains local audio and video into 
     <link href="/ko/css/_0-what-is-css/index.html" rel="alternate" hreflang="ko">
     <link href="/css/_0-what-is-css/index.html" rel="alternate" hreflang="en">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/css/fontawesome-all.min.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1711950590" rel="stylesheet"></noscript>
-    <link href="/css/nucleus.css?1711950590" rel="stylesheet">
-    <link href="/css/auto-complete.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1711950590" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar.min.css?1711950590" rel="stylesheet">
-    <link href="/css/fonts.css?1711950590" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1711950590" rel="stylesheet"></noscript>
-    <link href="/css/theme.css?1711950590" rel="stylesheet">
-    <link href="/css/theme-blue.css?1711950590" rel="stylesheet" id="R-variant-style">
-    <link href="/css/chroma-learn.css?1711950590" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/css/variant.css?1711950590" rel="stylesheet">
-    <link href="/css/print.css?1711950590" rel="stylesheet" media="print">
-    <link href="/css/ie.css?1711950590" rel="stylesheet">
-    <script src="/js/url.js?1711950590"></script>
-    <script src="/js/variant.js?1711950590"></script>
+    <link href="/css/fontawesome-all.min.css?1712038976" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fontawesome-all.min.css?1712038976" rel="stylesheet"></noscript>
+    <link href="/css/nucleus.css?1712038976" rel="stylesheet">
+    <link href="/css/auto-complete.css?1712038976" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/auto-complete.css?1712038976" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar.min.css?1712038976" rel="stylesheet">
+    <link href="/css/fonts.css?1712038976" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/css/fonts.css?1712038976" rel="stylesheet"></noscript>
+    <link href="/css/theme.css?1712038976" rel="stylesheet">
+    <link href="/css/theme-blue.css?1712038976" rel="stylesheet" id="R-variant-style">
+    <link href="/css/chroma-learn.css?1712038976" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/css/variant.css?1712038976" rel="stylesheet">
+    <link href="/css/print.css?1712038976" rel="stylesheet" media="print">
+    <link href="/css/ie.css?1712038976" rel="stylesheet">
+    <script src="/js/url.js?1712038976"></script>
+    <script src="/js/variant.js?1712038976"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -113,10 +111,11 @@ Push refers to the process by which the host obtains local audio and video into 
             </header>
 <h1 id="css-basics">CSS Basics</h1>
 
-<p>Prior to start with Tencent Cloud Cloud Streaming Service (A.K.A CSS), <strong>Push domain</strong> and <strong>Play domain</strong> are configured to configure one live streaming.</p>
+<p>Tencent Cloud Cloud Streaming Service (A.K.A CSS) provides an all-in-one service that allows you to build an entire live workflow on the cloud.
+To build a live streaming workflow using CSS, you need 2 customer domains.</p>
 <p>In other words, CSS has two main components, and channels are organized around domains.</p>
-<p><a href="#R-image-c60928607588427b0e7e07d403358610" class="lightbox-link"><img src="/images/css-basic/css_architecture_ko.png" alt="CSS architecture" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c60928607588427b0e7e07d403358610"><img src="/images/css-basic/css_architecture_ko.png" alt="CSS architecture" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
+<p><a href="#R-image-2e48ce10f031170a2e495fdc3c1e36eb" class="lightbox-link"><img src="/images/css-basic/css_architecture_ko.png" alt="CSS architecture" class="figure-image noborder lightbox noshadow" style="height: auto; width: auto;" loading="lazy"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2e48ce10f031170a2e495fdc3c1e36eb"><img src="/images/css-basic/css_architecture_ko.png" alt="CSS architecture" class="lightbox-image noborder lightbox noshadow" loading="lazy"></a></p>
 <h2 id="1-push-domain">1. Push domain</h2>
 <p>The push domain includes stream acquisition and media processing (AI functions such as encoding, transcoding, recording, and moderation) and is an essential component for ingesting and processing video feed.</p>
 <p>Push refers to the process by which the host obtains local audio and video into Tencent Cloud, where the domain name used to push the live stream is a required setting. If you want to use a domain name for live streaming, you must first register it. After the push domain name is configured, CSS can generate the corresponding push URL.</p>
@@ -153,7 +152,7 @@ Push refers to the process by which the host obtains local audio and video into 
 </blockquote>
 <h2 id="2-player-domain-css-cdn">2. Player domain (CSS CDN)</h2>
 <p>The Player domain is a component that provides a CDN optimized for live streaming.
-This can be (1) integrated with a CSS Push domain to build an end-to-end live workflow, or (2) integrated with a 3rd party live streaming packaging &amp; origination service.</p>
+(1) Basically Player domain is natively integrated with a CSS Push domain to build an end-to-end live workflow or (2) can be integrated with a 3rd party live streaming packaging &amp; origination service by enabling Origin-Pull mode.</p>
 <p>In addition, CSS Player domain provides essential functions for live streaming such as Authentication, Referer, and IP/Regional Access Control.</p>
 <blockquote>
 <p>NOTE: For additional information on basic concepts, you can further explore the following <a href="https://www.tencentcloud.com/document/product/267/7968?lang=en" target="_blank">User Guide</a>.</p>
@@ -184,12 +183,12 @@ This can be (1) integrated with a CSS Push domain to build an end-to-end live wo
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/js/auto-complete.js?1711950590" defer></script>
-        <script src="/js/lunr/lunr.min.js?1711950590" defer></script>
-        <script src="/js/lunr/lunr.stemmer.support.min.js?1711950590" defer></script>
-        <script src="/js/lunr/lunr.multi.min.js?1711950590" defer></script>
-        <script src="/js/lunr/lunr.en.min.js?1711950590" defer></script>
-        <script src="/js/search.js?1711950590" defer></script>
+        <script src="/js/auto-complete.js?1712038976" defer></script>
+        <script src="/js/lunr/lunr.min.js?1712038976" defer></script>
+        <script src="/js/lunr/lunr.stemmer.support.min.js?1712038976" defer></script>
+        <script src="/js/lunr/lunr.multi.min.js?1712038976" defer></script>
+        <script src="/js/lunr/lunr.en.min.js?1712038976" defer></script>
+        <script src="/js/search.js?1712038976" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation homelinks">
         <ul>
@@ -269,8 +268,8 @@ This can be (1) integrated with a CSS Push domain to build an end-to-end live wo
         </div>
       </div>
     </aside>
-    <script src="/js/clipboard.min.js?1711950590" defer></script>
-    <script src="/js/perfect-scrollbar.min.js?1711950590" defer></script>
-    <script src="/js/theme.js?1711950590" defer></script>
+    <script src="/js/clipboard.min.js?1712038976" defer></script>
+    <script src="/js/perfect-scrollbar.min.js?1712038976" defer></script>
+    <script src="/js/theme.js?1712038976" defer></script>
   </body>
 </html>

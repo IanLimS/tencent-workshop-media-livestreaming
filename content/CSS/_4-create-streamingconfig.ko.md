@@ -3,7 +3,7 @@ title = "Create a Adaptive Bitrate Config"
 weight = 24
 +++
 
-Tencent Cloud 의 Cloud Streaming Service 를 이용하면, 트랜스코딩 타입 해상도, 비트레이트를 별도 지정한 Adaptive Bitrate 구성을 템플릿으로 구성하고 Cloud Streaming Service 의 HLS Stream 및 WebRTC Streaming 에서 사용이 가능합니다.
+Tencent Cloud 의 Cloud Streaming Service 를 이용하면, 트랜스코딩 타입, 해상도, 비트레이트 등을 별도 지정한 Adaptive Bitrate 구성을 템플릿으로 구성하고 Cloud Streaming Service 의 HLS Stream 및 WebRTC Streaming 에서 사용이 가능합니다.
 
 > **NOTE** : Tencent Cloud 의 Cloud Streaming Service 에서 HLS, WebRTC Streaming 외 HTTP-FLV, RTMP 스트리밍을 통한 단일 비트레이트 포맷을 사용하는 경우, Adaptive Bitrate 가 아닌 Live Transcoding 기능 구성을 통해 스트림의 상세 스펙을 구성을 지원합니다.
 
@@ -16,10 +16,10 @@ Tencent Cloud 의 Cloud Streaming Service 를 이용하면, 트랜스코딩 타�
 ![abr-config](/images/css-basic/5-1-abr-config.png)
 
 5. **Streams** 메뉴에는 ABR 래더를 구성하고 레더별 트랜스코딩 방법, 해상도, 비트레이트 등을 결정 할 수 있습니다.
-이번 랩에서는 Standard Transcoding 을 활용한 기본 구성으로 진행할 예정 입니다.
-다음과 같이 3개의 Stream 을 Adaptive Bitrate 으로 구성하고,
-각각의 Stream Name 은 HD, SD, Smooth 로 구성합니다.
-**Stream Quality** 은 각각 HD, SD, Smooth 을 선택합니다. 그러면 자동으로 resolution, bitrate 값들이 지정됩니다.
+- 이번 랩에서는 Standard Transcoding 을 활용한 기본 구성으로 진행할 예정 입니다.
+- 다음과 같이 3개의 Stream 을 Adaptive Bitrate 으로 구성하고, 각각의 Stream Name 은 HD, SD, Smooth 로 구성합니다.
+- **Video Quality 메뉴에서** 은 HD 를 선택합니다. 그러면 자동으로 resolution, bitrate 값들이 지정됩니다. 
+- 아래쪽에 **Add Stream** 버튼을 클릭해서 SD, Smooth 구성을 동일하게 생성합니다.
 ![abr-config-hd](/images/css-basic/5-1-abr-config-hd.png?width=80vw&classes=left)
 > **Note**: 이번 랩에서는 기본값을 선택하지만, bitrate, resolution, transcoding type 등 유연하게 지정 가능합니다.
 

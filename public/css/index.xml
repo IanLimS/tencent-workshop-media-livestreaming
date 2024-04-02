@@ -12,10 +12,9 @@
       <link>/css/_0-what-is-css/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/css/_0-what-is-css/index.html</guid>
-      <description>Prior to start with Tencent Cloud Cloud Streaming Service (A.K.A CSS), Push domain and Play domain are configured to configure one live streaming.
+      <description>Tencent Cloud Cloud Streaming Service (A.K.A CSS) provides an all-in-one service that allows you to build an entire live workflow on the cloud. To build a live streaming workflow using CSS, you need 2 customer domains.
 In other words, CSS has two main components, and channels are organized around domains.
-1. Push domain The push domain includes stream acquisition and media processing (AI functions such as encoding, transcoding, recording, and moderation) and is an essential component for ingesting and processing video feed.
-Push refers to the process by which the host obtains local audio and video into Tencent Cloud, where the domain name used to push the live stream is a required setting.</description>
+1. Push domain The push domain includes stream acquisition and media processing (AI functions such as encoding, transcoding, recording, and moderation) and is an essential component for ingesting and processing video feed.</description>
     </item>
     <item>
       <title>Prerequisites</title>

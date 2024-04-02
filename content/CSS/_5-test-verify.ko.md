@@ -28,10 +28,10 @@ weight = 25
 4. Playback address 를 확인하고 HLS URL 을 copy 합니다.
 ![ALT IMG](/images/css-basic/6-3-test-play-addr.png?width=60vw&classes=left)
 
-5. [Tencent video player demo](https://tcplayer.vcube.tencent.com/intl/index.html) 사이트를 방문해서 **Playback URL** 에 붙여넣기 합니다. 그리고 **Preview** 버튼을 클릭 한 후, 정상적으로 HLS Stream 이 재생 되는지 확인 합니다.
+5. [Tencent video player demo](http://tcplayer.vcube.tencent.com/intl/index.html) 사이트를 방문해서 **Playback URL** 에 붙여넣기 합니다. 그리고 **Preview** 버튼을 클릭 한 후, 정상적으로 HLS Stream 이 재생 되는지 확인 합니다. (*왼쪽은 Player, 오른쪽은 OBS 를 캡쳐한 화면 입니다.*)
 ![ALT IMG](/images/css-basic/6-5-test-playback-hls.png)
 
-6. 4번의 Playback address 에서 **WebRTC URL** 을 copy 합니다. [Tencent video player demo](https://tcplayer.vcube.tencent.com/intl/index.html) 사이트를 방문해서 **Playback URL** 에 붙여넣기 합니다. 그리고 **Preview** 버튼을 클릭 한 후, 정상적으로 WebRTC Stream 이 재생 되는지 확인 합니다.
+6. 4번의 Playback address 에서 **WebRTC URL** 을 copy 합니다. [Tencent video player demo](https://tcplayer.vcube.tencent.com/intl/index.html) 사이트를 방문해서 **Playback URL** 에 붙여넣기 합니다. 그리고 **Preview** 버튼을 클릭 한 후, 정상적으로 WebRTC Stream 이 재생 되는지 확인 합니다. (*왼쪽은 Player, 오른쪽은 OBS 를 캡쳐한 화면 입니다.*)
 ![ALT IMG](/images/css-basic/6-5-test-playback-webrtc.png)
 
 > NOTE : CSS (Cloud Streaming Services) 의 Playback Domain 은 CDN 의 역할을 합니다. 만약 HTTPS 프로토콜을 이용해 안전한 연결을 하기 위해서는, (a)  CSS Playback domain 에서 [HTTPS 를 enable](https://www.tencentcloud.com/document/product/267/31066?lang=en) 하고 (b) [인증서를 발급받아 CSS 에 업로드](https://www.tencentcloud.com/document/product/267/41317?lang=en) 해야 합니다. 자세한 내용은 링크들을 클릭해서 확인해 주세요.

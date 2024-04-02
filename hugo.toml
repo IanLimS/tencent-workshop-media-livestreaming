@@ -33,7 +33,7 @@ description = "Tencent Cloud Workshop"
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # Multilanguage content.
 # Default: "ko"
-# additionalContentLanguage = [ "en", "ko" ]
+# additionalContentLanguage = [ "ko" ]
 
 # When using mulitlingual website, disable the switch language button.
 # disableLanguageSwitchingButton = false
@@ -87,14 +87,9 @@ showVisitedLinks = true
 
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 # English is the default language
-defaultContentLanguage = "en"
+defaultContentLanguage = "ko"
 
 [languages]
-[languages.en]
-title = "English"
-weight = 2
-languageName = "English"
-
 [languages.ko]
 title = "한글"
 weight = 1

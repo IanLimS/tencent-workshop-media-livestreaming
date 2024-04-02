@@ -14,11 +14,12 @@ In Cloud Streaming Service, you can configure an Adaptive Bitrate configuration 
 4. For Template Name, enter **testABR**. Any value can be entered.
 ![abr-config](/images/css-basic/5-1-abr-config.png)
 
-5. In the **Streams** menu, you can configure the ABR ladder and determine the transcoding method, resolution, bitrate, etc. for each ladder.
-In this lab, we will proceed with the basic configuration using Standard Transcoding.
-Configure 3 streams with Adaptive Bitrate as follows,
-Each Stream Name consists of HD, SD, and Smooth.
-**Stream Quality** selects HD, SD, and Smooth respectively. Then, resolution and bitrate values are automatically specified.
+5. In the **Streams** menu, you can configure the ABR ladder and determine the transcoding type, resolution, bitrate, etc. for each ladder.
+- In this lab, we will proceed with the basic configuration using Standard Transcoding.
+- Configure 3 streams with Adaptive Bitrate as follows, and each stream name is configured as  HD, SD, and Smooth.
+- Click HD in **Video Quality menu**. Then, resolution and bitrate values are automatically specified.
+- Click the **Add Stream** button at the bottom, and create SD and Smooth configurations in a same way.
+
 ![abr-config-hd](/images/css-basic/5-1-abr-config-hd.png?width=80vw&classes=left)
 > **Note**: In this lab, we will select the default value, however, you can flexibly specify bitrate, resolution, transcoding type in the real scenario.
 

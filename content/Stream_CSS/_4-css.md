@@ -27,7 +27,7 @@ Let's take a look at how to configure CSS as a CDN which is optimized for Live S
 
 - **CNAME Configuration menu**
 ![CNAME Configuration menu](/images/stream-css/3-3-add-play-domain-2.png?width=40vw&classes=left)
-- **Add CNAME record to DNS**
+- **Add CNAME record to DNS** (*This is example screenshot so that the domain name can be differnt*)
 ![Add domain](/images/css-basic/4-2-css-play-domain-cname.png?width=40vw&classes=left)
 - **CNAME record verification**
 ![Record verification](/images/stream-css/3-5-css-play-domain-cname-verify.png?width=40vw&classes=left)
@@ -46,5 +46,5 @@ Let's take a look at how to configure CSS as a CDN which is optimized for Live S
 ![ALT_IMG](/images/stream-css/3-8-add-play-connect-strpkg.png?width=40vw&classes=left)
 
 > Note. If you go to **CSS configuration**, you can see that **Origin server mode** is activated, and in **Origin-pull configuration**, only StreamPackage Id is integrated.
->> When configuring CSS for Live Streaming CDN only, **Origin server mode** must be enabled.
+>> When configuring CSS for Live Streaming CDN only or integrating with 3rd party live streaming service, **Origin server mode** must be enabled.
 ![ALT_IMG](/images/stream-css/3-8-verify-css-oirigin-pull.png?width=40vw&classes=left)

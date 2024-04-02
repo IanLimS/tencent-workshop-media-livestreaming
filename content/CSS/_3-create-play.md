@@ -18,7 +18,7 @@ weight = 23
 
 - **CNAME Configuration menu**
 ![CNAME Configuration menu](/images/css-basic/4-2-css-play-domain-cname-configuration.png?width=40vw&classes=left)
-- **Add CNAME record to DNS**
+- **Add CNAME record to DNS** : *This is example screenshot so that the domain name can be differnt*
 ![Add domain](/images/css-basic/4-2-css-play-domain-cname.png)
 - **CNAME record verification**
 ![Record Verification](/images/css-basic/4-2-css-play-domain-cname-verify.png?width=40vw&classes=left)
